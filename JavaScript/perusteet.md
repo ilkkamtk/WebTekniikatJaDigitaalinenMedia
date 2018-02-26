@@ -1,6 +1,7 @@
 # Lähtökohtia
 
 ## JavaScript ohjelmointikielenä
+JavaScript on selainympäristöön suunniteltu ohjelmointikieli, joka...
 
 ## Työskentely-ympäristö
 
