@@ -4,6 +4,7 @@
 JavaScript on selainympäristöön suunniteltu ohjelmointikieli, joka...
 
 ## Työskentely-ympäristö
+WebStorm
 
 ## Tulostus
 ### console.log()
