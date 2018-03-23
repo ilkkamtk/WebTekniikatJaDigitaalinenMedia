@@ -24,7 +24,7 @@ on ohjelmoinnin opiskelun kannalta tarkoituksenmukaisempi: tulosteet saadaan ker
 varoitusikkunan sisältöä tarvitse erikseen kuitata.
 
 ### Konsolin lokituloste
-Konsolin lokituloste tuotetaan `console.log`-funktiolla.
+Konsolin lokituloste tuotetaan `console.log()`-metodilla.
 Lokituloste näkyy selaimen kehittäjätilassa yleensä Console-välilehdellä.
 
 ```javascript
@@ -47,6 +47,7 @@ alert("Hei tätäkin kautta!");
 Selainikkunaan ilmestyvä viesti-ikkuna näyttää tältä:
 ![viesti-ikkuna](img/viesti_ikkuna.png)
 
+Tästä eteenpäin esimerkeissä käytetään konsolitulostusvaihtoehtoa eli `console.log()`-metodia.
 
 ### Merkkijonoliteraalit
 
@@ -283,5 +284,6 @@ Voit tutustua tarjolla oleviin metodeihin myös virallisen JavaScript-määrityk
 <http://www.ecma-international.org/ecma-262/6.0/> (luku 20.2.)
 tai voit käyttää jotakin netin lukuisista JavaScript-lähteistä ja opetusmateriaaleista.
 
+## Harjoitustehtävät
 
 
