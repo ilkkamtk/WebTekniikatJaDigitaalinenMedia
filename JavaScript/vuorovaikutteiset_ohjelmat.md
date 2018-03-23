@@ -193,6 +193,7 @@ Seuraava lause kysyy käyttäjältä tämän nimen:
      prompt("Anna nimesi.");
 ```
 Selainikkunaan ilmestyy dialogi-ikkuna:
+
 ![dialogi-ikkuna](img/dialogi_ikkuna.png)
 
 Tuossa muodossa kysymys on kuitenkin varsin hyödytön, sillä
