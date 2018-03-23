@@ -7,7 +7,7 @@ Vuorovaikutteisuudella tarkoitetaan mallia, jossa ohjelma
 2. käsittelee syötteitä
 3. tulostaa tuloksen.
 
-Tarkastellaan esimerkkinä ohjelmaa, jossa käyttäjä antaa kaksi lukua ja ohjelma tulostaa
+Esimerkkinä tällaisesta on ohjelma, jossa käyttäjä antaa kaksi lukua ja ohjelma tulostaa
 lukujen summan. Käyttäjä antaa kaksi syötettä: ensimmäisen ja toisen luvun (vaihe 1), ohjelma laskee niiden
 summan (vaihe 2) ja ohjelma laskee tulostetun summan (vaihe 3).
 
@@ -69,8 +69,41 @@ Ohjelman tarvitsemia arvoja voidaan tallentaa muuttujiin.
 Muuttujaan tallennettavia arvoja voidaan lukea ohjelman aikana monta kertaa,
 ja kertaalleen asetettavia arvoja voidaan muuttaa.
 
-Esimerkiksi seuraava ohjelma (TODO).
+JavaScript-kielen muuttujat määritellään `var`-lauseella.
+Muuttujat eivät ole tyypitettyjä, joten muuttujaa määriteltäessä
+ei ole tarpeen kertoa, minkälainen arvo muuttujaan on tarkoitus tallentaa - 
+onko kyseessä esimerkiksi kokonaisluku (kuten 17), liukuluku
+ eli desimaaliluku (kuten 21.38) vai merkkijono
+ (kuten "tietokone").
 
+Esimerkiksi seuraava ohjelma määrittelee kaksi muuttujaa, joista ensimmäiseen
+tallennetaan merkkijono ja toiseen kokonaisluku. Tämän jälkeen ohjelma
+tulostaa muuttujien arvot, korvaa ne uusilla arvoilla ja tulostaa
+muuttuneet arvot:
+
+
+nimeltä luku, sijoittaa sen arvoksi
+8, tulostaa sijoitetun arvon, kasvattaa arvoa kahdella ja lopuksi tulostaa kasvatetun
+arvon:
+```javascript
+        var luku, nimi;
+        luku = 153;
+        nimi = "Anna";
+        console.log(luku);
+        console.log(nimi);
+        luku = -17;
+        nimi = "Pekka";
+        console.log(luku);
+        console.log(nimi);
+```
+
+Ohjelman tuottama tuloste:
+```
+153
+Anna
+-17
+Pekka
+```   
 ### Merkkijonojen yhdistäminen
 Merkkijonojen yhdistäminen eli katenaatio toteutetaan `+`-operaatiolla.
 Esimerkiksi seuraava lause rakentaa tulosteen kolmesta osamerkkijonosta:
@@ -79,9 +112,23 @@ console.log("Hyvää" + " huomenta" + " kaikille.");
 ```
 
 Tuloste:
-```monospace
+```
 Hyvää huomenta kaikille.
 ```
+
+Vaihtoehtoisesti osajonot ja yhdistetty merkkijono voitaisiin 
+tallentaa muuttujiin 
+ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
+
+```javascript
+        var eka, toka, kolmas, kaikki;
+        eka = "Hyvää ";
+        toka = "huomenta ";
+        kolmas = "kaikille.";
+        kaikki = eka + toka + kolmas;
+        console.log(kaikki);
+```       
+
 ## Syötteen luku
 Aiemmissa esimerkeissä ohjelmien tuottamat tulosteet olivat aina samanlaisia, eikä
 käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
@@ -89,9 +136,27 @@ käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
 Sellaiset ohjelmat ovat harvinaisia. Yleensä halutaan, että käyttäjä voi antaa
 ohjelmalle syötteitä, jotka vaikuttavat ohjelman kulkuun.
 
-Käyttäjältä luetut syötteet tallennetaan lähes poikkeuksetta muuttujiin, jotta niitä voidaan käyttää myöhemmin ohjelmassa.
+Syöte luetaan `prompt()`-funktiolla. Funktion argumenttina annetaan merkkijono, joka esitetään dialogi-ikkunassa käyttäjälle.
 
-TODO.
+Seuraava lause kysyy käyttäjältä tämän nimen:
+
+```javascript
+     prompt("Anna nimesi.");
+```
+
+Tuossa muodossa kysymys on kuitenkin varsin hyödytön, sillä
+käyttäjän antamaa nimeä ei oteta talteen. Niinpä käyttäjältä luetut syötteet tallennetaan lähes poikkeuksetta muuttujiin,
+jotta luettuja syötteitä voidaan käyttää myöhemmin ohjelmassa.
+
+Seuraava esimerkkiohjelma kysyy käyttäjän nimen ja tervehtii tätä
+henkilökohtaisesti:
+
+```javascript
+     var nimi;
+     nimi = prompt("Anna nimesi.");
+     console.log("Hauska tavata, " + nimi);
+```
+
 
 ## Laskutoimitukset
 
