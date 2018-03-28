@@ -11,14 +11,15 @@ Jokainen osa tulee päättää lopputagilla, joka on sama kuin tagi itse, mutta 
 
 Eli siis tällainen on jokaisen HTML-sivun runko:
 
-```
-<DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-</head>
-<body>
+    </head>
+    <body>
 
-</body>
+    </body>
 </html>
 ```
+
