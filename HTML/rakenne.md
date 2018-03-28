@@ -39,3 +39,20 @@ Tämä kannattaa tehdä näin sen takia, että WebStorm helpottaa käyttäjän t
 ![Aloitustagit](pics/html5.png)
 
 Nyt olemmekin valmiit aloittamaan. 
+
+## Tiedostojen nimeämisestä sekä ns. indeksitiedosto
+
+Tiedostojen nimeäminen on staattisia web-sivuja tehtäessä varsin vapaata, kunhan antaa tiedoston päätteeksi joko *.html* taikka *.htm*. Pääte kertoo web-selaimelle, että sivu on html-koodia ja lisäksi webserveri ymmärtää sivun html-koodiksi eikä ryhdy tekemään sille mitään erityistä. 
+
+On kuitenkin syytä huomata, että nyt isot ja pienet kirjaimet ovat eri asia. Esimerkiksi *testi.html* ja *TESTI.html* ovat kaksi eri tiedostoa!
+
+Web-sivuston etusivun nimeksi kuitenkin on järkevää antaa ennalta määrätty sivun nimi, joka on yleensä *index.html* (tai *index.htm*) tämä sen takia, että sivuihin viitataan yleensä sen osoitteella, kuten esimerkiksi 
+
+`http://www.example.com`
+
+Tällöin haetaan ns. indeksitiedosto, joka näytetään osoitteeseen menijälle. Kun ei ilmoiteta mitään erillistä sivua, näytetään juuri tämä indeksitiedosto (*index.html*). Näin ei erikseen tarvitse tietää, miten sivujen laatija on päättänyt etusivunsa nimetä.
+
+Jos indeksitiedostoa ei ole, käyttäjälle saatetaan näyttää webserveriltä hakemisto, johon osoite viittaa. Tämä tosin riippuu hakemiston oikeuksien määrittelystä. Hakemisto saattaa sisältää tiedostoja, joita vierailjan ei haluttaisi näkevän, joten indeksitiedosto myöskin lisää webpalvelimen tietoturvallisuutta. Näkymä voi olla jotain tällaista:
+
+![Hakemistolistaus](pics/index_of.png))
+
