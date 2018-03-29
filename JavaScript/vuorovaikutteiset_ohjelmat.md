@@ -141,7 +141,7 @@ ei vielä ole alustettu, jolloin sen tyyppi ei ole tiedossa.
 Edellä lueteltujen alkeistyyppien lisäksi JavaScriptissä on olemassa oliotyyppi,
 joka voi sisältää rakenteeltaan mielivaltaisen monimutkaisia olioita.
 
-Muuttujan tyyppi voidaan testata `typeOf`´-operaatiolla:
+Muuttujan tyyppi voidaan testata `typeOf`-operaatiolla:
 ```javascript
         var nimi = 'Ahmed';
         console.log(typeof nimi);
