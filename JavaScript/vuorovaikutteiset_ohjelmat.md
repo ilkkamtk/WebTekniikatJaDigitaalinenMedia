@@ -28,7 +28,7 @@ Konsolin lokituloste tuotetaan `console.log()`-metodilla.
 Lokituloste näkyy selaimen kehittäjätilassa yleensä Console-välilehdellä.
 
 ```javascript
-console.log("Hei, maailma!");
+console.log('Hei, maailma!');
 ```
 
 Tuloste konsoli-ikkunassa:
@@ -41,7 +41,7 @@ Hyvää huomenta kaikille.
 
 Ponnahtava viesti-ikkuna tuotetaan `alert`-funktiolla:
 ```javascript
-alert("Hei tätäkin kautta!");
+alert('Hei tätäkin kautta!');
 ```
 
 Selainikkunaan ilmestyvä viesti-ikkuna näyttää tältä:
@@ -57,9 +57,9 @@ Literaalilla tarkoitetaan arvoa, joka kirjoitetaan ohjelmakoodin sellaisenaan el
 Merkkijonoliteraalit kirjoitetaan aina lainausmerkkien sisään.
 
 Esimerkkejä merkkijonoliteraaleista:
-- `"Metropolia"`
-- `"A2"`
-- `"Tässä on pitkä palanen tekstiä."`
+- `'Metropolia'`
+- `'A2'`
+- `'Tässä on pitkä palanen tekstiä.'`
 
 Lainausmerkeistä JavaScript-tulkki tunnistaa, että kyseessä on merkkijonoliteraali.
  Tällöin tulkki osaa
@@ -83,13 +83,13 @@ eli sille on asetettu arvo ensimmäisen kerran.
 
 Edellä mainittu muuttuja voidaan alustaa seuraavasti:
 ```javascript
-nimi = "Milla";
+nimi = 'Milla';
 ```
 
 
 Muuttuja voitaisiin myös määritellä ja alustaa samalla kertaa:
 ```javascript
-var nimi = "Milla";
+var nimi = 'Milla';
 ```
 
 Muuttujat ovat löyhästi tyypitettyjä, joten muuttujaa määriteltäessä
@@ -110,11 +110,11 @@ arvon:
 ```javascript
         var luku, nimi;
         luku = 153;
-        nimi = "Anna";
+        nimi = 'Anna';
         console.log(luku);
         console.log(nimi);
         luku = -17;
-        nimi = "Pekka";
+        nimi = 'Pekka';
         console.log(luku);
         console.log(nimi);
 ```
@@ -143,7 +143,7 @@ joka voi sisältää rakenteeltaan mielivaltaisen monimutkaisia olioita.
 
 Muuttujan tyyppi voidaan testata `typeOf`´-operaatiolla:
 ```javascript
-        var nimi = "Ahmed";
+        var nimi = 'Ahmed';
         console.log(typeof nimi);
  ```
  Ohjelma tulostaa merkkijonon "string".
@@ -158,7 +158,7 @@ Merkkijonojen
 yhdistäminen eli katenaatio toteutetaan `+`-operaatiolla.
 Esimerkiksi seuraava lause rakentaa tulosteen kolmesta osamerkkijonosta:
 ```javascript
-console.log("Hyvää" + " huomenta" + " kaikille.");
+console.log('Hyvää' + ' huomenta' + ' kaikille.');
 ```
 
 Tuloste:
@@ -172,9 +172,9 @@ ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
 
 ```javascript
         var eka, toka, kolmas, kaikki;
-        eka = "Hyvää ";
-        toka = "huomenta ";
-        kolmas = "kaikille.";
+        eka = 'Hyvää ';
+        toka = 'huomenta ';
+        kolmas = 'kaikille.';
         kaikki = eka + toka + kolmas;
         console.log(kaikki);
 ```       
@@ -191,7 +191,7 @@ Syöte luetaan `prompt()`-funktiolla. Funktion argumenttina annetaan merkkijono,
 Seuraava lause kysyy käyttäjältä tämän nimen:
 
 ```javascript
-     prompt("Anna nimesi.");
+     prompt('Anna nimesi.');
 ```
 Selainikkunaan ilmestyy dialogi-ikkuna:
 
@@ -206,8 +206,8 @@ henkilökohtaisesti:
 
 ```javascript
      var nimi;
-     nimi = prompt("Anna nimesi.");
-     console.log("Hauska tavata, " + nimi);
+     nimi = prompt('Anna nimesi.');
+     console.log('Hauska tavata, ' + nimi);
 ```
 
 ## Matemaattiset operaatiot
