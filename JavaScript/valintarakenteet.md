@@ -35,12 +35,12 @@ suoritus hyppää ehdollisen ohjelmanosan yli.
 
 Valintalauseessa oleva ehdon ilmaisemiseksi tarvitaan yleensä vertailuoperaattoreita. JavaScript-kielessä on käytössä seuraavat vertailuoperattorit:
 
-- yhtä suuri kuin `--`
-- eri suuri kuin `!=`
-- suurempi kuin `>`
-- suurempi tai yhtä suuri kuin `>=`
-- pienempi kuin `<`
-- pienempi tai yhtä suuri kuin `<=`
+- yhtä suuri kuin (`--`)
+- eri suuri kuin (`!=`)
+- suurempi kuin (`>`)
+- suurempi tai yhtä suuri kuin (`>=`)
+- pienempi kuin (`<`)
+- pienempi tai yhtä suuri kuin (`<=`)
 
 ### Vaara: yhtäsuuruusehto vs. sijoituslause
 
@@ -132,8 +132,82 @@ Jos aina halutaan päätyä johonkin lopputulokseen, kirjoitetaan viimeinen haar
         }
 ```
 
+## Sisäkkäiset valintarakenteet
+
+Valintarakenteita (kuten muitakin ohjausrakenteita) voidaan kirjoittaa
+sisäkkäin ja toteuttaa näin toimintalogiikaltaan monimutkaisiakin
+ohjelmia.
+
+Tarkastellaan esimerkkinä alla olevaa särkylääkkeen annosteluohjetta ja
+kirjoitetaan sen pohjalta ohjelma, joka määrittää oikean lääkeannoksen.
+
+Annosteluohje on seuraavanlainen:
+- 12 vuotta täyttäneen potilaan annos on 500 mikrogrammaa.
+- 2-11-vuotiaan potilaan annos on 12,5 mikrogrammaa potilaan painokiloa kohden. Annos ei saa kuitenkaan ylittää aikuisen annosta,
+- Lääkettä ei saa antaa alle kaksivuotiaalle potilaalle.
+
+Lääkeannoksen määritys voidaan kirjoittaa JavaScript-ohjelmana näin:
+```javascript
+        var ikä, paino, annos;
+        ikä = prompt('Anna potilaan ikä vuosina.');
+        if (ikä>=12) {
+            annos = 500;
+        }
+        else if (ikä>=2) {
+            paino = prompt('Anna potilaan paino kilogrammoina.');
+            annos = paino * 12.5;
+            if (annos > 500) {
+                annos = 500;
+            }
+        }
+        else {
+            annos = 0;
+        }
+        console.log('Annos on ' + annos + ' mikrogrammaa.');
+```
+Huomaa `else-if`-haaran sisällä olevaa uusi `if`-lause, joka suoritetaan vain, jos saavutaan kyseiseen haaraan.
+
 ## Lueteltujen vaihtoehtojen valintarakenne (switch)
 
+Kaikki valintarakennetta käyttävät ohjelmat voidaan kirjoittaa `if`-valintarakenteen
+avulla. JavaScript-kieli tarjoaa kuitenkin myös toisen, `switch`-valintarakenteen,
+jossa haarautuminen tapahtuu jonkin lausekkeen arvovaihtoehtojen perusteella.
 
+Esimerkiksi seuraava ohjelma kysyy käyttäjältä laivan hyttiluokan (A, B tai C) ja tulostaa
+sitä vastaavan sanallisen kuvauksen:
 
+```javascript
+        var luokka = prompt("Anna hyttiluokan tunnus (A/B/C).");
+        switch (luokka) {
+            case 'A':
+                console.log('Ikkunallinen yläkansihytti.');
+                break;
+            case 'B':
+                console.log('Ikkunaton yläkansihytti.');
+                break;
+            case 'C':
+                console.log('Ikkunaton hytti autokannen alla.');
+                break;
+            default:
+                console.log("Virheellinen hyttiluokka.");
+        }
+```
+
+`switch`-sanan perässä oleva lauseke (tässä `luokka`) toimii valitsimena, jonka arvo määrää, mihin suoritushaaraan
+päädytään.
+
+Kukin suoritushaara aloitetaan `case`-sanalla, jota seuraa valitsimen arvo ja kaksoispiste. Tämän jälkeen
+kirjoitetaan haarassa suoritettavat lauseet, joita ei tarvitse koota aaltosulkeiden sisään. Haara päättyy `break`-lauseeseen.
+
+Viimeisenä olevaan `default`-haaraan päädytään aina, jos käyttäjän valitsimen arvo ei vastaa
+yhdessäkään `case`-haarassa olevaa arvoa.
+
+Jokainen haara (viimeistä `default`-haaraa lukuun ottamatta) päättyy `break`-lauseeseen.
+Lause saa `switch`-valintarakenteen suorituksen lakkaamaan välittömästi.
+Ilman `break`-lausetta suoritus jatkuisi välittömästi alapuolella olevan
+ `case`-haaraan lauseista vaikka valitsimen arvo ei täsmäisikään.
+ Jos siis A-hyttiä vastaavan haaran lopussa oleva `break`-lause poistettaisiin,
+ ohjelma tulostaisi A-hytistä kaksi kuvausta: `Ikkunallinen yläkansihytti` ja
+ `Ikkunaton yläkansihytti`.
+ 
 ## Harjoitustehtävät
