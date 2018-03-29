@@ -1,4 +1,4 @@
-#Valintarakenne
+# Valintarakenne
 
 Valintarakenteen avulla ohjelmaan voidaan luoda vaihtoehtoisia suorituspolkuja.
 Se, kumpi (tai mikä) polku valitaan, riippuu ohjelmoijan kirjoittaman ehdon voimassaolosta.
@@ -75,7 +75,7 @@ Esimerkiksi seuraava ohjelma ilmoittaa, jos käyttäjän antama kokonaisluku on 
 
 ## Kahden vaihtoehdon valintarakenne
 
-Kahden toisensa poissulkevan vaihtoehdon valintarakenteessa eli if-else-rakenteessa annetaan myös vaihtoehtoinen lohko, joka suoritetaan, jos ehto on epätosi.
+Kahden toisensa poissulkevan vaihtoehdon valintarakenteessa eli `if-else`-rakenteessa annetaan myös vaihtoehtoinen lohko, joka suoritetaan, jos ehto on epätosi.
 
 Kaksi vaihtoehtoista lohkoa ovat toisensa poissulkevia; jompikumpi suoritetaan aina.
 
@@ -94,8 +94,9 @@ Seuraava esimerkki ilmoittaa, onko käyttäjän antama kokonaisluku parillinen v
 
 ## Monen vaihtoehdon valintarakenne
 
-Monen toisensa poissulkevan vaihtoehdon valintarakenteessa tarjotaan peräkkäisiä haaroja, joista siirrytään ensimmäiseen, jonka valintaehto täyttyy.
-Tämän jälkeen valintalauseen suoritus on valmis:
+Monen toisensa poissulkevan vaihtoehdon valintarakenteeseen liitetään tarpeellinen määrä
+`else if`-haaroja. Suorituksen aikana siirrytään alkuperäiseen `if`-haaraan - tai sen valintahdon ollessa epätosi -  ensimmäiseen `else-if`-haaraan, jonka valintaehto täyttyy. Seuraava ohjelma kommentoi täysi-ikäisen käyttäjän ikää:
+
 ```javascript
         var ikä;
         ikä = prompt('Anna ikäsi');
@@ -110,13 +111,13 @@ Tämän jälkeen valintalauseen suoritus on valmis:
         }
 ```
 
-Huomaa, että kussakin haarassa olevien loogisen lausekkeen arvo lasketaan vasta siinä vaiheessa, kun ylempien
-haarojen ehdot on jo todettu epätosiksi. Jos käyttäjä syöttää iäkseen esimerkiksi 38 vuotta, ei if-haaran ehto (ikä vähintään 65 vuotta) toteudu ja siirrytään laskemaan ylemmän else if -haaran ehdon arvoa. Tässä vaiheessa riittää testata, onko
+Huomaa, että kussakin haarassa olevan loogisen lausekkeen arvo lasketaan vasta siinä vaiheessa, kun ylempien
+haarojen ehdot on jo todettu epätosiksi. Jos käyttäjä syöttää iäkseen esimerkiksi 38 vuotta, ei `if`-haaran ehto (ikä vähintään 65 vuotta) toteudu ja siirrytään laskemaan ylemmän `else if` -haaran ehdon arvoa. Tässä vaiheessa riittää testata, onko
 ikä vähintään 30 vuotta, koska tiedetään jo, että se ei ole 65 vuotta tai enemmän.
 
-Ohjelmassa ei ole else-haaraa; jos käyttäjä syöttää iäkseen 17 vuotta tai vähemmän, ohjelma ei tulosta mitään.
+Ohjelmassa ei ole `else`-haaraa; jos käyttäjä syöttää iäkseen 17 vuotta tai vähemmän, ohjelma ei tulosta mitään.
 
-Jos aina halutaan päätyä johonkin lopputulokseen, kirjoitetaan viimeinen haara else-haarana. Seuraava ohjelma ilmoittaa, onko käyttäjän syöttämä luku positiivinen, negatiivinen vai nolla:
+Jos aina halutaan päätyä johonkin lopputulokseen, kirjoitetaan viimeinen haara `else`-haarana. Seuraava ohjelma ilmoittaa, onko käyttäjän syöttämä luku positiivinen, negatiivinen vai nolla:
 ```javascript
         var luku;
         ikä = prompt('Anna luku');
