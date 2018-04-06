@@ -297,6 +297,9 @@ Esimerkiksi seuraava ohjelma voitaisiin suorittaa näennäisen onnistuneesti:
         aksleiväli = 2340;
         console.log('Akseliväli on: ' + akseliväli);
 ```
+
+Ohjelma tulostaa kuitenkin akseliväliksi nollan; syynä siihen on
+ohjelmoijan tekemä lyöntivirhe muuttujanimessä.
 Ohjelma luo aluksi `var`-lausella määritellyn
 `akseliväli`-nimisen muuttujan. Toisella rivillä kuitenkin sijoitetaan
 arvo eri nimiseen, vahingossa väärin kirjoitettuun `aksleiväli`-nimiseen
@@ -329,6 +332,42 @@ näkyviksi syntaksivirheiksi. Tämä helpottaa oikein toimivien
 ohjelmien kirjoittamista.
 
 Edellä kuvatusta syystä `use strict` -määrityksen käyttö jokaisessa ohjelmassa kannattaa ottaa tavaksi.
+
+## Nimetyt vakiot
+
+Aiemmissa esimerkeissä käytettiin muuttujia, jotka määriteltiin
+`var`-lauseella. Muuttujan arvoja voidaan nimensä mukaisesti
+muutella ohjelman suorituksen aikana.
+
+Toisinaan voi syntyä tilanne, jossa haluttaisiin luoda muuttuja jonkin
+monimutkaisen arvon säilyttämiseksi, mutta tuon muuttujan arvoa ei
+ole tarkoitus ohjelman suorituksen aikana muuttaa. Esimerkkinä
+tällaisesta arvosta on vaikkapa kahden energian yksikön, kalorien ja joulien,
+välinen muuntokerroin 4,1868.
+
+Tällaisen muuttumattoman arvon säilyttämiseksi voidaan käyttää nimettyä vakiota,
+joka määritetään `const`-sanalla. Nimetyn vakion arvo voidaan asettaa kerran,
+mutta sitä ei voi muuttaa.
+
+Seuraava ohjelma kysyy käyttäjältä kaksi kalorimäärää ja muuttaa ne jouleiksi:
+```javascript
+        const KERROIN = 4.1868;
+        var k1, k2, j1, j2;
+        k1 = prompt('Anna lounaan energiamäärä (kcal).');
+        k2 = prompt('Anna päivällisen energiamäärä (kcal).');
+
+        j1 = KERROIN * k1;
+        j2 = KERROIN * k2;
+
+        console.log('Sait aamiaisella '+j1+' kJ ja päivällisellä '+j2+' kJ.');
+```
+
+Nimetyn vakion `KERROIN` käyttö tiukassa tilassa (strict mode) varmistaa, että kummassakin
+kertolaskussa käytetään oikeaa arvoa. Jos muuntokertoimet kirjoitettaisiin ohjelmakoodiin
+kahteen kertaan, on mahdollista, että toisen kertoimen desimaalien kohdalla tulisi tehtyä näppäilyvirhe,
+joka aiheuttaisi lopputulokseen pienen mutta hankalasti havaittavan laskuvirheen.
+
+Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimin.
 
 ## Harjoitustehtävät
 
