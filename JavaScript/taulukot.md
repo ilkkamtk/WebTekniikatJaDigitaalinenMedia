@@ -96,6 +96,7 @@ Ideana on käyttää taulukkoa sen kirjaamiseen, onko jokin arvo jo käytetty.
 
 Tarkastellaan esimerkkinä lottorivin arpovaa ohjelmaa. Ohjelma kysyy numeroiden kokonaismäärän
 ja arvottavien numeroiden määrän.
+Aluksi kaikki numerot alustetaan käyttämättömiksi.
 Kun jokin numero on arvottu, vastaava alkio merkitään taulukosta käytetyksi.
 Kunkin lottoriviin tulevan numeron arvonta toistetaan niin monta kertaa, kunnes saadaan käyttämätön numero.
 Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.

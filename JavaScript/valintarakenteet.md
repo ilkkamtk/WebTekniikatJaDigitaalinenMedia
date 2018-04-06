@@ -138,10 +138,10 @@ Valintarakenteita (kuten muitakin ohjausrakenteita) voidaan kirjoittaa
 sisäkkäin ja toteuttaa näin toimintalogiikaltaan monimutkaisiakin
 ohjelmia.
 
-Tarkastellaan esimerkkinä alla olevaa särkylääkkeen annosteluohjetta ja
+Tarkastellaan esimerkkinä alla olevaa särkylääkkeen annostusohjetta ja
 kirjoitetaan sen pohjalta ohjelma, joka määrittää oikean lääkeannoksen.
 
-Annosteluohje on seuraavanlainen:
+Annostusohje on seuraavanlainen:
 - 12 vuotta täyttäneen potilaan annos on 500 mikrogrammaa.
 - 2-11-vuotiaan potilaan annos on 12,5 mikrogrammaa potilaan painokiloa kohden. Annos ei saa kuitenkaan ylittää aikuisen annosta,
 - Lääkettä ei saa antaa alle kaksivuotiaalle potilaalle.
