@@ -89,10 +89,63 @@ Heiton 2 tulos: 3
 Heiton 1 tulos: 6
 ```
 
-## Taulukon hajakäsittely
-
 ## Harva taulukko
+
+Sellaista taulukkoa, jossa vain osaa alkioista käytetään, kutsutaan harvaksi taulukoksi.
+Ideana on käyttää taulukkoa sen kirjaamiseen, onko jokin arvo jo käytetty.
+
+Tarkastellaan esimerkkinä lottorivin arpovaa ohjelmaa. Ohjelma kysyy numeroiden kokonaismäärän
+ja arvottavien numeroiden määrän.
+Kun jokin numero on arvottu, vastaava alkio merkitään taulukosta käytetyksi.
+Kunkin lottoriviin tulevan numeron arvonta toistetaan niin monta kertaa, kunnes saadaan käyttämätön numero.
+Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.
+
+Alla on arvonnan toteuttava ohjelmakoodi:
+```javascript
+       var käytetty = [];
+       var numerot, arvottavat;
+       var i, r;
+
+       numerot = prompt('Monestako numerosta valitaan? ');
+       arvottavat = prompt('Montako numeroa arvotaan?');
+
+       for (i = 1; i<=arvottavat; i++) {
+           käytetty[i] = false;
+       }
+
+       for (i = 0; i<arvottavat; i++) {
+           do {
+               r = Math.ceil(Math.random()*numerot);
+           } while (käytetty[r]);
+           käytetty[r] = true;
+           console.log(r);
+       }
+```
+
+Esimerkki tulosteesta, kun valitaan seitsemän numeroa 40:stä:
+```
+11
+23
+24
+9
+27
+36
+16
+```
 
 ## Taulukkometodeja
 
+JavaScript-taulukolle voidaan soveltaa valmiiksi ohjelmoituja metodeja, joilla taulukkoa muokataan.
+Näitä metodeja ovat esimerkiksi:
+
+- `sort()`	lajittelee taulukon aakkosjärjestykseen
+- `reverse()`	vaihtaa taulukon alkiot käänteiseen 	järjestykseen
+- `shift()`	poistaa ja palauttaa taulukon 1. alkion
+- `pop()`	poistaa ja palauttaa taulukon viimeisen 	alkion
+- `push(alkioluettelo)`	lisää taulukon loppuun luetellut, pilkuilla 	erotellut alkiot
+
+Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi.
+Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
+
+## Harjoitustehtävät
 
