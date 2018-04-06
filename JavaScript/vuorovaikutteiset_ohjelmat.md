@@ -284,6 +284,52 @@ Voit tutustua tarjolla oleviin metodeihin myös virallisen JavaScript-määrityk
 <http://www.ecma-international.org/ecma-262/6.0/> (luku 20.2.)
 tai voit käyttää jotakin netin lukuisista JavaScript-lähteistä ja opetusmateriaaleista.
 
+## Muuttujien automaattinen määrittäminen
+JavaScript-ohjelmat suoritetaan oletusarvoisesti ns. löyhässä
+tilassa (sloppy mode), jossa muuttujien määrittäminen `var`-sanalla
+ei ole pakollista. Tällöin määritellään automaattisesti globaali
+(eli koko ohjelman tasolla näkyvä) muuttuja aina, kun ohjelmoija
+sijoittaa muuttujaan arvon ensimmäisen kerran.
+
+Esimerkiksi seuraava ohjelma voitaisiin suorittaa näennäisen onnistuneesti:
+```javascript
+        var akseliväli = 0;
+        aksleiväli = 2340;
+        console.log('Akseliväli on: ' + akseliväli);
+```
+Ohjelma luo aluksi `var`-lausella määritellyn
+`akseliväli`-nimisen muuttujan. Toisella rivillä kuitenkin sijoitetaan
+arvo eri nimiseen, vahingossa väärin kirjoitettuun `aksleiväli`-nimiseen
+muuttujaan. Tällöin luodaan automaattisesti toinen muuttuja.
+
+Lopulta ohjelmassa on kaksi eri muuttujaa, ja ohjelma tulostaa
+akseliväliksi nollan johtuen siitä, että oikea arvo `2340` oli
+sijoitettu väärään muuttujaan. Sen
+sijaan `var`-lauseella määritellyn, oikein kirjoitetun muuttujan arvo oli jäänyt nollaksi.
+
+Kuvatun kaltaiset tilanteet luovat hankalasti löydettäviä semanttisia virheitä,
+joissa ohjelman suoritus ei kaadu virheilmoitukseen vaan ohjelma
+toimii sen sijaan väärin.
+
+Niinpä `var`-lauseella määrittelemättömien globaalien muuttujien
+ automaattinen luonti kannattaa estää. Tämän voi tehdä lisäämällä
+ ohjelman alkuun `use strict` -lause, joka kirjoitetaan 
+ alla olevaan tapaan heittomerkkeihin:
+ 
+ ```javascript
+         'use strict';
+ ```
+
+Tämän seurauksena ohjelma suoritetaan tiukassa tilassa (strict mode).
+Tiukassa tilassa tulostuu virheilmoitus aina, kun määrittelemättömään
+muuttujaan yritetään sijoittaa arvo. Globaalia muuttujaa ei enää
+luoda automaattisesti, vaan se vaatii `var`-lauseen kirjoittamisen. Määrityksen käyttö muuttaa käyttäjän
+vahingossa tekemät, mahdollisesti huomaamatta jäävät lyöntivirheet
+näkyviksi syntaksivirheiksi. Tämä helpottaa oikein toimivien
+ohjelmien kirjoittamista.
+
+Edellä kuvatusta syystä `use strict` -määrityksen käyttö jokaisessa ohjelmassa kannattaa ottaa tavaksi.
+
 ## Harjoitustehtävät
 
 
