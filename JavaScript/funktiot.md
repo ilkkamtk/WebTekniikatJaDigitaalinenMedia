@@ -97,6 +97,82 @@ Tällöin käytössä on kaksi eri muuttujaa, joilla on sama nimi mutta erilaine
 
 ## Taulukko parametrina
 
+Edellä todettiin, että funktion argumenttien arvot kopioidaan parametrimuuttjien arvoiksi
+funktiota kutsuttaessa. Tarkastellaan seuraavaksi tilannetta, jossa funktiolle välitetään parametrina taulukko.
+
+Alkeismuuttujien tapauksessa parametrin arvona on muuttujan arvo (esimerkiksi 3). Taulukkomuuttujan arvona sen sijaan
+ei ole taulukko itsessään vaan viittaus taulukkoon. Viittauksella tarkoitetaan sen muistiosoitetta,
+johon taulukko on tallennettuna ajonaikaisessa ympäristössä.
+
+Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta:
+![muistiosoite](img/muistiosoite.png)
+
+Kun taulukko välitetään parametrina funktiota kutsuttaessa, kopioidaan sen muistiosoite. Itse taulukkoa ei kopioida parametrimuuttujan arvoksi.
+Niinpä funktion kutsussa oleva taulukkomuuttuja ja funktion sisäinen parametrimuuttuja viittaavat yhteen ja samaan taulukkoon.
+Tällaista parametrien välitystapaa kutsutaan viiteparametrien välittämiseksi (pass-by-reference). Ohjelmoijan on syytä olla tästä tietoinen, jottei taulukoiden
+käsittely parametrina aiheuta yllätyksiä.
+
+Tarkastellaan esimerkkinä alla olevaa ohjelmaa, jossa pääohjelma luo kolmialkioisen taulukon, välittää sen funktiolle parametrina ja tulostaa lopulta taulukon arvot.
+
+```javascript
+        function kasvata(taulukko) {
+            for (var i = 0; i<taulukko.length; i++) {
+                taulukko[i]++;
+            }
+            return;
+        }
+
+        var luvut = [5,6,7];
+        kasvata(luvut);
+        console.log(luvut[0] + ' ' + luvut[1] + ' ' + luvut[2]);
+```
+        
+Ohjelma tulostaa:
+```javascript
+6 7 8
+```
+
+Mitä tapahtui?
+1. Pääohjelma loi kolmealkioisen taulukon nimeltä `luvut`, johon tallennettiin luvut 5, 6 ja 7. Taulukko sijaitsee jossakin muistiosoitteessa X.
+2. `kasvata()`-funktion kutsussa muistiosoite X kopioidaan parametrimuuttujan taulukko arvoksi.
+3. Parametrimuuttujan `taulukko` kautta haetaan taulukko, ja kaikkia siinä olevia arvoja kasvatetaan yhdellä. Kyseessä on sama taulukko, joka luotiin pääohjelmassa.
+4. Funktion suoritus loppuu. Taulukon sisältö haetaan pääohjelmassa taulukkomuuttujan `luvut` kautta ja taulukon arvot tulostetaan. 
+
+Havaitaan, että kun pääohjelman parametrina välittämää taulukkoa muokataan funktiossa kasvata(), näkyy muutos myös kutsuvaan pääohjelmaan.
+
 ## Taulukko paluuarvona
+
+Funktion paluuarvona voi palauttaa viittauksen taulukkoon. Tarkastellaan alla olevaa ohjelmaa, joka palauttaa arvotun 
+lottonumerotaulukon:
+
+```javascript
+        function annaRivi(numerot, valittavat) {
+            var rivi = [];
+            var r;
+            for (var  i = 1; i<=valittavat; i++) {
+                var ok = false;
+
+                while (!ok) {
+                    ok = true;
+                    r = Math.ceil(Math.random()*numerot);
+                    for (var j = 0; j<i; j++) {
+                        if (rivi[j] == r) {
+                            ok = false;
+                        }
+                    }
+                }
+                rivi[i] = r;
+            }
+            return rivi;
+        }
+
+        var lottorivi = annaRivi(40,7);
+        for (var i = 1; i<=lottorivi.length; i++) {
+            console.log(lottorivi[i]);
+        }
+```
+Huomaa, että lottonumerotaulukko luotiin funktion sisällä. Viittaus luotuun taulukkoon palautetaan funktion paluuarvona
+(funktion sisäisen taulukkomuuttujan `rivi` arvo). Lottoriviin päästään käsiksi funktion ulkopuolelta taulukkomuuttujan `lottorivi`lautta; sen arvoksi on
+sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 
 ## Rekursio
