@@ -105,6 +105,7 @@ ei ole taulukko itsessään vaan viittaus taulukkoon. Viittauksella tarkoitetaan
 johon taulukko on tallennettuna ajonaikaisessa ympäristössä.
 
 Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta:
+
 ![muistiosoite](img/muistiosoite.png)
 
 Kun taulukko välitetään parametrina funktiota kutsuttaessa, kopioidaan sen muistiosoite. Itse taulukkoa ei kopioida parametrimuuttujan arvoksi.
