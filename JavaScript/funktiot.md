@@ -156,7 +156,7 @@ Tarkastellaan esimerkkinä alla olevaa ohjelmaa, jossa pääohjelma luo kolmialk
 ```
         
 Ohjelma tulostaa:
-```javascript
+```
 6 7 8
 ```
 
@@ -210,6 +210,27 @@ Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seur
 Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
 ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 5*4*3*2*1 eli 120.
 
-Tässä KESKEN.
+Reksursiivinen kertoman laskenta voidaan perustaa ajatukseen, että esimerkiksi luvun 5 kertoma on 5 kertaa luvun 4 kertoma.
+Näin ollen luvun 5 kertoman laskemiseksi täytyy saada selville luvun 4 kertoma, joka puolestaan on 4 kertaa luvun 3 kertoma ja niin edelleen.
+Kukin kertomista ilmaistaan aina yhtä pienemmän luvun kertoman avulla, kunnes lopulta päädytään luvun 1 kertomaan, josta heti tiedetään, että se on yksi.
+
+Ohjelmana tämä voidaan ilmaista seuraavasti:
+
+```javascript
+        function kertoma(luku) {
+            if (luku==1)
+                return 1;
+            else
+                return luku * kertoma(luku-1);
+        }
+
+        console.log(kertoma(5));
+```
+
+Vaikka rekursiivinen funktio näyttää kekseliäältä, se ei usein ole tehokkain ratkaisu. Ajonaikainen ympäristö joutuu nimittäin tallentamaan
+kesken jääneiden
+funktiokutsujen tiedot suorituksen aikana. Syvälle menevässä rekursiossa tälle kutsupinolle varattu
+kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
+
 
 ## Harjoitustehtävät
