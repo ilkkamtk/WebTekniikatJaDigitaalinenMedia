@@ -68,7 +68,7 @@ Kirjoitetaan funktion määrityksen alapuolelle funktion kutsu:
         tervehdi(4, 'Moikka!');
 ```
 Ohjelma tuottaa seuraavan tulosteen:
-```javascript
+```
 Moikka 1. kerran!
 Moikka 2. kerran!
 Moikka 3. kerran!
@@ -81,6 +81,33 @@ Näin kirjoitettu funktio on aiempaa yleiskäyttöisempi. Sitä voidaan käyttä
 
 
 ## Paluuarvo
+
+Parametrien avulla funktiolle voidaan antaa sen lukopuolelta tarvittavat lähtötiedot, joiden perusteella funktio
+suorittaa toimintansa. Usein tuon toiminnan seurauksen saadaan tulos, joka on välitettävä takaisin sille ohjelmanosalle
+(pääohjelmalle tai toiselle funktiolle), joka funktiota alun perin kutsui. Tuota palautettavaa tulosta kutsutaan funktion paluuarvoksi.
+
+Tarkastellaan esimerkkinä ohjelmaa, joka laskee kahden luvun neliösumman. Esimerkiksi lukujen 2 ja 5 neliösumma on 2*2+5*5 eli 29. Luvut, joiden neliösumma lasketaan (tässä 2 ja 5) ovat funktion parametreja. Vastaavasti laskennan tulos (tässä 29) on funktion paluuarvo, eli se tulos, joka välitetään funktion kursuvalle ohjelmanosalle.
+
+Paluuarvo palautetaan `return`-lauseella. Esimerkiksi muuttujan nimeltä `tulos` arvo palautettaisiin seuraavalla lauseella:
+```javascript
+return tulos;
+```
+
+Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen on pääohjelma, joka kutsuu neliösumma-funktiota antaen sille parametrien arvot. Lopuksi pääohjelma tulostaa `neliösumma`-funktion palauttaman paluuarvon.
+
+
+```javascript
+        function neliösumma(eka, toka) {
+                var tulos = eka*eka + toka*toka;
+                return tulos;
+        }
+        
+        var luku1, luku2, ns;
+        luku1 = prompt('Anna 1. luku.');
+        luku2 = prompt('Anna 2. luku.');
+        ns = neliösumma(luku1, luku2);
+        console.log('Lukujen ' + luku1 + ' ja ' + luku2 + ' neliösumma on ' + ns);
+```
 
 ## Muuttujien näkyvyys
 Funktioiden käyttöönoton myötä on tarpeen pohtia funktioiden näkyvyyttä.
