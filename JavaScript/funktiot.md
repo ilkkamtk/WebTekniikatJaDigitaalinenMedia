@@ -204,3 +204,12 @@ Huomaa, että lottonumerotaulukko luotiin funktion sisällä. Viittaus luotuun t
 sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 
 ## Rekursio
+
+Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
+
+Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
+ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 5*4*3*2*1 eli 120.
+
+Tässä KESKEN.
+
+## Harjoitustehtävät
