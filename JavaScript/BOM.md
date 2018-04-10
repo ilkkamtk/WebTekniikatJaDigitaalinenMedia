@@ -62,6 +62,6 @@ Kuuluu sekä BOMiin sekä DOM -standardiin
 ## [history -olio](https://developer.mozilla.org/fi/docs/Web/API/History)
 History -olio sisältää selainikkunan historian.
 ## navigator-olio
-## location -olio
-## screen -olio
+## location-olio
+## screen-olio
 ## evästeet
