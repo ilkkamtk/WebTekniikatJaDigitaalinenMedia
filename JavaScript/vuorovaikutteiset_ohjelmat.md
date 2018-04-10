@@ -371,4 +371,44 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 
 ## Harjoitustehtävät
 
+1. Kirjoita ohjelma, joka tulostaa näytölle tekstin 'Tämä on JavaScript-ohjelma!'
+
+2. Kirjoita ohjelma, joka kysyy nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi. Esimerkkejä:
+
+    - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin 'Terve, Viivi!'
+    - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin 'Terve, Ahmed!'
+    
+3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
+
+    - Selvitä, miten saat käyttöösi piin tarkan likiarvon. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference.
+
+4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta.
+    
+5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
+
+6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
+    - Yksi leiviskä on 20 naulaa, Yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
+
+    - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13,5 luotia:
+    
+        ```
+        Massa nykymittojen mukaan:
+        29 kilogrammaa ja 545.95 grammaa. 
+        ```
+
+7. Kirjoita ohjelma, joka kysyy käyttäjältä tilin saldon sekä vuotuisen korkoprosentin.
+Ohjelma ilmoittaa vuodessa kertyvän koron määrän sekä kasvaneen saldon, johon on lisätty vuosikorko.
+Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä.
+
+8. Monopoli-pelissä pelaaja heittää kahta noppaa ja etenee silmälukujen summan verran.
+   Kirjoita ohjelma, joka arpoo kaksi nopan silmälukua. Ohjelma tulostaa viesti-ikkunassa arvotut silmäluvut sekä niiden alapuolella eri rivillä silmälukujen summan.
+   
+   - Käytä funktiota `Math.random()`.
+   
+9. Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia:
+
+    1. Kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
+    2. Nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6. 
+
+
 
