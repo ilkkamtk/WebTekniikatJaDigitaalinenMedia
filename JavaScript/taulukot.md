@@ -150,3 +150,30 @@ Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
 
 ## Harjoitustehtävät
 
+1. Kirjoita ohjelma, joka kysyy käyttäjältä viisi lukua ja tulostaa ne vastakkaisessa järjestyksessä kuin ne syötettiin.
+
+     - Tehtävä on ratkaistava taulukkomuuttujan avulla.
+
+2. Kirjoita ohjelma, joka kysyy käyttäjältä osallistujien määrän. Tämän jälkeen ohjelma kysyy kaikkien osallistujen nimet.
+Lopuksi ohjelma tulostaa osallistujien nimet web-sivulle numeroituun luetteloon samassa järjestyksessä kuin ne syötettiin.
+
+3. Kirjoita ohjelma, joka kysyy kuuden koiran nimet.
+Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon käänteisessä aakkosjärjestyksessä.
+
+4. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän antaa nollan. Tämän jälkeen annetut luvut tulostetaan suurimmasta pienimpään.
+
+5. Kirjoita ohjelma, joka kysyy käyttäjältä väliltä 1..1000 olevia lukuja, kunnes hän antaa uudelleen jonkin aiemmin antamansa luvun. Tuolloin ohjelma ilmoittaa, että luku on jo annettu ja lopettaa toimintansa.
+
+6. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes käyttäjä antaa nollan. Tämän jälkeen ohjelma tulostaa annettujen lukujen mediaanin.
+   
+     - Mediaani on se luku, joka on suuruusjärjestyksessä keskimmäisin.
+     - Jos lukuja on parillinen määrä, on mediaani kahden suuruusjärjestyksessä keskimmäisen luvun keskiarvo.
+     - Huomaa, että nolla on vain lopetusmerkki. Sitä ei saa käsitellä mukana olevana lukuna mediaania laskettaessa.
+     
+7. Kirjoita alla olevan kuvauksen mukainen äänestysohjelma pienimuotoiseen kokouskäyttöön:
+    - Ohjelma kysyy ehdokkaiden lukumäärän. Jos ehdokkaita on esimerkiksi 5, saavat he äänestysnumerot 1, 2, ..., 5. (Tämän jälkeen ehdokkaat voisivat sopia keskenään ja ilmoittaa äänestäjille, mikä on kunkin ehdokkaan äänestysnumero.)
+    - Ohjelma kysyy äänestäjien lukumäärän.
+    - Ohjelma kysyy vuoron perään kultakin äänestäjältä, ketä tämä äänestää. Jos äänestäjä syöttää äänestysnumeron sijasta nollan, tulkitaan se tyhjäksi ääneksi.
+    - Ohjelma ilmoittaa vaalien voittajan (eli hänen äänestysnumeronsa).
+
+ 

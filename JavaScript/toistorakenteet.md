@@ -112,3 +112,36 @@ asti:
 ## Sisäkkäiset toistorakenteet
 
 ## Harjoitustehtävät
+
+1. Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun. Ohjelma laskee ja tulostaa luvun kertoman.
+
+    - Luvun kertomalla tarkoitetaan tuloa, joka saadaan, kun luku n kerrotaan kaikilla itseään pienemmillä positiivisilla kokonaisluvuilla 1, ..., n.
+    - Esimerkiksi luvun 4 kertoma on 4*3*2*1=24.
+    - Lukujen 0 ja 1 kertoma on yksi.
+
+2. Kirjoita ohjelma, joka kysyy käyttäjältä luvun ja tulostaa luvun neliöjuuren. Ohjelman on varauduttava siihen, että käyttäjä antaa negatiivisen luvun. Tällöin lukua pyydetään uudelleen niin kauan, kunnes saatu luku on ei-negatiivinen.
+
+3. Kirjoita ohjelma, joka kysyy käyttäjältä aloitus- ja lopetusvuoden. Ohjelma tulostaa kaikki karkausvuodet käyttäjän antamalta väliltä. Tulostus tehdään numeroimattomaan luetteloon osaksi web-sivun sisältöä.
+
+4. Kirjoita ohjelma, joka kysyy käyttäjältä arpakuutioiden lukumäärän. Ohjelma heittää kerran kaikkia arpakuutioita ja tulostaa silmälukujen summan.
+
+5. Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun ja ilmoittaa, onko se alkuluku.
+
+    - Alkulukuja ovat luvut, jotka ovat jaollisia vain ykkösellä ja itsellään.
+    - Esimerkiksi luku 13 on alkuluku, koska se voidaan jakaa vain luvuilla 1 ja 13 siten, että jako menee tasan.
+    - Toisaalta esimerkiksi luku 21 ei ole alkuluku, koska se voidaan jakaa tasan myös luvulla 3 tai luvulla 7.
+
+6. Kirjoittamasi ohjelma kysyy aluksi käyttäjältä arpakuutioiden lukumäärän sekä käyttäjää kiinnostavan silmälukujen summan.
+   Ohjelmasi tarkoituksena on nyt selvittää, millä todennäköisyydellä käyttäjän antama määrä arpakuutioita tuottaa käyttäjän antaman silmälukujen summan. Jos käyttäjä antaa esimerkiksi noppien määräksi 3 ja silmälukujen summaksi 15, ohjelma selvittää todennäköisyyden, jolla kolmen nopan silmälukujen summa on 15.
+   
+   - Ratkaise ongelma simuloimalla: Laita ohjelma heittelemään annettua määrää noppia toistorakenteessa (esim. 10000 kertaa) ja laske, kuinka suuri osuus toistoista tuotti käyttäjää kiinnostavan silmälukujen summan.
+   
+7. Kirjoita ohjelma, joka arpoo bingolapun numerot ja tulostaa ne pienimmästä suurimpaan.
+Bingolapussa on 25 numeroa alla olevan säännön mukaisesti:
+      
+    - ensimmäinen luku on jokin luvuista 1, 2, 3 ja 4.
+    - toinen luku on jokin luvuista 5, 6, 7 ja 8.
+    - yleisesti n:s luku on jokin luvuista 4n-3, 4n-2, 4n-1 ja 4n. (kun n on välillä 1, 2, ..., 25)
+      
+      
+      

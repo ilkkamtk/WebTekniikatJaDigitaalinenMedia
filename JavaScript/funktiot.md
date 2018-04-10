@@ -156,7 +156,7 @@ Tarkastellaan esimerkkinä alla olevaa ohjelmaa, jossa pääohjelma luo kolmialk
 ```
         
 Ohjelma tulostaa:
-```javascript
+```
 6 7 8
 ```
 
@@ -208,8 +208,58 @@ sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
 
 Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
-ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 5*4*3*2*1 eli 120.
+ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 120.
 
-Tässä KESKEN.
+Reksursiivinen kertoman laskenta voidaan perustaa ajatukseen, että esimerkiksi luvun 5 kertoma on 5 kertaa luvun 4 kertoma.
+Näin ollen luvun 5 kertoman laskemiseksi täytyy saada selville luvun 4 kertoma, joka puolestaan on 4 kertaa luvun 3 kertoma ja niin edelleen.
+Kukin kertomista ilmaistaan aina yhtä pienemmän luvun kertoman avulla, kunnes lopulta päädytään luvun 1 kertomaan, josta heti tiedetään, että se on yksi.
+
+Ohjelmana tämä voidaan ilmaista seuraavasti:
+
+```javascript
+        function kertoma(luku) {
+            if (luku==1)
+                return 1;
+            else
+                return luku * kertoma(luku-1);
+        }
+
+        console.log(kertoma(5));
+```
+
+Vaikka rekursiivinen funktio näyttää kekseliäältä, se ei usein ole tehokkain ratkaisu. Ajonaikainen ympäristö joutuu nimittäin tallentamaan
+kesken jääneiden
+funktiokutsujen tiedot suorituksen aikana. Syvälle menevässä rekursiossa tälle kutsupinolle varattu
+kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
+
 
 ## Harjoitustehtävät
+
+1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestagallonoina). Kirjoita funktio muunnos(), joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan.
+
+   - Yksi gallona on 3,785 litraa.
+
+2.  Kirjoita funktio `muunnos()`, joka saa parametrina gallonamäärän, muuntaa gallonat litroiksi ja palauttaa paluuarvonaan litramäärän.
+Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän, kutsuu funktiota muunnos() ja tulostaa funktion palauttaman litramäärän.
+
+3. Kirjoita funktio `itseisarvo()`, joka palauttaa paluuarvonaan parametrina saamansa luvun itseisarvon.
+   Kirjoita myös pääohjelma. joka kysyy käyttäjältä luvun, kutsuu funktiota `itseisarvo()` ja tulostaa saamansa itseisarvon.
+   
+4. Kirjoita funktio, joka palauttaa kolmesta parametreina saamastaan luvusta suurimman.
+Kirjoita myös pääohjelma. joka kysyy käyttäjältä kolme lukua, kutsuu kirjoittamaasi funktiota ja tulostaa paluuarvona saamansa suurimman luvun.
+   
+   - Huomaa, että kaksi lukua tai jopa kaikki luvut saattavat olla yhtäsuuria. Tällöinkin ohjelman on toimittava oikein.
+
+5. Kirjoita funktio `liitä()`, joka saa parametrinaan merkkijonoja sisältävän taulukon. Funktio palauttaa merkkijonon, joka on muodostettu liittämällä taulukon alkiot toisiinsa.
+   
+   - Esimerkki: Kolmialkioisessa taulukossa on alkiot Viivi, Saara ja Yrjö-Pekka. Funktio palauttaa merkkijonon ViiviSaaraYrjö-Pekka.
+
+6. Kirjoita funktio `vastaluvuksi()`, joka saa parametrinaan lukuja sisältävän taulukon. Funktio muuttaa kaikki taulukon luvut vastaluvuiksi. Funktio ei palauta paluuarvoa.
+
+7. Kirjoita funktio `parilliset()`, joka saa parametrinaan lukuja sisältävän taulukon. Funktio palauttaa toisen (yleensä pienemmän) taulukon, johon on poimittu alkuperäisen taulukon parilliset luvut.  Funktio ei saa tehdä muutoksia alkuperäiseen taulukkoon.
+
+    - Esimerkki: Kolmialkioisessa taulukossa on alkiot 2, 3 ja 0. Funktio palauttaa kaksialkioisen taulukon, jossa on alkiot 2 ja 0.
+      
+8. Kirjoita rekursiivinen funktio Fibonaccin lukujonon laskemiseksi. Fibonaccin lukujonossa seuraava alkio lasketaan
+kahden edellisen summana. Jono alkaa 1, 1, 2, 3, 5, 8, 13, ... Käyttäjältä kysytään, monennenko
+Fibonaccin lukujonossa esiintyvän luvun hän haluaa, ja ohjelma tulostaa tuon luvun.
