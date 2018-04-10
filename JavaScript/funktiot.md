@@ -208,7 +208,7 @@ sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
 
 Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
-ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 5*4*3*2*1 eli 120.
+ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 120.
 
 Reksursiivinen kertoman laskenta voidaan perustaa ajatukseen, että esimerkiksi luvun 5 kertoma on 5 kertaa luvun 4 kertoma.
 Näin ollen luvun 5 kertoman laskemiseksi täytyy saada selville luvun 4 kertoma, joka puolestaan on 4 kertaa luvun 3 kertoma ja niin edelleen.
