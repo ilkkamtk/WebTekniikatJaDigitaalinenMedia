@@ -219,7 +219,7 @@ sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 
 ## Rekursio
 
-Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
+Rekursiolla tarkoitetaan tilannetta, jossa funktio kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
 
 Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
 ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 120.
@@ -249,12 +249,12 @@ kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
 
 ## Harjoitustehtävät
 
-1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestagallonoina). Kirjoita funktio muunnos(), joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan.
+1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestagallonoina). Kirjoita funktio `muunnos()`, joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan.
 
    - Yksi gallona on 3,785 litraa.
 
 2.  Kirjoita funktio `muunnos()`, joka saa parametrina gallonamäärän, muuntaa gallonat litroiksi ja palauttaa paluuarvonaan litramäärän.
-Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän, kutsuu funktiota muunnos() ja tulostaa funktion palauttaman litramäärän.
+Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän, kutsuu funktiota `muunnos()` ja tulostaa funktion palauttaman litramäärän.
 
 3. Kirjoita funktio `itseisarvo()`, joka palauttaa paluuarvonaan parametrina saamansa luvun itseisarvon.
    Kirjoita myös pääohjelma. joka kysyy käyttäjältä luvun, kutsuu funktiota `itseisarvo()` ja tulostaa saamansa itseisarvon.
