@@ -10,6 +10,20 @@ Jo ohjelmoitua funktiota voi ajatella tällöin ”mustana laatikkona”. Sen vo
 Funktiot kutsuvat (eli käyttävät) toisiaan oman suorituksensa aikana.
 Myös web-sivulle upotettu painike (button) voi käynnistää funktion.
 
+JavaScript-kieli tukee kahta funktioiden kirjoitustapaa:
+- `function`-lauseina kirjoitetut funktiot
+- nuolifunktiot.
+
+Ensin mainittu `function`-lauseena  kirjoitettu funktio edustaa proseduraalisten ohjelmointikielten vakiintunutta funktioiden kirjoitustapaa.
+Nuolifunktiot puolestaan edustavat uutta funktionaalista ohjelmointiparadigmaa, jossa kirjoitetaan tilattomia ja sivuvaikutuksettomia funktioita.
+
+Funktionaalista ohjelmointiparadigmaa pidetään vaikeampana oppia, ja nuolifunktioiden avulla
+tuotettu JavaScript-koodi on tiiviimpää ja kehittäjälle ainakin aluksi haastavampaa ymmärtää ja tuottaa. Tästä syystä tässä materiaalissa
+käytetään `function`-lauseen avulla kirjoitettuja funktioita.
+
+
+## Parametriton ja paluuarvoton funktio
+
 Tarkastellaan aluksi esimerkkiä parametrittomasta ja paluuarvottomasta funktiosta.
 Tällainen funktio tekee aina kutsuttaessa saman asian: sen toiminnallisuutta ei voi säädellä
 funktion ulkopuolelta eikä funktio palauta mitään tietoja sitä kutsuvalle ohjelmanosalle.
@@ -23,7 +37,7 @@ Seuraavassa määriteltävä funktio tulostaa kiinteän tervehdystekstin:
         }
 ```     
 
-Funktio päättyy return-lauseeseen. Lausetta käytetään myös paluuarvon palauttamiseen, mutta tässä tapauksessa paluuarvoa ei ole.
+Funktio päättyy `return`-lauseeseen. Lausetta käytetään myös paluuarvon palauttamiseen, mutta tässä tapauksessa paluuarvoa ei ole.
 
 Edellä kirjoitettua funktiota ei suoriteta sen perusteella, että se on kirjoitettu ohjelmaan, vaan funktiota on erikseen
 kutsuttava sen ulkopuolelta.
@@ -40,7 +54,7 @@ Funktion käyttö parantaa modulaarisuutta: jos tervehtimisen tapaa tarvitsee
 myöhemmin ohjelmassa muuttaa, riittää muutos tehdä yhteen paikkaan: funktion määritykseen.
 
 
-## Parametrit
+## Parametrillinen funktio
 
 Laajennetaan edellä esiteltyä tervehtimisfunktiota siten, että ohjelmoija voi määrittää
 tervehdystekstin ja tervehtimiskertojen lukumäärän. Tätä kutsutaan funktion parametrisoinniksi:
@@ -80,7 +94,7 @@ Funktion kutsun yhteydessä ensimmäisen argumentin arvo (`Moikka!`-merkkijono) 
 Näin kirjoitettu funktio on aiempaa yleiskäyttöisempi. Sitä voidaan käyttää erilaisten tervehdysten tuottamiseksi eri osissa pääohjelmaa.
 
 
-## Paluuarvo
+## Paluuarvollinen funktio
 
 Parametrien avulla funktiolle voidaan antaa sen lukopuolelta tarvittavat lähtötiedot, joiden perusteella funktio
 suorittaa toimintansa. Usein tuon toiminnan seurauksen saadaan tulos, joka on välitettävä takaisin sille ohjelmanosalle

@@ -15,9 +15,10 @@ summan (vaihe 2) ja ohjelma laskee tulostetun summan (vaihe 3).
 
 Aloitetaan yksinkertaisesta ohjelmasta, joka tuottaa käyttäjälle tulosteen.
 
-JavaScript tarjoaa kaksi tulostusvaihtoehtoa:
+JavaScript tarjoaa kolme tulostusvaihtoehtoa:
 1. Konsolin lokituloste
-2. Ponnahtava varoitusikkuna.
+2. Ponnahtava varoitusikkuna
+3. Tulostus osaksi verkkosivua
 
 Tutustutaan tässä kumpaankin tulostustapaan. Jatkossa rajoitutaan konsolin lokitulosteen käyttöön, koska se
 on ohjelmoinnin opiskelun kannalta tarkoituksenmukaisempi: tulosteet saadaan kerralla näkyviin, eikä jokaisen
@@ -48,6 +49,37 @@ Selainikkunaan ilmestyvä viesti-ikkuna näyttää tältä:
 ![viesti-ikkuna](img/viesti_ikkuna.png)
 
 Tästä eteenpäin esimerkeissä käytetään konsolitulostusvaihtoehtoa eli `console.log()`-metodia.
+
+### Tulostus osaksi verkkosivua
+
+JavaScript-ohjelma voi tulostaa  HTML-sisältöä verkkosivun osaksi `document.write`-metodin avulla.
+Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappale-elementin (`p`) sisällön ohjelmallisesti:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-kokeilu</title>
+</head>
+<body>
+<h1>Tervehditään</h1>
+    <script language="JavaScript">
+        'use strict';
+        var nimi = 'Aapo';
+        document.write('<p>Hyvää huomenta, käyttäjä!</p>');
+    </script>
+</body>
+</html>
+```
+
+Avattava verkkosivu näyttää selaimessa tältä:
+![tulostus sivun sisällöksi](img/sivunsisalloksi.png)
+
+Käytännössä ohjelmalliset tulostukset kerätään yleensä omiin funktioihinsa, joita kutsutaan jonkin tapahtuman - esimerkiksi 
+verkkosivulla olevan painikkeen painamisen - seurauksena. Tämä tulostustapa edellyttää funktion käsitteen ja dokumenttioliomallin
+hallintaa, joten sitä ei tässä yhteydessä käsitellä enempää.
+
 
 ### Merkkijonoliteraalit
 
