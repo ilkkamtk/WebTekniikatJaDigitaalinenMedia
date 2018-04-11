@@ -57,11 +57,23 @@ const intervalli = setInterval(moikkaa, 1000);
 ```javascript
 clearInterval(intervalli);
 ```
-## [document -olio](https://developer.mozilla.org/fi/docs/Web/API/Document)
-Kuuluu sekä BOMiin sekä DOM -standardiin
-## [history -olio](https://developer.mozilla.org/fi/docs/Web/API/History)
-History -olio sisältää selainikkunan historian.
-## navigator-olio
-## location-olio
-## screen-olio
-## evästeet
+## [document-olio](https://developer.mozilla.org/en-US/docs/Web/API/Window/document)
+Kuuluu sekä BOMiin sekä DOM-standardiin
+Tarkemmin document-oliosta [DOM-sivulla](DOM.md)
+## [history-olio](https://developer.mozilla.org/fi/docs/Web/API/History)
+`history`-olio sisältää selainikkunan historian eli ne sivut, joilla on käyty kyseisessä selainikkunassa tai välilehdessä.
+```javascript
+history.back(); // siirry historiassa taaksepäin
+history.forward(); // siirry historiassa eteenpäin
+history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
+```
+
+## [navigator-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
+`navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. `navigator.gelocation` palauttaa laitteen gps-koordinaatit.
+ 
+ Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista haistella onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
+## [location-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/location)
+`location`-rajapinta kertoo dokumentin osoitetiedot. Yleensä sitä käytetään selaimen uudelleenohjaukseen:
+```javascript
+location.href = 'http://metropolia.fi'; 
+```
