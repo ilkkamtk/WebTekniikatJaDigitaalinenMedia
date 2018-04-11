@@ -420,7 +420,7 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
 
 6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
-    - Yksi leiviskä on 20 naulaa, Yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
+    - Yksi leiviskä on 20 naulaa, yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
 
     - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13,5 luotia:
     
