@@ -145,7 +145,7 @@ Alkeismuuttujien tapauksessa parametrin arvona on muuttujan arvo (esimerkiksi 3)
 ei ole taulukko itsessään vaan viittaus taulukkoon. Viittauksella tarkoitetaan sen muistiosoitetta,
 johon taulukko on tallennettuna ajonaikaisessa ympäristössä.
 
-Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta:
+Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta. (Kuvassa olevat muistiosoitteet ovat "hatusta tempaistuja". Todelliset muistiosoitteet eivät näy ohjelmoijalle eikä niillä ole ohjelmoinnin kannalta merkitystä.)
 
 ![muistiosoite](img/muistiosoite.png)
 
