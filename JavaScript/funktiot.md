@@ -7,7 +7,7 @@ useaan otteeseen.
 
 Jo ohjelmoitua funktiota voi ajatella tällöin ”mustana laatikkona”. Sen voi ottaa aina tarvittaessa käyttöön - onhan se jo kertaalleen ohjelmoitu ja testattu huolellisesti.
 
-Funktiot kutsuvat (eli käyttävät) toisiaan oman suorituksensa aikana.
+Funktiota kutsutaan (eli käytetään) pääohjelmasta eli funktioiden ulkopuolisesta ohjelmanosasta. Funktiot voivat myös kutsua  toisiaan.
 Myös web-sivulle upotettu painike (button) voi käynnistää funktion.
 
 JavaScript-kieli tukee kahta funktioiden kirjoitustapaa:
