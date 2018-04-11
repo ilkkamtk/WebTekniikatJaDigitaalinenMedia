@@ -91,6 +91,35 @@ document.scripts    // hakee kaikki script-elementit
 ### CSS:n käsittely
 JavaScriptillä voidaan myös muokata elementtien ulkoasua. Vaihtoehtoina tällöin on joko vaihtaa style-attribuutin tai class-attribuuttien arvoja aivan kuten HTML-dokumenteissa on normaalistikin tapana.
 
+Inline eli style attribuutin muokkaaminen:
 
+```html
+<p style="background-color: #ccc; padding: 1rem;" id="kappale">Jotain tekstiä</p>
+
+<script>
+document.querySelector('#kappale').style = "background-color: #222; padding: 3rem;";
+</script>
+```
+Class attribuutin muokkaaminen:
+```html
+<style>
+.punainen {
+    color: #f00;
+}
+
+.sininen {
+    color: #00f;
+}
+</style>
+
+<p class="punainen" id="kappale">Jotain tekstiä</p>
+
+<script>
+document.querySelector('#kappale').setAttribute('class', 'sininen');
+// tai
+document.querySelector('#kappale').classList.toggle('sininen');
+</script>
+```
+[classList-dokumentaatio](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
 ## Lomakkeen kanssa työskentely
