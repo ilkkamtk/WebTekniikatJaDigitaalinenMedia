@@ -74,6 +74,7 @@ Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappal
 ```
 
 Avattava verkkosivu näyttää selaimessa tältä:
+
 ![tulostus sivun sisällöksi](img/sivunsisalloksi.png)
 
 Käytännössä ohjelmalliset tulostukset kerätään yleensä omiin funktioihinsa, joita kutsutaan jonkin tapahtuman - esimerkiksi 
