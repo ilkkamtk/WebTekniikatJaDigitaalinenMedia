@@ -47,7 +47,7 @@ console.log(vastaus);
 ### [setInterval-metodi](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 `setInterval()`-metodin avulla voidaan kutsua funktiota tietyin väliajoin. `setInterval()`-metodi palauttaa `interval ID`:n, jonka avulla intervalli voidaan myöhemmin pysäyttää kutsumalla `clearInterval()`-metodia
 ```javascript
-const moikkaa = () => {
+function moikkaa() {
   console.log('moro');
 }
 
