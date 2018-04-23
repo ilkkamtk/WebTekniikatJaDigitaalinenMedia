@@ -111,6 +111,39 @@ asti:
 ```
 ## Sisäkkäiset toistorakenteet
 
+Toisinaan on tarpeen tuottaa kahden tai useamman muuttujan arvoyhdistelmiä: esimerkiksi tulostettaessa lukujen yhdestä
+viiteen kertotaulu on ensimmäisen tulon tekijän saatava vuoron perään kaikki kokonaislukuarvot yhdestä viiteen ja toisen tulon tekijän samoin.
+
+Tämänkaltainen ongelma voidaan ratkaista kahden sisäkkäisen toistorakenteen avulla:
+
+```javascript
+        var i, j, tulo;
+        for (i = 1; i<=5; i++) {
+            for (j = 1; j<=5; j++) {
+                tulo = i*j;
+                console.log(i + ' kertaa ' + j + ' on ' + tulo + ".");
+            }
+        }
+```
+Huomaa kahden kierrosmuuttujan (`i` ja `j`) käyttö. Ulommassa toistorakenteessa kierrosmuuttuja `i` saa ensimmäisellä
+kierroksella arvon yksi, minkä jälkeen sisemmän toistorakenteen kierrosmuuttuja käy läpi kaikki arvot yhdestä viiteen.
+Sen jälkeen ulomman toistorakenteen kierrosmuuttuja kasvaa arvoon kaksi, ja sisempi toistorakenne käydään jälleen
+läpi kokonaisuudessaan. Tätät jatketaan kunnes ulomman rakenteen kierrosmuuttuja kasvaa lopulta arvoon kuusi, jolloin sen toistoehto
+on tullut epätodeksi.
+
+Ohjelma tuottaa alla olevan tulosteen:
+```
+1 kertaa 1 on 1.
+1 kertaa 2 on 2.
+1 kertaa 3 on 3.
+1 kertaa 4 on 4.
+1 kertaa 5 on 5.
+2 kertaa 1 on 2.
+2 kertaa 2 on 4.
+...
+5 kertaa 5 on 25.
+```
+
 ## Harjoitustehtävät
 
 1. Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun. Ohjelma laskee ja tulostaa luvun kertoman.

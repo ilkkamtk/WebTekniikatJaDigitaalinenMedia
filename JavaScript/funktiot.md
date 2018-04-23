@@ -7,8 +7,22 @@ useaan otteeseen.
 
 Jo ohjelmoitua funktiota voi ajatella tällöin ”mustana laatikkona”. Sen voi ottaa aina tarvittaessa käyttöön - onhan se jo kertaalleen ohjelmoitu ja testattu huolellisesti.
 
-Funktiot kutsuvat (eli käyttävät) toisiaan oman suorituksensa aikana.
-Myös web-sivulle upotettu painike (button) voi käynnistää funktion.
+Funktiota kutsutaan (eli käytetään) pääohjelmasta eli funktioiden ulkopuolisesta ohjelmanosasta. Funktiot voivat myös kutsua  toisiaan.
+Myös web-sivulle upotettu painike voi käynnistää funktion.
+
+JavaScript-kieli tukee kahta funktioiden kirjoitustapaa:
+- `function`-lauseina kirjoitetut funktiot
+- nuolifunktiot.
+
+Ensin mainittu `function`-lauseena  kirjoitettu funktio edustaa proseduraalisten ohjelmointikielten vakiintunutta funktioiden kirjoitustapaa.
+Nuolifunktiot puolestaan edustavat uutta funktionaalista ohjelmointiparadigmaa, jossa kirjoitetaan tilattomia ja sivuvaikutuksettomia funktioita.
+
+Funktionaalista ohjelmointiparadigmaa pidetään vaikeampana oppia, ja nuolifunktioiden avulla
+tuotettu JavaScript-koodi on tiiviimpää ja kehittäjälle ainakin aluksi haastavampaa ymmärtää ja tuottaa. Tästä syystä tässä materiaalissa
+käytetään `function`-lauseen avulla kirjoitettuja funktioita.
+
+
+## Parametriton ja paluuarvoton funktio
 
 Tarkastellaan aluksi esimerkkiä parametrittomasta ja paluuarvottomasta funktiosta.
 Tällainen funktio tekee aina kutsuttaessa saman asian: sen toiminnallisuutta ei voi säädellä
@@ -23,7 +37,7 @@ Seuraavassa määriteltävä funktio tulostaa kiinteän tervehdystekstin:
         }
 ```     
 
-Funktio päättyy return-lauseeseen. Lausetta käytetään myös paluuarvon palauttamiseen, mutta tässä tapauksessa paluuarvoa ei ole.
+Funktio päättyy `return`-lauseeseen. Lausetta käytetään myös paluuarvon palauttamiseen, mutta tässä tapauksessa paluuarvoa ei ole.
 
 Edellä kirjoitettua funktiota ei suoriteta sen perusteella, että se on kirjoitettu ohjelmaan, vaan funktiota on erikseen
 kutsuttava sen ulkopuolelta.
@@ -40,7 +54,7 @@ Funktion käyttö parantaa modulaarisuutta: jos tervehtimisen tapaa tarvitsee
 myöhemmin ohjelmassa muuttaa, riittää muutos tehdä yhteen paikkaan: funktion määritykseen.
 
 
-## Parametrit
+## Parametrillinen funktio
 
 Laajennetaan edellä esiteltyä tervehtimisfunktiota siten, että ohjelmoija voi määrittää
 tervehdystekstin ja tervehtimiskertojen lukumäärän. Tätä kutsutaan funktion parametrisoinniksi:
@@ -80,7 +94,7 @@ Funktion kutsun yhteydessä ensimmäisen argumentin arvo (`Moikka!`-merkkijono) 
 Näin kirjoitettu funktio on aiempaa yleiskäyttöisempi. Sitä voidaan käyttää erilaisten tervehdysten tuottamiseksi eri osissa pääohjelmaa.
 
 
-## Paluuarvo
+## Paluuarvollinen funktio
 
 Parametrien avulla funktiolle voidaan antaa sen lukopuolelta tarvittavat lähtötiedot, joiden perusteella funktio
 suorittaa toimintansa. Usein tuon toiminnan seurauksen saadaan tulos, joka on välitettävä takaisin sille ohjelmanosalle
@@ -131,7 +145,7 @@ Alkeismuuttujien tapauksessa parametrin arvona on muuttujan arvo (esimerkiksi 3)
 ei ole taulukko itsessään vaan viittaus taulukkoon. Viittauksella tarkoitetaan sen muistiosoitetta,
 johon taulukko on tallennettuna ajonaikaisessa ympäristössä.
 
-Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta:
+Alla oleva kuvaa esittää muistiosoitteen ja sen sisällön välistä suhdetta. (Kuvassa olevat muistiosoitteet ovat "hatusta tempaistuja". Todelliset muistiosoitteet eivät näy ohjelmoijalle eikä niillä ole ohjelmoinnin kannalta merkitystä.)
 
 ![muistiosoite](img/muistiosoite.png)
 
@@ -205,7 +219,7 @@ sijoitettu funktion paluuarvona saatu viittaus taulukkoon.
 
 ## Rekursio
 
-Rekursiolla tarkoitetaan tilannetta, jossa funktion kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
+Rekursiolla tarkoitetaan tilannetta, jossa funktio kutsuu itseään, jonka seurauksena kutsuttu funktio kutsuu jälleen itseään ja niin edelleen. Jossain välissä kutsupinon syveneminen päättyy ja rekursio lähtee purkautumaan.
 
 Tarkastellaan esimerkkinä rekursiivisesta ohjelmasta kertoman laskemista. Kertomalla tarkoitetaan tuloa, jossa tulon tekijöinä
 ovat luvun lisäksi kaikki sitä pienemmät positiiviset kokonaisluvut, kukin kertaalleen. Esimerkiksi luvun 5 kertoma on 120.
@@ -235,12 +249,12 @@ kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
 
 ## Harjoitustehtävät
 
-1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestagallonoina). Kirjoita funktio muunnos(), joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan.
+1. Yhdysvalloissa bensiinin määrä mitataan yleensä gallonoina (tarkkaan ottaen nestagallonoina). Kirjoita funktio `muunnos()`, joka kysyy käyttäjältä bensamäärän gallonoina, muuntaa sen litroiksi ja tulostaa litramäärän. Kirjoita funktion kutsu pääohjelmaan.
 
    - Yksi gallona on 3,785 litraa.
 
 2.  Kirjoita funktio `muunnos()`, joka saa parametrina gallonamäärän, muuntaa gallonat litroiksi ja palauttaa paluuarvonaan litramäärän.
-Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän, kutsuu funktiota muunnos() ja tulostaa funktion palauttaman litramäärän.
+Kirjoita myös pääohjelma, joka kysyy käyttäjältä gallonamäärän, kutsuu funktiota `muunnos()` ja tulostaa funktion palauttaman litramäärän.
 
 3. Kirjoita funktio `itseisarvo()`, joka palauttaa paluuarvonaan parametrina saamansa luvun itseisarvon.
    Kirjoita myös pääohjelma. joka kysyy käyttäjältä luvun, kutsuu funktiota `itseisarvo()` ja tulostaa saamansa itseisarvon.
