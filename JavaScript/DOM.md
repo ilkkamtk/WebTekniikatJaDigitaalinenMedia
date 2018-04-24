@@ -6,6 +6,9 @@ Document Object Model eli dokumenttioliomalli on puumainen kuvaus HTML dokumenti
 HTML DOM on standardi, joka määrittelee kuinka HTML elementtejä valitaan, muokataan, lisätään ja poistetaan. Kaikkia elementtejä käsitellään olioina ja jokaista elementtiä, attribuuttia ja elementin sisältöä (esim. tekstiä) kutsutaan nimellä 'node'.
 ```html
 <html>
+    <head>
+        <title>Esimerkki</title>
+    </head>
     <body>
         <p>Tässä on yksi kappale</p>
         <script>
@@ -37,6 +40,7 @@ solmu.removeChild(lapsi)            // poistaa solmu-nodesta lapsinoden
 Koska document-rajapinta perii [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)- ja [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-rajapinnat, itse asiassa tärkeimmät ominaisuudet tulevat niistä:
 ```javascript
 elem.innerHTML   // elem-noden sisältämä HTML-koodi
+elem.innerText   // elem-noden sisältämä teksti
 elem.nodeName    // elem-noden elementtityyppi
 elem.nodeValue   // elem-noden arvo
 elem.parentNode  // elem-noden parentnode

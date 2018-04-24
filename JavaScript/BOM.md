@@ -70,27 +70,39 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
 
 ## [navigator-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
 `navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) palauttaa laitteen gps-koordinaatit:
-```javascript
-const options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
+```html
+<!-- haetaan käyttäjän paikkatiedot ja näytetään ne Google Mapsin avulla -->
+<iframe width="600" height="450" frameborder="0" style="border:0"></iframe>
 
-function success(pos) {
-  const crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-}
-
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options);
+<script>
+    // asetukset paikkatiedon hakua varten (valinnainen)
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+    
+    // Funktio, joka ajetaan, kun paikkatiedot on haettu
+    function success(pos) {
+      const crd = pos.coords;
+    
+      // tulostetaan paikkatiedot konsoliin
+      console.log('Your current position is:');
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+      console.log(`More or less ${crd.accuracy} meters.`);
+      
+      // haetaan Google Maps iframeen
+      document.querySelector('iframe').src = `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
+      
+    }
+    
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+    
+    navigator.geolocation.getCurrentPosition(success, error, options);
+</script>
 ```
 Navigator rajapinnasta löytyy myös [MediaDevices-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), jolla voidaan käyttää laitteen kameraa ja/tai mikrofonia. Esim:
 ```html
@@ -113,7 +125,8 @@ navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
 </script>
 ```
  
- Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista haistella onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
+ Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista [haistella](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
+
 ## [location-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/location)
 `location`-rajapinta kertoo dokumentin osoitetiedot. Yleensä sitä käytetään selaimen uudelleenohjaukseen:
 ```javascript
