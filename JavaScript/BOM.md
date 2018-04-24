@@ -69,7 +69,7 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
 ```
 
 ## [navigator-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
-`navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. `navigator.gelocation` palauttaa laitteen gps-koordinaatit:
+`navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) palauttaa laitteen gps-koordinaatit:
 ```javascript
 const options = {
   enableHighAccuracy: true,
@@ -92,7 +92,7 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 ```
-Navigator rajapinnasta löytyy myös MediaDevices-rajapinta, jolla voidaan käyttää laitteen kameraa ja/tai mikrofonia. Esim:
+Navigator rajapinnasta löytyy myös [MediaDevices-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia), jolla voidaan käyttää laitteen kameraa ja/tai mikrofonia. Esim:
 ```html
 <video autoplay></video>
 
