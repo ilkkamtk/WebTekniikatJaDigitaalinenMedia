@@ -1,5 +1,5 @@
 # BOM - Browser Object Model
-Browser Object Model on kokoelma ominaisuuksia joilla käistellään mm. selainikkunaa ja ikkunoiden väistä kommunikointia. BOM ei ole standardi, joten eri selainten välillä on pieniä eroja. 
+Browser Object Model on kokoelma ominaisuuksia joilla käsitellään mm. selainikkunaa ja ikkunoiden väistä kommunikointia. BOM ei ole standardi, joten eri selainten välillä on pieniä eroja. 
 
 ## [window-olio](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 Window-olio tarkoittaa selainikkunaa ja se on tuettu kaikissa selaimissa. Kaikki globaalit JavaScript-oliot, -funktiot ja -muuttujat ovat automaattisesti window-olion jäseniä. Esim:
@@ -69,7 +69,45 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
 ```
 
 ## [navigator-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
-`navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. `navigator.gelocation` palauttaa laitteen gps-koordinaatit.
+`navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. `navigator.gelocation` palauttaa laitteen gps-koordinaatit:
+```javascript
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  const crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+```
+Navigator rajapinnasta löytyy myös MediaDevices-rajapinta, jolla voidaan käyttää laitteen kameraa ja/tai mikrofonia. Esim:
+```html
+<video autoplay></video>
+
+<script>
+// Määritetään videon toivottu koko.
+const constraints = { video: { width: 1280, height: 720 } }; 
+
+navigator.mediaDevices.getUserMedia(constraints)
+    .then(function(mediaStream) {
+      const video = document.querySelector('video');
+      video.srcObject = mediaStream;
+    })
+    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+</script>
+```
  
  Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista haistella onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
 ## [location-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/location)
