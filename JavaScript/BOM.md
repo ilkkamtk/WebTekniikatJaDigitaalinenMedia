@@ -75,7 +75,7 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
 <iframe width="600" height="450" frameborder="0" style="border:0"></iframe>
 
 <script>
-    // asetukset paikkatiedon hakua varten (valinnainen)
+    // Asetukset paikkatiedon hakua varten (valinnainen)
     const options = {
       enableHighAccuracy: true,
       timeout: 5000,
@@ -86,21 +86,23 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
     function success(pos) {
       const crd = pos.coords;
     
-      // tulostetaan paikkatiedot konsoliin
+      // Tulostetaan paikkatiedot konsoliin
       console.log('Your current position is:');
       console.log(`Latitude : ${crd.latitude}`);
       console.log(`Longitude: ${crd.longitude}`);
       console.log(`More or less ${crd.accuracy} meters.`);
       
-      // haetaan Google Maps iframeen
+      // Haetaan Google Maps iframeen ja lisätään paikkatiedot hakuparametriin
+      // Huomaa, että Google Maps vaatii API-avaimen toimiakseen. Sen saa esim. täältä: https://developers.google.com/maps/documentation/embed/
       document.querySelector('iframe').src = `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
-      
     }
     
+    // Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     }
     
+    // Käynnistetään paikkatietojen haku
     navigator.geolocation.getCurrentPosition(success, error, options);
 </script>
 ```
@@ -109,20 +111,25 @@ Navigator rajapinnasta löytyy myös [MediaDevices-rajapinta](https://developer.
 <video autoplay></video>
 
 <script>
-// Määritetään videon toivottu koko.
-const options = { video: { width: 1280, height: 720 } };
-
-function success(mediaStream) {
-  const video = document.querySelector('video');
-  video.srcObject = mediaStream;
-}
-
-function error(err) { 
-  console.warn(`ERROR(${err.name}): ${err.message}`); 
-}
-
-navigator.mediaDevices.getUserMedia(options).then(success).catch(error);
-</script>
+    // Määritetään videon toivottu koko.
+    const options = { video: { width: 1280, height: 720 } };
+    
+    // Funktio, joka ajetaan, kun kamerasta saadaan kuva
+    function success(mediaStream) {
+      // Valitaan video-elementti
+      const video = document.querySelector('video');
+      // Asetetaan kameran striimi video-elementin kuvalähteeksi 
+      video.srcObject = mediaStream;
+    }
+    
+    // Funktio, joka ajetaan, jos tapahtuu virhe
+    function error(err) { 
+      console.warn(`ERROR(${err.name}): ${err.message}`); 
+    }
+    
+    // Käynnistetään kamera
+    navigator.mediaDevices.getUserMedia(options).then(success).catch(error);
+    </script>
 ```
  
  Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista [haistella](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
