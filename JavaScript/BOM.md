@@ -109,9 +109,7 @@ function error(err) {
   console.warn(`ERROR(${err.name}): ${err.message}`); 
 }
 
-navigator.mediaDevices.getUserMedia(constraints)
-    .then(success)
-    .catch(error); // always check for errors at the end.
+navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
 </script>
 ```
  
