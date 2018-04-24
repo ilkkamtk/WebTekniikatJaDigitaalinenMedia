@@ -110,7 +110,7 @@ Navigator rajapinnasta löytyy myös [MediaDevices-rajapinta](https://developer.
 
 <script>
 // Määritetään videon toivottu koko.
-const constraints = { video: { width: 1280, height: 720 } };
+const options = { video: { width: 1280, height: 720 } };
 
 function success(mediaStream) {
   const video = document.querySelector('video');
@@ -121,7 +121,7 @@ function error(err) {
   console.warn(`ERROR(${err.name}): ${err.message}`); 
 }
 
-navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
+navigator.mediaDevices.getUserMedia(options).then(success).catch(error);
 </script>
 ```
  
