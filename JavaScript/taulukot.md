@@ -30,7 +30,7 @@ Taulukon käyttöönotto koostuu taulukkomuuttujan määrityksestä ja taulukon 
 
 Seuraava lause luo taulukkomuuttujan nimeltä luvut, jonka arvona on aluksi tyhjä taulukko.
 ```javascript
-        var luvut = [];
+        let luvut = [];
 ```
 
 Lisätään taulukkoon sen jälkeen kolme alkiota:
@@ -60,8 +60,8 @@ Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksess
 
 ```javascript
         const HEITOT = 5;
-        var i, tulos;
-        var heitot = [];
+        let i, tulos;
+        let heitot = [];
 
         for (i = 0; i<HEITOT; i++) {
             tulos = Math.ceil(Math.random()*6);
@@ -103,9 +103,9 @@ Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.
 
 Alla on arvonnan toteuttava ohjelmakoodi:
 ```javascript
-       var käytetty = [];
-       var numerot, arvottavat;
-       var i, r;
+       let käytetty = [];
+       let numerot, arvottavat;
+       let i, r;
 
        numerot = prompt('Monestako numerosta valitaan? ');
        arvottavat = prompt('Montako numeroa arvotaan?');

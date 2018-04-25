@@ -8,7 +8,7 @@ seuraava ohjelma kysyy käyttäjältä tämän iän ja ilmoittaa,
 jos käyttäjä on syötteen perusteella alaikäinen:
 
 ```javascript
-        var ikä;
+        let ikä;
         ikä = prompt('Anna ikäsi.');
         if (ikä<18) {
             console.log('Olet alaikäinen.');
@@ -66,7 +66,7 @@ Loogisia lausekkeita voidaan liittää loogisten operaattoreiden avulla. Käytö
 Esimerkiksi seuraava ohjelma ilmoittaa, jos käyttäjän antama kokonaisluku on sekä parillinen että yli 10:
 
 ```javascript
-        var luku;
+        let luku;
         luku = prompt('Anna kokonaisluku');
         if (luku%2==1 && luku>10) {
             console.log('Annoit parillisen luvun, joka on suurempi kuin 10');
@@ -82,7 +82,7 @@ Kaksi vaihtoehtoista lohkoa ovat toisensa poissulkevia; jompikumpi suoritetaan a
 Seuraava esimerkki ilmoittaa, onko käyttäjän antama kokonaisluku parillinen vai pariton:
 
 ```javascript
-        var luku;
+        let luku;
         luku = prompt('Anna kokonaisluku');
         if (luku%2==0) {
             console.log('Annoit parillisen luvun');
@@ -98,7 +98,7 @@ Monen toisensa poissulkevan vaihtoehdon valintarakenteeseen liitetään tarpeell
 `else if`-haaroja. Suorituksen aikana siirrytään alkuperäiseen `if`-haaraan - tai sen valintahdon ollessa epätosi -  ensimmäiseen `else-if`-haaraan, jonka valintaehto täyttyy. Seuraava ohjelma kommentoi täysi-ikäisen käyttäjän ikää:
 
 ```javascript
-        var ikä;
+        let ikä;
         ikä = prompt('Anna ikäsi');
         if (ikä >= 65) {
             console.log('Olet eläkeikäinen');
@@ -119,7 +119,7 @@ Ohjelmassa ei ole `else`-haaraa; jos käyttäjä syöttää iäkseen 17 vuotta t
 
 Jos aina halutaan päätyä johonkin lopputulokseen, kirjoitetaan viimeinen haara `else`-haarana. Seuraava ohjelma ilmoittaa, onko käyttäjän syöttämä luku positiivinen, negatiivinen vai nolla:
 ```javascript
-        var luku;
+        let luku;
         ikä = prompt('Anna luku');
         if (luku>0) {
             console.log('Luku on positiivinen.');
@@ -148,7 +148,7 @@ Annostusohje on seuraavanlainen:
 
 Lääkeannoksen määritys voidaan kirjoittaa JavaScript-ohjelmana näin:
 ```javascript
-        var ikä, paino, annos;
+        let ikä, paino, annos;
         ikä = prompt('Anna potilaan ikä vuosina.');
         if (ikä>=12) {
             annos = 500;
@@ -177,7 +177,7 @@ Esimerkiksi seuraava ohjelma kysyy käyttäjältä laivan hyttiluokan (A, B tai 
 sitä vastaavan sanallisen kuvauksen:
 
 ```javascript
-        var luokka = prompt("Anna hyttiluokan tunnus (A/B/C).");
+        let luokka = prompt("Anna hyttiluokan tunnus (A/B/C).");
         switch (luokka) {
             case 'A':
                 console.log('Ikkunallinen yläkansihytti.');

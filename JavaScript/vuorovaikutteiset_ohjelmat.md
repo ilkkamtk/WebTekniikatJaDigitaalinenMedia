@@ -103,10 +103,14 @@ Ohjelman tarvitsemia arvoja voidaan tallentaa muuttujiin.
 Muuttujaan tallennettavia arvoja voidaan lukea ohjelman aikana monta kertaa,
 ja kertaalleen asetettavia arvoja voidaan muuttaa.
 
-JavaScript-kielen muuttujat määritellään `var`-lauseella.
+JavaScript-kielen muuttujat määritellään `let`- tai `var`-lauseella. Avainsanan
+valinta vaikuttaa muuttujan näkyvyyteen: näkyykö muuttuja koodilohkon vai funktion tasolla.
+Näitä ohjelmointikielen rakenteita käsitellään myöhemmin; tässä vaiheessa
+riittää opetella määrittelemään muuttujat `let`-avainsanan avulla.
+
 Esimerkiksi muuttuja nimeltä `nimi` määritellään seuraavasti:
 ```javascript
-var nimi;
+let nimi;
 ```
 Tässä vaiheessa muuttuja on määritelty eli ohjelman näkökulmasta
 olemassa: sille voidaan asettaa arvo, ja sen arvo voidaan lukea. 
@@ -122,7 +126,7 @@ nimi = 'Milla';
 
 Muuttuja voitaisiin myös määritellä ja alustaa samalla kertaa:
 ```javascript
-var nimi = 'Milla';
+let nimi = 'Milla';
 ```
 
 Muuttujat ovat löyhästi tyypitettyjä, joten muuttujaa määriteltäessä
@@ -141,7 +145,7 @@ nimeltä luku, sijoittaa sen arvoksi
 8, tulostaa sijoitetun arvon, kasvattaa arvoa kahdella ja lopuksi tulostaa kasvatetun
 arvon:
 ```javascript
-        var luku, nimi;
+        let luku, nimi;
         luku = 153;
         nimi = 'Anna';
         console.log(luku);
@@ -163,11 +167,11 @@ Pekka
 
 Edellä käsiteltiin kahden tyyppisiä muuttujia: kokonaislukuja ja merkkijonoja.
 JavaScript-kielessä on kuusi muuttujien alkeistyyppiä:
-- totuusarvo- eli boolean-tyyppi, jonka arvona voi olla true tai false
+- totuusarvo- eli boolean-tyyppi, jonka arvona voi olla `true` tai `false`
 - numeerinen tyyppi, joka voi sisältää kokonais- tai liukuluvun.
 - merkkijono
-- null, joka ilmaisee, että arvo on tyhjä.
-- undefined, joka ilmaisee, että määriteltyä muuttujaa
+- `null`, joka ilmaisee, että arvo on tyhjä.
+- `undefined`, joka ilmaisee, että määriteltyä muuttujaa
 ei vielä ole alustettu, jolloin sen tyyppi ei ole tiedossa.
 - symboli, jonka avulla voidaan luoda yksikäsitteisiä tunnisteita.
 
@@ -176,7 +180,7 @@ joka voi sisältää rakenteeltaan mielivaltaisen monimutkaisia olioita.
 
 Muuttujan tyyppi voidaan testata `typeOf`-operaatiolla:
 ```javascript
-        var nimi = 'Ahmed';
+        let nimi = 'Ahmed';
         console.log(typeof nimi);
  ```
  Ohjelma tulostaa merkkijonon "string".
@@ -204,7 +208,7 @@ tallentaa muuttujiin
 ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
 
 ```javascript
-        var eka, toka, kolmas, kaikki;
+        let eka, toka, kolmas, kaikki;
         eka = 'Hyvää ';
         toka = 'huomenta ';
         kolmas = 'kaikille.';
@@ -238,7 +242,7 @@ Seuraava esimerkkiohjelma kysyy käyttäjän nimen ja tervehtii tätä
 henkilökohtaisesti:
 
 ```javascript
-     var nimi;
+     let nimi;
      nimi = prompt('Anna nimesi.');
      console.log('Hauska tavata, ' + nimi);
 ```
@@ -259,7 +263,7 @@ JavaScript-kielen peruslaskutoimitukset ovat:
 - jakojäännös (`%`)
 
 ```javascript
-        var luku = 3;
+        let luku = 3;
         luku = luku * 7;     // arvo on nyt 21
         luku = 1 + luku/2;   // arvo on nyt 11.5
         console.log(luku);
@@ -270,7 +274,7 @@ Seuraavilla operaatioilla voidaan muuttaa muuttujan arvoa yhdellä:
 - vähennys yhdellä (`--`)
 
 ```javascript
-        var luku = 3;
+        let luku = 3;
         luku++;     // arvo on nyt 4
         luku--;     // arvo on taas 3
         console.log(luku);
@@ -284,7 +288,7 @@ Arvoa voidaan myös muuttaa kerralla enemmän:
 - jakaminen vakiolla (`/=`)
 
 ```javascript
-        var luku = 3;
+        let luku = 3;
         luku *= 2;    // arvo on nyt 6
         luku /= 3;    // arvo on nyt 2
         luku += 7;   // arvo on nyt 9
@@ -326,14 +330,14 @@ sijoittaa muuttujaan arvon ensimmäisen kerran.
 
 Esimerkiksi seuraava ohjelma voitaisiin suorittaa näennäisen onnistuneesti:
 ```javascript
-        var akseliväli = 0;
+        let akseliväli = 0;
         aksleiväli = 2340;
         console.log('Akseliväli on: ' + akseliväli);
 ```
 
 Ohjelma tulostaa kuitenkin akseliväliksi nollan; syynä siihen on
 ohjelmoijan tekemä lyöntivirhe muuttujanimessä.
-Ohjelma luo aluksi `var`-lausella määritellyn
+Ohjelma luo aluksi `let`-lausella määritellyn
 `akseliväli`-nimisen muuttujan. Toisella rivillä kuitenkin sijoitetaan
 arvo eri nimiseen, vahingossa väärin kirjoitettuun `aksleiväli`-nimiseen
 muuttujaan. Tällöin luodaan automaattisesti toinen muuttuja.
@@ -341,13 +345,13 @@ muuttujaan. Tällöin luodaan automaattisesti toinen muuttuja.
 Lopulta ohjelmassa on kaksi eri muuttujaa, ja ohjelma tulostaa
 akseliväliksi nollan johtuen siitä, että oikea arvo `2340` oli
 sijoitettu väärään muuttujaan. Sen
-sijaan `var`-lauseella määritellyn, oikein kirjoitetun muuttujan arvo oli jäänyt nollaksi.
+sijaan `let`-lauseella määritellyn, oikein kirjoitetun muuttujan arvo oli jäänyt nollaksi.
 
 Kuvatun kaltaiset tilanteet luovat hankalasti löydettäviä semanttisia virheitä,
 joissa ohjelman suoritus ei kaadu virheilmoitukseen vaan ohjelma
 toimii sen sijaan väärin.
 
-Niinpä `var`-lauseella määrittelemättömien globaalien muuttujien
+Niinpä määrittelemättömien globaalien muuttujien
  automaattinen luonti kannattaa estää. Tämän voi tehdä lisäämällä
  ohjelman alkuun `use strict` -lause, joka kirjoitetaan 
  alla olevaan tapaan heittomerkkeihin:
@@ -359,7 +363,7 @@ Niinpä `var`-lauseella määrittelemättömien globaalien muuttujien
 Tämän seurauksena ohjelma suoritetaan tiukassa tilassa (strict mode).
 Tiukassa tilassa tulostuu virheilmoitus aina, kun määrittelemättömään
 muuttujaan yritetään sijoittaa arvo. Globaalia muuttujaa ei enää
-luoda automaattisesti, vaan se vaatii `var`-lauseen kirjoittamisen. Määrityksen käyttö muuttaa käyttäjän
+luoda automaattisesti, vaan se vaatii `let`-lauseen kirjoittamisen. Määrityksen käyttö muuttaa käyttäjän
 vahingossa tekemät, mahdollisesti huomaamatta jäävät lyöntivirheet
 näkyviksi syntaksivirheiksi. Tämä helpottaa oikein toimivien
 ohjelmien kirjoittamista.
@@ -369,7 +373,7 @@ Edellä kuvatusta syystä `use strict` -määrityksen käyttö jokaisessa ohjelm
 ## Nimetyt vakiot
 
 Aiemmissa esimerkeissä käytettiin muuttujia, jotka määriteltiin
-`var`-lauseella. Muuttujan arvoja voidaan nimensä mukaisesti
+`let`-lauseella. Muuttujan arvoja voidaan nimensä mukaisesti
 muutella ohjelman suorituksen aikana.
 
 Toisinaan voi syntyä tilanne, jossa haluttaisiin luoda muuttuja jonkin
@@ -385,7 +389,7 @@ mutta sitä ei voi muuttaa.
 Seuraava ohjelma kysyy käyttäjältä kaksi kalorimäärää ja muuttaa ne jouleiksi:
 ```javascript
         const KERROIN = 4.1868;
-        var k1, k2, j1, j2;
+        let k1, k2, j1, j2;
         k1 = prompt('Anna lounaan energiamäärä (kcal).');
         k2 = prompt('Anna päivällisen energiamäärä (kcal).');
 

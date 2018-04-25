@@ -47,7 +47,7 @@ kutsuttava sen ulkopuolelta.
 Lisätään funktion määrityksen alapuolelle pääohjelma, joka sisältää funktion kutsun:
 
 ```javascript
-        tervehdi()
+        tervehdi();
 ```
 
 Nyt funktio suoritetaan, ja ohjelma tulostaa tervehdystekstin.
@@ -65,7 +65,7 @@ jotka kertovat, miten funktion on tarkoitus täsmälleen toimia:
 
 ```javascript
         function tervehdi(teksti, kerrat) {
-            var i;
+            let i;
             for (i = 1; i<=kerrat; i++) {
                 console.log(teksti + ' ' + i + '. kerran!');
             }
@@ -114,11 +114,11 @@ Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen
 
 ```javascript
         function neliösumma(eka, toka) {
-                var tulos = eka*eka + toka*toka;
+                let tulos = eka*eka + toka*toka;
                 return tulos;
         }
         
-        var luku1, luku2, ns;
+        let luku1, luku2, ns;
         luku1 = prompt('Anna 1. luku.');
         luku2 = prompt('Anna 2. luku.');
         ns = neliösumma(luku1, luku2);
@@ -128,15 +128,48 @@ Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen
 ## Muuttujien näkyvyys
 Funktioiden käyttöönoton myötä on tarpeen pohtia funktioiden näkyvyyttä.
 
-Tähän asti on käytetty vain globaaleja muuttujia. Globaali muuttuja
-Määritellään funktioiden ulkopuolella var-lauseella. Se näkyy kaikkialle.
+Tähän asti on käytetty `let`-avainsanalla määriteltyjä muuttujia, jotka näkyvät siinä ohjelmanosassa (koodilohkossa),
+ jossa ne on määritelty - samoin kuin sen sisäpuolella olevissa koodilohkoissa. Kun `let`-sanalla määritellään
+ muuttuja pääohjelmassa (funktioiden ulkopuolella), tulee siitä globaali muuttuja, joka näkyy kaikkialle ohjelmassa. 
+ 
+Globaali muuttuja
+voidaan määritellä funktioiden ulkopuolella myös `var`-lauseella.
 
-Funktion sisällä var-lauseella määriteltävät muuttujat ovat paikallisia muuttujia.
-Paikallinen muuttuja näkyy vain siinä funktiossa, jossa se on määritetty.
+Funktion sisällä var-lauseella määriteltävät muuttujat ovat funktion paikallisia muuttujia.
+Funktion paikallinen muuttuja näkyy kaikkialle siinä funktiossa, jossa se on määritetty.
 
-Jos globaalilla ja paikallisella muuttujalla on sama nimi, paikallinen muuttuja peittää globaalin muuttujan funktiossa, jossa se on määritelty.
-Tällöin käytössä on kaksi eri muuttujaa, joilla on sama nimi mutta erilainen näkyvyys.
+Tarkastellaan esimerkkiä, joka kuvaa `var`- ja `let`-lauseilla määritettyjen muuttujien näkyvyyseroja:
+```javascript
+        let n1 = 3; // globaali muuttuja
 
+        function moi() {
+            var n2 = 5; // funktion sisäinen muuttuja
+
+            if (n2>0) {
+                let n3 = 8; // lohkon sisäinen muuttuja
+                var n4 = 9; // funktion sisäinen muuttuja
+            }
+            console.log(n1); // globaali muuttuja näkyy kaikkialle
+            console.log(n2); // funktion sisäinen muuttuja näkyy funktion sisälle
+            //console.log(n3); -- lohkon sisäinen muuttuja ei näy lohkon ulkopuolelle
+            console.log(n4); // funktion sisäinen muuttuja näkyy funktion sisälle
+
+        }
+
+        moi();
+
+        console.log(n1); // globaali muuttuja näkyy kaikkialle
+        //console.log(n2); -- funktion sisäinen muuttuja ei näy funktion ulkopuolelle
+        //console.log(n3); -- lohkon sisäinen muuttuja ei näy lohkon ulkopuolelle
+        //console.log(n4); -- funktion sisäinen muuttuja ei näy funktion ulkopuolelle
+```
+
+Osa tulostuslauseista on kommentoitu toimimattomiksi; nuo lauseet viittaavat
+muuttujaan, joka ei näy kyseiseen ohjelmanosaan.
+
+Jos vaikkapa globaalilla ja funktion paikallisella muuttujalla olisi sama nimi,
+paikallinen muuttuja peittäisi globaalin muuttujan funktiossa, jossa se on määritelty.
+Tällöin käytössä olisi kaksi eri muuttujaa, joilla on sama nimi mutta erilainen näkyvyys.
 
 ## Taulukko parametrina
 
@@ -160,13 +193,13 @@ Tarkastellaan esimerkkinä alla olevaa ohjelmaa, jossa pääohjelma luo kolmialk
 
 ```javascript
         function kasvata(taulukko) {
-            for (var i = 0; i<taulukko.length; i++) {
+            for (let i = 0; i<taulukko.length; i++) {
                 taulukko[i]++;
             }
             return;
         }
 
-        var luvut = [5,6,7];
+        let luvut = [5,6,7];
         kasvata(luvut);
         console.log(luvut[0] + ' ' + luvut[1] + ' ' + luvut[2]);
 ```
@@ -191,8 +224,8 @@ lottonumerotaulukon:
 
 ```javascript
         function annaRivi(numerot, valittavat) {
-            var rivi = [];
-            var r;
+            let rivi = [];
+            let r;
             for (var  i = 1; i<=valittavat; i++) {
                 var ok = false;
 
@@ -210,8 +243,8 @@ lottonumerotaulukon:
             return rivi;
         }
 
-        var lottorivi = annaRivi(40,7);
-        for (var i = 1; i<=lottorivi.length; i++) {
+        let lottorivi = annaRivi(40,7);
+        for (let i = 1; i<=lottorivi.length; i++) {
             console.log(lottorivi[i]);
         }
 ```

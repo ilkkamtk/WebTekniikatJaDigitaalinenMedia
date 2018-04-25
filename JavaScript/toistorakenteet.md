@@ -22,7 +22,7 @@ Alla oleva ohjelma heittää kolikkoa sata kertaa. Ohjelma
 tulostaa lopuksi, montako kruunaa ja klaavaa saatiin.
 
 ```javascript
-        var kruunat = 0, klaavat = 0;
+        let kruunat = 0, klaavat = 0;
         while (kruunat + klaavat < 100) {
             r = Math.random();
             if (r>0.5)
@@ -47,7 +47,7 @@ Esimerkiksi seuraava ohjelma tarkistaa, että käyttäjän syöttämä paino oli
 Ohjelman suoritus pääsee etenemään vasta, kun käyttäjä antoi kelvollisen painon.
 
 ```javascript
-        var paino = prompt('Anna paino (kg).');
+        let paino = prompt('Anna paino (kg).');
         while (paino <= 0) {
             paino = prompt('Painon on oltava positiivinen. Anna paino uudelleen (kg).');
         }
@@ -65,7 +65,7 @@ siihen saakka, kunnes nopasta tulee silmäluku
 kuusi:
 
 ```javascript
-        var tulos;
+        let tulos;
         do {
             tulos = Math.ceil(Math.random()*6);
             console.log(tulos);
@@ -81,7 +81,7 @@ ohjelmoidaan osaksi for-lausetta.
 
 Seuraava esimerkki tulostaa luvut yhdestä kymmeneen:
 ```javascript
-        var i;
+        let i;
         for (i = 1; i<=10 ; i++) {
             console.log(i);
         }
@@ -103,7 +103,7 @@ Esimerkiksi seuraava ohjelma kysyy käyttäjältä luvun ja tulostaa
 kaikki parilliset kokonaisluvut nollasta alkaen käyttäjän antamaan lukuun
 asti:
 ```javascript
-        var luku, i;
+        let luku, i;
         luku = prompt('Anna yläraja parillisille luvuille.');
         for (i = 0; i<=luku ; i+=2) {
             console.log(i);
@@ -117,7 +117,7 @@ viiteen kertotaulu on ensimmäisen tulon tekijän saatava vuoron perään kaikki
 Tämänkaltainen ongelma voidaan ratkaista kahden sisäkkäisen toistorakenteen avulla:
 
 ```javascript
-        var i, j, tulo;
+        let i, j, tulo;
         for (i = 1; i<=5; i++) {
             for (j = 1; j<=5; j++) {
                 tulo = i*j;
