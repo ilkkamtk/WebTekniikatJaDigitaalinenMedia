@@ -18,8 +18,10 @@ Ensin mainittu `function`-lauseena  kirjoitettu funktio edustaa proseduraalisten
 Nuolifunktiot puolestaan edustavat uutta funktionaalista ohjelmointiparadigmaa, jossa kirjoitetaan tilattomia ja sivuvaikutuksettomia funktioita.
 
 Funktionaalista ohjelmointiparadigmaa pidetään vaikeampana oppia, ja nuolifunktioiden avulla
-tuotettu JavaScript-koodi on tiiviimpää ja kehittäjälle ainakin aluksi haastavampaa ymmärtää ja tuottaa. Tästä syystä tässä materiaalissa
-käytetään `function`-lauseen avulla kirjoitettuja funktioita.
+tuotettu JavaScript-koodi on tiiviimpää ja kehittäjälle ainakin aluksi haastavampaa ymmärtää ja tuottaa.
+
+Tästä syystä tämän sivun pääpaino on
+ `function`-lauseen avulla kirjoitetuissa funktioissa. Sivun lopussa kuitenkin kurkistetaan myös nuolifunktioiden laatimiseen. 
 
 
 ## Parametriton ja paluuarvoton funktio
@@ -246,6 +248,46 @@ kesken jääneiden
 funktiokutsujen tiedot suorituksen aikana. Syvälle menevässä rekursiossa tälle kutsupinolle varattu
 kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
 
+## Nuolifunktiot
+
+Tämän sivun esimerkit on kirjoitettu JavaScript-kielen perinteisen `function`-lauseen avulla. EC6-kielimääritys tarjoaa
+vaihtoehtoisen, kompaktimman
+funktion kirjoitustavan. Tämän kirjoitustavan mukaisia funktioita kutsutaan nuolifunktioiksi eli lambda-funktioiksi.
+(Nuolifunktiot ratkaisevat myös eräitä aiemmassa EC5-kieliversiossa `this`-avainsanan
+käsittelyyn liittyviä hankaluuksia, mutta niitä ei käsitellä tässä enempää.)
+
+Kirjoitetaan aiemmassa esimerkissä ollut neliösumman laskeva funktio tällä kertaa nuolifunktiona:
+```javascript
+        const neliosumma = (a,b) => (a*a + b*b);
+```
+Tässä esitystavassa neliösumman laskeva, nimetön funktio ikään kuin sijoitetaan
+`neliosumma`-nimisen vakion arvoksi.
+
+Ennen nuolioperaattoria luetellaan parametrit (tässä `a` ja `b`), ja paluuarvona saadaan lukujen neliösumma.
+
+Nuolifunktiota kutsutaan samaan tapaan kuin `function`-avainsanalla kirjoitettua funktiota.
+
+```javascript
+        console.log(neliosumma(3,5));
+```
+
+
+Tarkastellaan nyt koodilohkon liittämistä nuolifunktioon.
+Alla oleva versio `neliosumma`-funktiosta sisältää myös tulostuslauseen, joten sitä varten tarvitaan koodilohko,
+johon lause voidaan kirjoittaa. Paluuarvo voidaan tässä notaatiossa välittää `return`-lauseella.
+
+```javascript
+const neliosumma = (a,b) =>
+        {
+            console.log('Neliösummafunktiota kutsuttiin.');
+            return (a * a + b * b);
+        }
+```
+
+Koodilohkon sisältävän funktion kutsuminen on samanlaista kuin edellisessä esimerkissä:
+```javascript
+        console.log(neliosumma(3,5));
+```
 
 ## Harjoitustehtävät
 
@@ -277,3 +319,5 @@ Kirjoita myös pääohjelma. joka kysyy käyttäjältä kolme lukua, kutsuu kirj
 8. Kirjoita rekursiivinen funktio Fibonaccin lukujonon laskemiseksi. Fibonaccin lukujonossa seuraava alkio lasketaan
 kahden edellisen summana. Jono alkaa 1, 1, 2, 3, 5, 8, 13, ... Käyttäjältä kysytään, monennenko
 Fibonaccin lukujonossa esiintyvän luvun hän haluaa, ja ohjelma tulostaa tuon luvun.
+
+9. Kirjoita edellisen tehtävän Fibonaccin luvun laskenta nuolifunktiona.
