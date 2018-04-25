@@ -1,4 +1,4 @@
-# HTML5, rakenne
+# HTML5, sivuston rakenne
 
 HTML-dokumentti rakentuu seuraavista osista:
 
@@ -28,15 +28,15 @@ Eli siis tällainen on jokaisen HTML-sivun runko:
 
 Kun projekti on luotu, siihen voi lisätä tiedostoja. Aloitetaan Files-valikosta, josta valitaan New | HTML-file:
 
-![Uusi tiedosto](pics/uusitiedosto.png)
+![Uusi tiedosto](img/uusitiedosto.png)
 
 Valinnan jälkeen annetaan tiedostolle nimi ja valitaan, mitä HTML-kielen versiota käytetään. Kuvassa on valittu HTML5:
 
-![Uusi tiedosto](pics/index.png)
+![Uusi tiedosto](img/index.png)
 
 Tämä kannattaa tehdä näin sen takia, että WebStorm helpottaa käyttäjän työtä lisäämällä dokumenttiin automaattisesti edellä mainitut tagit:
 
-![Aloitustagit](pics/html5.png)
+![Aloitustagit](img/html5.png)
 
 Nyt olemmekin valmiit aloittamaan. 
 
@@ -54,5 +54,23 @@ Tällöin haetaan ns. indeksitiedosto, joka näytetään osoitteeseen menijälle
 
 Jos indeksitiedostoa ei ole, käyttäjälle saatetaan näyttää webserveriltä hakemisto, johon osoite viittaa. Tämä tosin riippuu hakemiston oikeuksien määrittelystä. Hakemisto saattaa sisältää tiedostoja, joita vierailjan ei haluttaisi näkevän, joten indeksitiedosto myöskin lisää webpalvelimen tietoturvallisuutta. Näkymä voi olla jotain tällaista:
 
-![Hakemistolistaus](pics/index_of.png))
+![Hakemistolistaus](img/index_of.png))
 
+## Datan organisoinnista
+
+Koska html-sivusto sisältää nykyisin erilaisia tiedostoja, kuten
+
+- Html-sivuja
+- Kuvia
+- Css- eli tyylitiedostoja
+- JavaScriptiä
+
+kannattaa jo alusta pitäen lähteä siitä, että luodaan eri asioille omat hakemistonsa, esimerkiksi tähän tyyliin:
+
+![Hakemistorakenne](img/hakemistot.png)
+
+Kuvassa siis kotihakemiston (public_html) alle luotu kolme hakemistoa (css, img sekä js). Hakemistojen sisältö lienee ilmeinen... 
+
+Näin voidaan organisoida ja hallita tiedeostoja paremmin kuin siinä tapauksessa, kuin kaikki tiedostot olisivat sekaisin yhdessä hakemistossa.
+
+Laajoilla sivustoilla voidaan myös html-sivuja jakaa eri alikansioihin.

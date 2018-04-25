@@ -2,7 +2,7 @@
 
 Jotta sivut näkyisivät netissä, tulee olla nettiin näkyvä palvelin, jolla ne voidaan julkaista. Tällaista palvelua tarjoavat useat palveluntarjoajat. Metropoliassa web-sivut voi julkaista koulun palvelimella, kopioimalla ne oman verkkolevyn (Z-levy) hakemistoon nimeltään *public_html*. 
 
-![Public_html](pics/public_html.png)
+![Public_html](img/public_html.png)
 
 Kopioitaessa sivut tänne, ne löytää osoitteella 
 
