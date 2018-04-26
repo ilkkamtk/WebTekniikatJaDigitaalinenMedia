@@ -135,15 +135,17 @@ onko kyseessä esimerkiksi kokonaisluku (kuten 17), liukuluku
  eli desimaaliluku (kuten 21.38) vai merkkijono
  (kuten "tietokone").
 
+Muuttujien nimet ovat ohjelmoijan itse keksimiä tunnuksia. Nimet saavat sisältää kirjaimia, numeromerkkejä sekä alaviiva-
+ja dollarimerkkejä. Muuttujan nimi ei kuitenkaan saa alkaa numeromerkillä. Esimerkiksi `luku2` ja `kilogrammat` ovat kelvollisia
+muuttujan nimiä, mutta `7päivää` tai `yli-intendentti` eivät ole. Muuttujien nimissä saa käyttää skandinaavisia merkkejä
+eli ns. ääkkösiä, mutta niitä usein vältetään, koska merkkien tulostumisessa saattaa olla ongelmia silloin, kun
+tietokoneessa tai selaimessa on erilaiset maa-asetukset.
+
 Esimerkiksi seuraava ohjelma määrittelee kaksi muuttujaa, joista ensimmäiseen
 tallennetaan merkkijono ja toiseen kokonaisluku. Tämän jälkeen ohjelma
 tulostaa muuttujien arvot, korvaa ne uusilla arvoilla ja tulostaa
 muuttuneet arvot:
 
-
-nimeltä luku, sijoittaa sen arvoksi
-8, tulostaa sijoitetun arvon, kasvattaa arvoa kahdella ja lopuksi tulostaa kasvatetun
-arvon:
 ```javascript
         let luku, nimi;
         luku = 153;
@@ -330,9 +332,9 @@ sijoittaa muuttujaan arvon ensimmäisen kerran.
 
 Esimerkiksi seuraava ohjelma voitaisiin suorittaa näennäisen onnistuneesti:
 ```javascript
-        let akseliväli = 0;
-        aksleiväli = 2340;
-        console.log('Akseliväli on: ' + akseliväli);
+        let akselivali = 0;
+        aksleivali = 2340;
+        console.log('Akseliväli on: ' + akselivali);
 ```
 
 Ohjelma tulostaa kuitenkin akseliväliksi nollan; syynä siihen on
