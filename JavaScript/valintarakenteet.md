@@ -8,15 +8,15 @@ seuraava ohjelma kysyy käyttäjältä tämän iän ja ilmoittaa,
 jos käyttäjä on syötteen perusteella alaikäinen:
 
 ```javascript
-        let ikä;
-        ikä = prompt('Anna ikäsi.');
-        if (ikä<18) {
+        let ika;
+        ika = prompt('Anna ikäsi.');
+        if (ika<18) {
             console.log('Olet alaikäinen.');
         }
 ```
 
 Ehtolauseessa `if`-sanan perässä on kaarisulkeiden sisällä valintaehto eli looginen lauseke. Se on tässä
-tapauksessa `ikä<18`.
+tapauksessa `ika<18`.
 
 Loogisen lausekkeen arvo on aina tosi tai epätosi - eli `true` tai `false`.
 
@@ -98,15 +98,15 @@ Monen toisensa poissulkevan vaihtoehdon valintarakenteeseen liitetään tarpeell
 `else if`-haaroja. Suorituksen aikana siirrytään alkuperäiseen `if`-haaraan - tai sen valintahdon ollessa epätosi -  ensimmäiseen `else-if`-haaraan, jonka valintaehto täyttyy. Seuraava ohjelma kommentoi täysi-ikäisen käyttäjän ikää:
 
 ```javascript
-        let ikä;
-        ikä = prompt('Anna ikäsi');
-        if (ikä >= 65) {
+        let ika;
+        ika = prompt('Anna ikäsi');
+        if (ika >= 65) {
             console.log('Olet eläkeikäinen');
         }
-        else if (ikä>=30) {
+        else if (ika>=30) {
             console.log('Olet keski-ikäinen.');
         }
-        else if (ikä>=18) {
+        else if (ika>=18) {
                 console.log('Olet nuori aikuinen');
         }
 ```
@@ -148,12 +148,12 @@ Annostusohje on seuraavanlainen:
 
 Lääkeannoksen määritys voidaan kirjoittaa JavaScript-ohjelmana näin:
 ```javascript
-        let ikä, paino, annos;
-        ikä = prompt('Anna potilaan ikä vuosina.');
-        if (ikä>=12) {
+        let ika, paino, annos;
+        ika = prompt('Anna potilaan ikä vuosina.');
+        if (ika>=12) {
             annos = 500;
         }
-        else if (ikä>=2) {
+        else if (ika>=2) {
             paino = prompt('Anna potilaan paino kilogrammoina.');
             annos = paino * 12.5;
             if (annos > 500) {
