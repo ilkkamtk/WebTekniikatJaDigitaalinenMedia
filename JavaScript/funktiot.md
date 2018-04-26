@@ -109,11 +109,11 @@ Paluuarvo palautetaan `return`-lauseella. Esimerkiksi muuttujan nimeltä `tulos`
 return tulos;
 ```
 
-Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen on pääohjelma, joka kutsuu neliösumma-funktiota antaen sille parametrien arvot. Lopuksi pääohjelma tulostaa `neliösumma`-funktion palauttaman paluuarvon.
+Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen on pääohjelma, joka kutsuu `neliosumma`-funktiota antaen sille parametrien arvot. Lopuksi pääohjelma tulostaa `neliosumma`-funktion palauttaman paluuarvon.
 
 
 ```javascript
-        function neliösumma(eka, toka) {
+        function neliosumma(eka, toka) {
                 let tulos = eka*eka + toka*toka;
                 return tulos;
         }
@@ -121,7 +121,7 @@ Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen
         let luku1, luku2, ns;
         luku1 = prompt('Anna 1. luku.');
         luku2 = prompt('Anna 2. luku.');
-        ns = neliösumma(luku1, luku2);
+        ns = neliosumma(luku1, luku2);
         console.log('Lukujen ' + luku1 + ' ja ' + luku2 + ' neliösumma on ' + ns);
 ```
 
