@@ -14,10 +14,10 @@ Esimerkiksi työtuntitaulukko voitaisiin visualisoida seuraavasti:
 
 Taulukon alkioihin viitataan taulukkomuuttujan nimellä ja indeksillä.
 
-Esimerkissä `työtunnit` on taulukkomuuttujan nimi, ja luvut 0 ja 4 ovat indeksejä.
+Esimerkissä `tyotunnit` on taulukkomuuttujan nimi, ja luvut 0 ja 4 ovat indeksejä.
 Indeksit voivat vaihdella esimerkissä välillä 0..6.
 
-Taulukon työtunnit viidenteen alkioon viitataan ilmauksella `työtunnit[4]`. Numerointi alkaa
+Taulukon työtunnit viidenteen alkioon viitataan ilmauksella `tyotunnit[4]`. Numerointi alkaa
 nollasta, ja taulukon indeksi on aina yhtä pienempi kuin taulukon koko - eli alkioiden määrä taulukossa.
 
 JavaScript-ohjelmointikieli ei edellytä, että kaikki taulukon alkiot ovat saman tyyppisiä. Niinpä
@@ -103,7 +103,7 @@ Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.
 
 Alla on arvonnan toteuttava ohjelmakoodi:
 ```javascript
-       let käytetty = [];
+       let kaytetty = [];
        let numerot, arvottavat;
        let i, r;
 
@@ -111,14 +111,14 @@ Alla on arvonnan toteuttava ohjelmakoodi:
        arvottavat = prompt('Montako numeroa arvotaan?');
 
        for (i = 1; i<=arvottavat; i++) {
-           käytetty[i] = false;
+           kaytetty[i] = false;
        }
 
        for (i = 0; i<arvottavat; i++) {
            do {
                r = Math.ceil(Math.random()*numerot);
-           } while (käytetty[r]);
-           käytetty[r] = true;
+           } while (kaytetty[r]);
+           kaytetty[r] = true;
            console.log(r);
        }
 ```
