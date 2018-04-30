@@ -51,7 +51,7 @@ function kirjaaJotain(param) {
   console.log(param);
 }
 
-setTimeout(moikkaa, 2000, 'Tämä kirjataan');
+setTimeout(kirjaaJotain, 2000, 'Tämä kirjataan');
 ```
 * yllä olevassa koodissa luodaan funktio `kirjaaJotain`, joka ajetaan `setTimeout()`-metodin avulla kahden sekunnin kuluttua. Aika ilmoitetaan millisekunteina.
 
