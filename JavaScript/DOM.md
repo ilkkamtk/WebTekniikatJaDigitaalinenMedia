@@ -22,6 +22,7 @@ Yllä olevassa esimerkissä valittu p-elementti tallennetaan elementtioliona (ta
 
 ## Parent/child
 ![DOM](https://www.w3schools.com/js/pic_htmltree.gif) 
+
 Koska DOM kuvaa dokumentin puumaisena rakenteena, käytetään sen yhteydessä termejä vanhempi (tai äiti/isä), lapsi, ja sisar. Englanniksi parent, child ja sibling. Esim. ylläolevassa kuvassa h1-elementti on body-elementin lapsi ja a-elementin sisar. Vastaavasti body-elementti on sekä h1- ja a-elementtien vanhempi.
 
 ## [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)-rajapinta
