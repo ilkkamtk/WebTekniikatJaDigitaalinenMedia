@@ -87,7 +87,7 @@ document.scripts    // hakee kaikki script-elementit
    ```
 1. Attribuutin arvon muuttaminen:
    ```html
-   <img id="logo" src="metropolia.png">
+   <img id="logo" src="metropolia.png"  alt="Joku kuva">
    
    <script>
    document.getElementById('logo').src = "laurea.png";                 // käytetään attribuutin nimeä ominaisuutena
@@ -95,18 +95,37 @@ document.scripts    // hakee kaikki script-elementit
    </script>
    ```
 1. HTML:n lisääminen sivulle:
-   ```html
-   <div id="esimerkki"></div>
-   
-   <script>
-   const div = document.querySelector('#esimerkki');                 // 
-   const html = 
-           `<p>
-               Tässä on kappale tekstiä, jossa on kuva.
-               <img s>
-            </p>`;
-   </script>
-   ```
+    1. innerHTML-ominaisuuden avulla:
+       ```html
+       <div id="esimerkki"></div>
+       
+       <script>
+       const div = document.querySelector('#esimerkki');                 // 
+       const html = 
+               `<p>
+                   Tässä on kappale tekstiä, jossa on kuva.
+                   <img src="http://placekitten.com/321/241" alt="Kissa">
+                </p>`;
+       div.innerHTML = html;
+       </script>
+       ```
+    1. Sama DOM-metodien avulla
+       ```html
+           <div id="esimerkki"></div>
+           
+           <script>
+           const div = document.querySelector('#esimerkki');                 // 
+           const i = document.createElement(img);
+           i.src = 'http://placekitten.com/321/241';
+           i.alt = 'Kissa';
+           
+           const t = document.createTextNode('Tässä on kappale tekstiä, jossa on kuva.');
+           const p = document.createElement('p');
+           p.appendChild(t);
+           p.appendChild(i)
+           div.appendChild(div);
+           </script>
+           ```
 ### CSS:n käsittely
 JavaScriptillä voidaan myös muokata elementtien ulkoasua. Vaihtoehtoina tällöin on joko vaihtaa style-attribuutin tai class-attribuuttien arvoja aivan kuten HTML-dokumenteissa on normaalistikin tapana.
 
