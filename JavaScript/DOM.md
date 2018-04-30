@@ -125,7 +125,7 @@ document.scripts    // hakee kaikki script-elementit
            p.appendChild(i)
            div.appendChild(div);
            </script>
-           ```
+        ```
 ### CSS:n käsittely
 JavaScriptillä voidaan myös muokata elementtien ulkoasua. Vaihtoehtoina tällöin on joko vaihtaa style-attribuutin tai class-attribuuttien arvoja aivan kuten HTML-dokumenteissa on normaalistikin tapana.
 
