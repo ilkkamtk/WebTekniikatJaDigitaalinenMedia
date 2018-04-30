@@ -105,7 +105,7 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
       
       // Haetaan Google Maps iframeen ja lisätään paikkatiedot hakuparametriin
       // Huomaa, että Google Maps vaatii API-avaimen toimiakseen. 
-      // Sen saa Google tunnuksilla (huom. Metropolian tunnus ei käy) esim. täältä: https://developers.google.com/maps/documentation/embed/
+      // Sen saa Google-tunnuksilla (huom. Metropolian tunnus ei käy) esim. täältä: https://developers.google.com/maps/documentation/embed/
       document.querySelector('iframe').src = 
         `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
     }
