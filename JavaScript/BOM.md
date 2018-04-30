@@ -104,8 +104,10 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
       console.log(`More or less ${crd.accuracy} meters.`);
       
       // Haetaan Google Maps iframeen ja lisätään paikkatiedot hakuparametriin
-      // Huomaa, että Google Maps vaatii API-avaimen toimiakseen. Sen saa esim. täältä: https://developers.google.com/maps/documentation/embed/
-      document.querySelector('iframe').src = `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
+      // Huomaa, että Google Maps vaatii API-avaimen toimiakseen. 
+      // Sen saa esim. täältä: https://developers.google.com/maps/documentation/embed/
+      document.querySelector('iframe').src = 
+        `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
     }
     
     // Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
