@@ -92,6 +92,19 @@ document.scripts    // hakee kaikki script-elementit
    document.getElementById('logo').setAttribute('src', 'laurea.png');  // tai setAttribute()-metodia
    </script>
    ```
+1. HTML:n lisääminen sivulle:
+   ```html
+   <div id="esimerkki"></div>
+   
+   <script>
+   const div = document.querySelector('#esimerkki');                 // 
+   const html = 
+           `<p>
+               Tässä on kappale tekstiä, jossa on kuva.
+               <img s>
+            </p>`;
+   </script>
+   ```
 ### CSS:n käsittely
 JavaScriptillä voidaan myös muokata elementtien ulkoasua. Vaihtoehtoina tällöin on joko vaihtaa style-attribuutin tai class-attribuuttien arvoja aivan kuten HTML-dokumenteissa on normaalistikin tapana.
 

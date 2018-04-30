@@ -44,6 +44,17 @@ console.log(vastaus);
 ##### Tehtävä: Kokeile prompt-metodia selaimen konsolissa.
 
 ## Tapahtumien ajastaminen
+### [setTimeout-metodi](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+`setTimeout()`-metodin avulla voidaan kutsua funktiota kerran tietyn ajan kuluttua.
+```javascript
+function kirjaaJotain(param) {
+  console.log(param);
+}
+
+setTimeout(moikkaa, 2000, 'Tämä kirjataan');
+```
+* yllä olevassa koodissa luodaan funktio `kirjaaJotain`, joka ajetaan `setTimeout()`-metodin avulla kahden sekunnin kuluttua. Aika ilmoitetaan millisekunteina.
+
 ### [setInterval-metodi](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 `setInterval()`-metodin avulla voidaan kutsua funktiota tietyin väliajoin. `setInterval()`-metodi palauttaa `interval ID`:n, jonka avulla intervalli voidaan myöhemmin pysäyttää kutsumalla `clearInterval()`-metodia
 ```javascript
@@ -129,7 +140,7 @@ Navigator rajapinnasta löytyy myös [MediaDevices-rajapinta](https://developer.
     
     // Käynnistetään kamera
     navigator.mediaDevices.getUserMedia(options).then(success).catch(error);
-    </script>
+</script>
 ```
  
  Joissain tapauksissa, kun halutaan käyttää JavaScriptin tuoreimpia ominaisuuksia, tarvitsee tutkia tukeeko käyttäjän selain ko. ominaisuutta. Vaikka navigator-oliolla on mahdollista [haistella](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) onko kyseessä esim Chrome tai Internet Explorer, parempi tapa tutkia ominaisuuden toiminta on [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection). 
