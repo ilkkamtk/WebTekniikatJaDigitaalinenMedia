@@ -100,13 +100,13 @@ document.scripts    // hakee kaikki script-elementit
        <div id="esimerkki"></div>
        
        <script>
-       const div = document.querySelector('#esimerkki');                 // 
-       const html = 
+       const div = document.querySelector('#esimerkki');          // haetaan elementti, jonka id on esimerkki
+       const html =                                               // tehdään monirivinen merkkijono, huomaa backtick merkkijonon ympärillä (gravis)
                `<p>
                    Tässä on kappale tekstiä, jossa on kuva.
                    <img src="http://placekitten.com/321/241" alt="Kissa">
                 </p>`;
-       div.innerHTML = html;
+       div.innerHTML = html;                                      // asetetaan merkkijono 'html' valitun elementin HTML-sisällöksi
        </script>
        ```
     1. Sama DOM-metodien avulla
@@ -114,16 +114,20 @@ document.scripts    // hakee kaikki script-elementit
            <div id="esimerkki"></div>
            
            <script>
-           const div = document.querySelector('#esimerkki');                 // 
-           const i = document.createElement(img);
-           i.src = 'http://placekitten.com/321/241';
-           i.alt = 'Kissa';
+           const div = document.querySelector('#esimerkki');       // haetaan elementti, jonka id on esimerkki
+    
+           const i = document.createElement('img');                // tehdään img elementti
+           i.src = 'http://placekitten.com/321/241';               // asetetaan src-attribuutti
+           i.alt = 'Kissa';                                        // asetetaan alt-attribuutti
            
-           const t = document.createTextNode('Tässä on kappale tekstiä, jossa on kuva.');
-           const p = document.createElement('p');
-           p.appendChild(t);
-           p.appendChild(i)
-           div.appendChild(div);
+           const t = document.createTextNode('Tässä on kappale tekstiä, jossa on kuva.');  // tehdään tekstinoodi
+    
+           const p = document.createElement('p');                  // tehdään p-elementti
+           p.appendChild(t);                                       // lisätään teksti p-elementtin
+           p.appendChild(i);                                       // lisätään kuva p-elementtiin
+    
+           div.appendChild(p);                                     // lisätään p-elementti HTML-dokumentista valittuun elementtiin
+                                                                   // tässä vaiheessa luoto HTML ilmestyy dokumenttin.
            </script>
         ```
 ### CSS:n käsittely
