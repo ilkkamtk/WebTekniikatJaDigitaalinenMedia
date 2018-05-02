@@ -7,11 +7,30 @@ Esimerkiksi, jos käyttäjä napsauttaa painiketta, siihen voidaan vastata näyt
 <button>Klikkaa mua</button>
 <script>
 const nappi = document.querySelector('button');
-nappi.addEventListener('click', function(){
-  alert('Klikattu');
-})
+nappi.addEventListener('click', function(evt){
+  alert('Elementtiä' + evt.target + 'klikattiin');
+});
 </script>
 ``` 
+Yllä olevassa koodissa [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)-metodin ensimmäinen parametri 'click' on tapahtuma eli event ja toinen parametri on funktio, jota kutsutaan, kun 'click' tapahtuu.
+Toinen parametri voi olla myös viittaus funktioon:
+```html
+<button>Klikkaa mua</button>
+<script>
+const nappi = document.querySelector('button');
+
+function popup(evt){
+  alert('Elementtiä' + evt.target + 'klikattiin');
+}
+
+nappi.addEventListener('click', popup);
+</script>
+``` 
+Huomaa että addEventListenerissä popup-funktiosta puutuvat sulkeet Tämä siksi, että popup-funktiota käytetään tapahtumankäsittelijänä 
+eikä sitä kutsuta välittömästi, vaan vasta sitten, kun 'click' tapahtuu. Jos siinä oisi sulkeet, funktio käynnistettäisiin välittömästi.
+
+Tapahtumankäsittelijä ottaa vastaan [tapahtuma-olion](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt), joka sisältää tietoa tapahtumasta, kuten tapahtuman tyypin ja sen kohteen. Esim `evt.target` palauttaa sen elementin, joka on tapahtuman kohde.
+Yllä olevassa esimerkkikoodissä tämä kohde on `<button>`-elementti; 
 ## perinteinen
 ````javascript
 document.getElementById('#nappi').onclick = someFunction;
