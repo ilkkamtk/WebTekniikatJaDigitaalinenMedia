@@ -110,7 +110,7 @@ const p = document.querySelector('p');
 
 form.onsubmit = function(evt) {
   evt.preventDefault();
-  p.innerHTML = `Your name is ${fname.value} ${lname.value}`;
+  p.innerText = `Your name is ${fname.value} ${lname.value}`;
 }
 </script>
 ```
