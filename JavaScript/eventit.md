@@ -154,7 +154,7 @@ form.onsubmit = function(evt) {
   evt.preventDefault();
   // lähetetään tiedot
   fetch('osoiteJohonTiedotLahetetaan.php', data)
-    .then(function(vastaus) {   // Sitten kun palvelimen vastaus on saatu
+    .then( function(vastaus) {  // Sitten kun palvelimen vastaus on saatu
     console.log(vastaus);       // tehdään vastauksella jotain.
    }).catch( function(virhe) {  // Virhetilanteessa otetaan virhe kiinni
      console.log(virhe);        // ja tulostetaan se.
