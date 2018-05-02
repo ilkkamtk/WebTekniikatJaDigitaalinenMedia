@@ -64,7 +64,7 @@ nappi.onclick = popup;
 ```
 ### moderni (2010-luku)
 [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)-metodia suositellaan käytettäväksi vähänkin laajemmissa sovelluksissa. Sen avulla voidaan samaan tapahtumaan liittää useampi tapahtumankäsittelijä tai tapahtuman kuuntelu voidaan perua sovelluksen eri vaiheissa tarpeen mukaan [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)-metodin avulla.
-Tälläistä toimintoa voidaan tarvita esim. silloin, kun halutaan että painikkeen ensimmäinen napsautus tekee toiminnon A ja toinen napsautus tekee toiminnon B: 
+Tälläistä toimintoa voidaan tarvita esim. silloin, kun halutaan, että painikkeen ensimmäinen napsautus tekee toiminnon A ja toinen napsautus tekee toiminnon B: 
 ```html
 <button>Klikkaa mua</button>
 <script>
@@ -83,4 +83,38 @@ function B(evt){
 nappi.addEventListener('click', A);
 </script>
 ```
+## Vakiotapahtuman keskeyttäminen
+Joillain elementeillä, kuten `<a>` tai `<form>` on vakiotapahtumia. Esim. `<a>` elementtiä klikkaamalla siirrytään `href`-attribuutilla määritettyyn osoitteeseen, tai `<form>`-elementti lähetettäessä avaa `action`-attribuutissa määritetyn osoitteen.
+Joissain tapauksissa nätä vakiotoiminnot halutaan keskeyttää. Nykyään aika usein halutaan hoitaa lomakkeen tietojen lähettäminen JavaScriptillä selaimen normaalitoiminnon sijasta. Eli ei haluta, että selain siirtyy `action`-attribuutissa määritettyyn osoitteeseen automaattisesti.
+Tällöin käytetään [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)-metodia:
+```html
+<form>
+  <div>
+    <input name="fName" type="text" placeholder="etunimi">
+  </div>
+  <div>
+    <input name="lName" type="text" placeholder="sukunimi">
+  </div>
+  <div>
+    <input name="submit" type="submit" value="Näytä">
+  </div>
+</form>
+<p></p>
+
+<script>
+const form = document.querySelector('form');
+const fname = document.querySelector('input[name=fName]');
+const lname = document.querySelector('input[name=lName]');
+const submit = document.querySelector('input[name=submit]');
+const p = document.querySelector('p');
+
+form.onsubmit = function(evt) {
+  evt.preventDefault();
+  p.innerHTML = `Your name is ${fname.value}` ${lname.value};
+}
+</script>
+```
+
+
+
 ## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
