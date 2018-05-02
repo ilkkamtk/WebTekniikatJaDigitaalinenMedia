@@ -29,6 +29,8 @@ nappi.addEventListener('click', popup);
 Huomaa että addEventListenerissä popup-funktiosta puutuvat sulkeet Tämä siksi, että popup-funktiota käytetään tapahtumankäsittelijänä 
 eikä sitä kutsuta välittömästi, vaan vasta sitten, kun 'click' tapahtuu. Jos siinä oisi sulkeet, funktio käynnistettäisiin välittömästi.
 
+Tapahtumankäsittelijää kutsutaan myös takaisinkutsufunktioksi (callback).
+
 Tapahtumankäsittelijä ottaa vastaan [tapahtuma-olion](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt), joka sisältää tietoa tapahtumasta, kuten tapahtuman tyypin ja sen kohteen. Esim `evt.target` palauttaa sen elementin, joka on tapahtuman kohde.
 Yllä olevassa esimerkkikoodissä tämä kohde on `<button>`-elementti; 
 
@@ -121,7 +123,42 @@ form.onsubmit = function(evt) {
 </script>
 ```
 
-
-
-
 ## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+JavaScriptin uudemmissa versioissa tapahtumien sijasta käytetään yhä useammin lupauksia (promise). Lupaus on olio, joka 'lupaa' palauttaa arvon.
+Lupauksen etuja ovat mm. yksinkertaisempi syntaksi ja virheenkäsittelyn helpottaminen. Esim. lomakkeen lähettäminen fetch-metodilla:
+```html
+<form>
+  <div>
+    <input name="fName" type="text" placeholder="etunimi">
+  </div>
+  <div>
+    <input name="lName" type="text" placeholder="sukunimi">
+  </div>
+  <div>
+    <input name="submit" type="submit" value="Näytä">
+  </div>
+</form>
+<script>
+// luodaan olio 'data', johon lisätään käyttäjän syöte lomakkeesta ja määritetään http-metodiksi POST
+const data = {
+  body: {
+    fname: document.querySelector('input[name=fName]').value,
+    lname: document.querySelector('input[name=lName]').value
+    },
+  method: 'POST'
+}
+
+// Kun lomake lähetetään...
+form.onsubmit = function(evt) {
+  // ... estä vakiotapahtuma.
+  evt.preventDefault();
+  // lähetetään tiedot
+  fetch('osoiteJohonTiedotLahetetaan.php', data)
+    .then(function(vastaus) {   // sitten kun palvelimen vastaus on saatu
+    console.log(vastaus);       // tehdään vastauksella jotain
+   }).catch( function(virhe) {  // virhetilanteessa otetaan virhe kiinni
+     console.log(virhe);        // ja tulostetaan se
+   });
+}
+</script>
+```
