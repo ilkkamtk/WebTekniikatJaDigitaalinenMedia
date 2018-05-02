@@ -102,18 +102,25 @@ Tällöin käytetään [preventDefault](https://developer.mozilla.org/en-US/docs
 <p></p>
 
 <script>
+// valitaan elementit
 const form = document.querySelector('form');
 const fname = document.querySelector('input[name=fName]');
 const lname = document.querySelector('input[name=lName]');
 const submit = document.querySelector('input[name=submit]');
 const p = document.querySelector('p');
 
+// Kun lomake lähetetään...
 form.onsubmit = function(evt) {
+  // ... estä vakiotapahtuma.
   evt.preventDefault();
+  // Tässä voidaan esim. tarkastaa onko lomakkeen kentät täytetty oikein,
+  // jonka jälkeen se voitaisiin lähettää esim. fetch-metodilla
+  // Nyt kuitenkin tyydytään esimerkin vuoksi tulostamaan käyttäjän syöte.
   p.innerText = `Your name is ${fname.value} ${lname.value}`;
 }
 </script>
 ```
+
 
 
 
