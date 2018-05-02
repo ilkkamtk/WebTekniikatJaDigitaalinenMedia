@@ -14,4 +14,18 @@ Avoimia rajapintoja on tarjolla runsaasti ja suurin osa niistä on nykyään hyv
 
 Testaamista varten erittäin kätevä apuväline on [Postman](https://www.getpostman.com/). Sen avulla internetissä olevia rajapintoja voidaan testata kirjoittamatta riviäkään koodia.
 
+## HTTP-protokolla
+Suurin osa avoimista rajapinnoista on toteutettu HTTP-protokollaan perustuvalla REST-arkkitehtuurimallilla, jonka takia niistä käytetään usein termiä RESTful web palvelut (web service).
+REST-arkkitehtuuri käyttää HTTP:n metodeja kertomaan järjestelmälle halutaanko esim. lukea, lisätä tai muokata dataa. Jotta avoimia rajapintoja / RESTful palveluita voidaan käyttää, on hyvä tietää HTTP-protokollasta perusasiat.
+
+• Application layer protocol
+• relies on the transport protocol called TCP/IP
+• Stateless protocol
+• Once an HTTP transaction is completed, the connection between the client and server is completely
+broken: neither the client nor the server has any memory of the transaction
+• Transaction = sequence of the client request and corresponding server response
+• Obvious limitation when developing Web applications
+• Techniques have been developed to combine individual transactions into a set of related transactions
+that perform more complicated tasks
+
 #### Tehtävä: asenna Postman ja testaa [OpenChargeMap](https://openchargemap.org/site/develop#api)-rajapintaa
