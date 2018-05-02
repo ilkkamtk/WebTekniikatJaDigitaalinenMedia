@@ -139,7 +139,7 @@ Inline eli style attribuutin muokkaaminen:
 <p style="background-color: #ccc; padding: 1rem;" id="kappale">Jotain tekstiä</p>
 
 <script>
-document.querySelector('#kappale').style = "background-color: #222; padding: 3rem;";
+document.querySelector('#kappale').style = "color: #eee; background-color: #222; padding: 3rem;";
 </script>
 ```
 Class attribuutin muokkaaminen:
