@@ -31,6 +31,21 @@ eikä sitä kutsuta välittömästi, vaan vasta sitten, kun 'click' tapahtuu. Jo
 
 Tapahtumankäsittelijä ottaa vastaan [tapahtuma-olion](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt), joka sisältää tietoa tapahtumasta, kuten tapahtuman tyypin ja sen kohteen. Esim `evt.target` palauttaa sen elementin, joka on tapahtuman kohde.
 Yllä olevassa esimerkkikoodissä tämä kohde on `<button>`-elementti; 
+
+## Syntaksi
+Tapahtumankäsitteyssä voi käyttää kolmea eri syntaksia.
+
+### vanha
+Inline syntaksi, jossa tapahtumankäsittelijä määritetään HTML-koodissa. Tätä tapaa tulisi välttää. Tosin joissain frameworkeissä, kuten Angular ja React tämän kaltainen syntaksi on käytössä.
+```html
+<button onclick="popup()">Klikkaa mua</button>
+<script>
+function popup(evt){
+  alert('Elementtiä' + evt.target + 'klikattiin');
+}
+</script> 
+```
+
 ## perinteinen
 ````javascript
 document.getElementById('#nappi').onclick = someFunction;
