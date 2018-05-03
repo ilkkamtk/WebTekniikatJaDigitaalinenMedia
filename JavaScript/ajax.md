@@ -59,11 +59,61 @@ asynkroninen lataus valmis
 ```
 Miksi konsolissa olevat tekstit ovat eri järjestyksessä kuin edellisessä tehtävässä?
 
+## J = JavaScript
+AJAXissa JavaScriptiä käytetään ladatun datan näyttämiseen HTML-dokumentissa.
 
+## X = XML, eXtensible Markup Language
+XML on merkintäkieli, kuten HTML. Se on tarkoitettu datan tallennukseen ja siirtoon. Tyypillinen XML-dokumentti näyttää tältä:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<kuvat>
+    <kuva>
+      <nimi>Nukkuva kissa</nimi>
+      <kuvaus>Tässä kuvassa kissa nukkuu.</kuvaus>
+      <osoite>http://placekitten.com/321/241</osoite>
+    </kuva>
+    <kuva>
+      <nimi>Makaava kissa</nimi>
+      <kuvaus>Tässä kuvassa kissa makaa.</kuvaus>
+      <osoite>http://placekitten.com/421/251</osoite>
+    </kuva>
+</kuvat>
+```
+2000-luvun puolivälin paikkeilla, kun XMLHttpRequest lisättiin JavaScriptiin, XML oli luonnollinen vaihtoehto käytettäväksi datan siirtoon.
+XML-dokumenttien luominen palvelimella ja varsinkin niiden lukeminen / parsiminen asiakaspäässä JavaScriptillä on kohtuu hankalaa verrattuna nykyisiin tekniikoihin.
+Esim. haetaan yllä olevasta XML-dokumentista toisen kuvan tiedot ja näytetään ne HTML-dokumentissa:
+```html
+<figure>
+    <img>
+    <figcaption></figcaption>
+</figure>
+
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', 'kuvat.xml', true);                // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (true)
+    xhr.onreadystatechange = naytaKuva;                         // Kuunnellaan muutoksia latauksen tilassa, ja aina kun muutoksia tapahtuu ajetaan naytaKuva-funktio
+    xhr.send(null);                                             // Lähetetään pyyntö     
+    
+    function naytaKuva() {                    
+      if (xhr.readyState === 4 && xhr.status === 200) {         // Jos lataus on valmis ja osoite löytyi
+        const xml = xhr.responseXML;
+        const nimi = xml.firstChild.childNodes[1].childNodes[0].firstChild.nodeValue;  // xml > kuvat > kuva[1] > nimi > tekstinoodi >tekstiarvo
+        const kuvaus = xml.firstChild.childNodes[1].childNodes[1].firstChild.nodeValue;  // xml > kuvat > kuva[1] > kuvaus > tekstinoodi > tekstiarvo
+        const osoite = xml.firstChild.childNodes[1].childNodes[2].firstChild.nodeValue;// xml > kuvat > kuva[1] > osoite > tekstinoodi > tekstiarvo
+        
+        document.querySelector('img').src = osoite;
+        document.querySelector('img').alt = nimi;
+        document.querySelector('figcaption').innerText = kuvaus;
+      }
+     }
+</script>
+```
+
+## JSON
+
+### JSON vs XML
 
 ## Tyypillinen AJAX -sovellus
-## JSON
-## XML
-### JSON vs XML
+
 ## XMLHttpRequest -olio
 ## Fetch API
