@@ -110,7 +110,7 @@ riittää opetella määrittelemään muuttujat `let`-avainsanan avulla.
 
 Esimerkiksi muuttuja nimeltä `nimi` määritellään seuraavasti:
 ```javascript
-let nimi;
+        let nimi;
 ```
 Tässä vaiheessa muuttuja on määritelty eli ohjelman näkökulmasta
 olemassa: sille voidaan asettaa arvo, ja sen arvo voidaan lukea. 
@@ -120,13 +120,13 @@ eli sille on asetettu arvo ensimmäisen kerran.
 
 Edellä mainittu muuttuja voidaan alustaa seuraavasti:
 ```javascript
-nimi = 'Milla';
+        nimi = 'Milla';
 ```
 
 
 Muuttuja voitaisiin myös määritellä ja alustaa samalla kertaa:
 ```javascript
-let nimi = 'Milla';
+        let nimi = 'Milla';
 ```
 
 Muuttujat ovat löyhästi tyypitettyjä, joten muuttujaa määriteltäessä
