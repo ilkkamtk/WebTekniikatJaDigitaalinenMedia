@@ -1,0 +1,20 @@
+Projekti
+
+- aihe vapaa
+    - jos ei keksi annetaan aihe
+- Vaatimukset numeroon 1
+    - Validi HTML + CSS
+    - JavaScript
+    - Kartta
+        - Markkerien lisääminen
+        - Reititys?
+    - vähintään 1 (avoin) rajapinta, ei kaupallisia
+    - Reagoidaan käyttäjän syötteisiin (lomakkeet ym interaktiivisuus)
+    - Media
+        - Käyttöliittymän kuvat
+        - Sivulle upotettu video äänillä
+        - Tekijöiden kuvat
+            - kuvat kansio voidaan laittaa salasanan taakse?
+    - Julkaistaan palvelimella
+
+
