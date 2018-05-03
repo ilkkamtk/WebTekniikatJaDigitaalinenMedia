@@ -109,7 +109,8 @@ Esim. haetaan yllä olevasta XML-dokumentista toisen kuvan tiedot ja näytetää
 </script>
 ```
 
-## JSON
+## [JSON](http://json.org), JavaScript Object Notation
+Nykyään AJAX sovelluksissa useimmiten käytetään XML:n sijasta JSONia.
 
 ### JSON vs XML
 
