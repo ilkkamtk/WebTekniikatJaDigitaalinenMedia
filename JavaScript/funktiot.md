@@ -106,7 +106,7 @@ Tarkastellaan esimerkkinä ohjelmaa, joka laskee kahden luvun neliösumman. Esim
 
 Paluuarvo palautetaan `return`-lauseella. Esimerkiksi muuttujan nimeltä `tulos` arvo palautettaisiin seuraavalla lauseella:
 ```javascript
-return tulos;
+        return tulos;
 ```
 
 Alla olevan ohjelman funktio toteuttaa neliösumman laskennan. Funktion jälkeen on pääohjelma, joka kutsuu `neliosumma`-funktiota antaen sille parametrien arvot. Lopuksi pääohjelma tulostaa `neliosumma`-funktion palauttaman paluuarvon.
@@ -310,7 +310,7 @@ Alla oleva versio `neliosumma`-funktiosta sisältää myös tulostuslauseen, jot
 johon lause voidaan kirjoittaa. Paluuarvo voidaan tässä notaatiossa välittää `return`-lauseella.
 
 ```javascript
-const neliosumma = (a,b) =>
+        const neliosumma = (a,b) =>
         {
             console.log('Neliösummafunktiota kutsuttiin.');
             return (a * a + b * b);
