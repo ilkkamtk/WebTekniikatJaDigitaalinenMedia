@@ -29,7 +29,7 @@ Konsolin lokituloste tuotetaan `console.log()`-metodilla.
 Lokituloste näkyy selaimen kehittäjätilassa yleensä Console-välilehdellä.
 
 ```javascript
-console.log('Hei, maailma!');
+        console.log('Hei, maailma!');
 ```
 
 Tuloste konsoli-ikkunassa:
@@ -42,7 +42,7 @@ Hyvää huomenta kaikille.
 
 Ponnahtava viesti-ikkuna tuotetaan `alert`-funktiolla:
 ```javascript
-alert('Hei tätäkin kautta!');
+        alert('Hei tätäkin kautta!');
 ```
 
 Selainikkunaan ilmestyvä viesti-ikkuna näyttää tältä:
@@ -197,7 +197,7 @@ Merkkijonojen
 yhdistäminen eli katenaatio toteutetaan `+`-operaatiolla.
 Esimerkiksi seuraava lause rakentaa tulosteen kolmesta osamerkkijonosta:
 ```javascript
-console.log('Hyvää' + ' huomenta' + ' kaikille.');
+        console.log('Hyvää' + ' huomenta' + ' kaikille.');
 ```
 
 Tuloste:
