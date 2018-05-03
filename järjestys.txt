@@ -1,4 +1,4 @@
-https://www.udacity.com/course/html-and-css-syntax--ud001
+ennakkotehtävä: https://www.udacity.com/course/html-and-css-syntax--ud001
 
 1. HTML/Julkaiseminen.md
 2. CSS ...
