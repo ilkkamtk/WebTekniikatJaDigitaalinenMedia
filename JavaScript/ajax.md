@@ -7,18 +7,41 @@ Esim:
 <img>
 
 <script>
+console.log('skripti alkaa');
 const xhr = new XMLHttpRequest();
-xhr.open('get', 'https://raw.githubusercontent.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/master/JavaScript/img/dataUrlExample.txt?token=ACOtjEk98YJVWboOLX83HyTWSg1b5eK1ks5a8-INwA%3D%3D', false);
-request.send(null);
+xhr.open('get', 'dataUrlExample.txt', false);
+xhr.send(null);
+
+if (xhr.status === 200) {
+  document.querySelector('img').src = xhr.responseText;
+  console.log('synkroninen lataus valmis');
+}
+
+console.log('skripti päättyy');
+</script>
+``` 
+
+```html
+<img>
+
+<script>
+console.log('skripti alkaa');
+const xhr = new XMLHttpRequest();
+xhr.open('get', 'dataUrlExample.txt');
+xhr.onreadystatechange = function(evt) { 
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    document.querySelector('img').src = xhr.responseText;
+    console.log('asynkroninen lataus valmis');
+  }
+ }
+xhr.send(null);
 
 if (xhr.status === 200) {
   document.querySelector('img').src = xhr.responseText;
 }
 
-console.log('synkroninen valmis');
+console.log('skripti päättyy');
 </script>
-
-``` 
 ## Tyypillinen AJAX -sovellus
 ## JSON
 ## XML
