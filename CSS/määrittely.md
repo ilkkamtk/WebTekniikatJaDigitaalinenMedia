@@ -60,7 +60,7 @@ Suhteelliset taas seuraavia:
 | ex     | verrattuna fontin korkeuteen. Harvoin käytetty  |
 | ch| suhteutettuna merkin "0" leveyteen|
 | rem  |  suhteellinen juurielementin (body) fonttikokoon  |
-| vw | 1% viewportin (selainikkunan) leveydestä. 15% vw tarkoittaa 15% ikkunan leveydestä |
+| vw | 1% viewportin (selainikkunan) leveydestä. 15vw tarkoittaa 15% ikkunan leveydestä |
 | vh     | 1% viewportin korkeudesta    |
 | vmin    | 1% pienempi viewportin korkeudesta taikka leveydestä   |
 | vmax     | 1% suurempi viewportin korkeudesta taikka leveydestä   |
