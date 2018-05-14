@@ -110,11 +110,92 @@ Esim. haetaan yllä olevasta XML-dokumentista toisen kuvan tiedot ja näytetää
 ```
 
 ## [JSON](http://json.org), JavaScript Object Notation
-Nykyään AJAX sovelluksissa useimmiten käytetään XML:n sijasta JSONia.
+JSON eli JavaScript Object Notation on suosittu merkintäkieli, jota käytetään yleisesti selainten ja palvelinten välisessä tiedonsiirrossa ja erityisesti Ajax-sovelluksissa. Nykyään Ajax-sovelluksissa useimmiten käytetään XML:n sijasta JSONia. Vaikka JSONissa käytetään JavaScriptin tietorakenteita datan esittämiseen se on silti yhteensopiva muiden kielien kanssa. JSONin käyttö on sekä palvelin-, että selainohjelmoinnissa yleensä paljon yksinkertaisempaa kuin XML. Esim. edellinen XML esimerkki JSON-muodossa:
+```json
+[
+  {
+    "nimi": "Nukkuva kissa",
+    "kuvaus": "Tässä kuvassa kissa nukkuu.",
+    "osoite": "http://placekitten.com/321/241"
+  },
+  {
+    "nimi": "Nukkuva kissa",
+    "kuvaus": "Tässä kuvassa kissa makaa.",
+    "osoite": "http://placekitten.com/421/251"
+  }
+]
+```
+Ylläolevasta esimerkissä on kuvattu taulukko (hakasulkeet []), joka sisältää kaksi oliota (aaltosulkeet {}). Aiempi esimerkki, jossa haetaan XML-dokumentista toisen kuvan tiedot ja näytetään ne HTML-dokumentissa tehdään JSON versiona näin:
+```html
+<figure>
+    <img>
+    <figcaption></figcaption>
+</figure>
 
-### JSON vs XML
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', 'kuvat.json', true);                // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (true)
+    xhr.onreadystatechange = naytaKuva;                         // Kuunnellaan muutoksia latauksen tilassa, ja aina kun muutoksia tapahtuu ajetaan naytaKuva-funktio
+    xhr.send(null);                                             // Lähetetään pyyntö     
+    
+    function naytaKuva() {                    
+      if (xhr.readyState === 4 && xhr.status === 200) {         // Jos lataus on valmis ja osoite löytyi
+        const kuvat = JSON.parse(xhr.responseText);             // Muutetaan ladattu tekstimuotoinen JSON JavaScript-olioksi    
+                                                                // (tässä tapauksessa tarkemmin sanottuna taulukoksi)
+        const nimi = kuvat[1].nimi;     // 'Kuvat' taulukon toisen objektin 'nimi' ominaisuus
+        const kuvaus = kuvat[1].kuvaus; // 'Kuvat' taulukon toisen objektin 'kuvaus' ominaisuus
+        const osoite = kuvat[1].osoite; // 'Kuvat' taulukon toisen objektin 'osoite' ominaisuus
+        
+        document.querySelector('img').src = osoite;
+        document.querySelector('img').alt = nimi;
+        document.querySelector('figcaption').innerText = kuvaus;
+      }
+     }
+</script>
+```
 
 ## Tyypillinen AJAX -sovellus
+Koska Ajax-sovellus muokkaa WWW-sivuja dynaamisesti ilman, että käyttäjän tarvitsee navigoida sivulta toiselle, web-sovelluksen toiminta voidaan saada muistuttamaan tavallisia työpöytäohjelmia, kuten esim. Google Docs. Myös Facebook on hyvä esimerkki AJAX-sovelluksesta.
 
 ## XMLHttpRequest -olio
+XMLHttpRequest -olio hoitaa taustalla kommunikoinnin palvelimen kanssa. Sen avulla voidaan päivittää osia sivusta ilman, että sivu ladattaisiin kokonaan uudestaan.
+
+XHR-olion luominen:
+```javascript
+const xhr = new XMLHttpRequest();
+```
+Tärkeimmät metodit:
+```javascript
+open(metodi, osoite, async, user, pwd); // Määritetään yhteysasetukset
+                                        // metodi = GET, POST
+                                        // osoite = ladattavan datan osoite
+                                        // async = true (asynkroninen) / false (synkroninen) *valinnainen
+                                        // user = käyttäjänimi *valinnainen
+                                        // pwd = salasana *valinnainen
+                                                
+send(data);                             // Lähetetään pyyntö palvelimelle
+                                        // data = palvelimelle lähetettävä data, jos metodi on POST *valinnainen
+                                        // data tulee olla querystring-muodossa (https://en.wikipedia.org/wiki/Query_string)
+```
+Tärkeimmät ominaisuudet 
+```javascript
+onreadystatechange                      // määritetään funktio, jota kutsutaan kun readyState-ominaisuus vaihtuu
+
+readyState                              // sisältää XMLHttpRequestin tilatiedot
+                                        // 0: request not initialized 
+                                        // 1: server connection established
+                                        // 2: request received 
+                                        // 3: processing request
+                                        // 4: request finished and response is ready  (Tämä on ainoa, jota oikeasti käytetään)
+                                                
+responseText                            // palauttaa ladatun datan merkkijonona
+
+responseXML                             // palauttaa ladatun datan XML-oliona
+
+status                                  // palauttaa HTTP-tilakoodin. esim:
+                                        // 200: "OK"
+                                        // 403: "Forbidden"
+                                        // 404: "Not Found"
+```
+
 ## Fetch API
