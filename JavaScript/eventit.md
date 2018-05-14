@@ -164,3 +164,10 @@ form.onsubmit = function(evt) {
 </script>
 ```
 ## Harjoitustehtävät
+Lataa aloitustiedostot tästä reposta.
+1. teht1.html
+   * Dokumentti sisältää `<button>` elementin. Tee skripti, joka avaa ponnahdusikkunan, jossa lukee 'Nappia klikattu', kun `<button>` elementtiä klikataan
+1. teht2.html
+   * Dokumentti sisältää `<img>` ja `<p>` elementit. Tee CSS joka piilottaa `<p>` elementin ja skripti + CSS, joka näyttää `<p>` elementin, kun hiiri liikutetaan `<img>` elementin päälle (mouseenter) ja piilottaa `<p>` elementin, kun hiiri poistuu `<img>` elementin päältä (mouseleave).
+1. teht3.html
+1. teht4.html
