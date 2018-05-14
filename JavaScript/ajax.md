@@ -236,13 +236,13 @@ Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XM
 Tee sovellus, joka hakee käyttäjän syöttämän tv-sarjan tiedot ja näyttää ne web-sivulla. 
    * Käytettävä API: [TVMaze API](http://www.tvmaze.com/api#show-search)
    * Vaatimukset: 
-      * 1p: Tulostetaan haun tulos konsoliin
-      * 2p: Tulostetaan web-sivulle haun tuloksesta yhden sarjan tiedot
+      * Vaihe 1: Tulostetaan haun tulos konsoliin
+      * Vaihe 2: Tulostetaan web-sivulle haun tuloksesta yhden sarjan tiedot
          * vaadittavat tiedot: Nimi, linkki kotisivulle, medium-kuva sekä yhteenveto (summary)
-      * 4p: Tulostetaan web-sivulle haun tuloksesta kaikkien sarjojen samat tiedot kuin edellä
+      * Vaihe 3: Tulostetaan web-sivulle haun tuloksesta kaikkien sarjojen samat tiedot kuin edellä
          * lisäksi tulostetaan genret, joihin sarja kuuluu 
-      * 5p: Tyylikäs ulkoasu CSS:llä ja validi HTML
+      * Vaihe 4: Tyylikäs ulkoasu CSS:llä ja validi HTML
    * Tee ensin validi HTML-sivu, jossa on hakukenttä. Eli `<input id="hakuteksti" type="text">` sekä `<button id="hakunappi">Hae</button>`
-   * Lisää hakunappiin click-eventti, joka käynnistää haun.
+   * Lisää hakunappiin click-tapahtuma, joka käynnistää haun.
    * Hakua varten tarvitsee hakea 'hakuteksti'-kentän arvo (value), joka sitten lähetetään fetch:in avulla APIin.
    * Haun tuloksessa on todennäköisesti useampi TV-sarja, joten tee for-silmukka, jonka sisällä tulostat tietojen näyttämiseen tarvittavan HTML:n

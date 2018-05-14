@@ -207,6 +207,6 @@ Lataa alaitustiedostot tästä reposta.
  1. teht5.html
     * tee skripti, joka tulostaa kellonajan `<p id=kello>` elementin sisälle sekunnin välein
         * kellon tulee olla 24h kello ja sen tulee näyttää tunnit, minuutit ja sekunnit
-        * Kellonaika saadaan [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp)-olion avulla 
+        * Kellonaika saadaan [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp)-olion avulla ja päivitetään [setInterval](BOM.md#setInterval-metodi)-metodilla
 
    
