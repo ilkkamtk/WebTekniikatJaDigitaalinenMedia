@@ -165,7 +165,7 @@ document.querySelector('#kappale').classList.toggle('sininen');
 [classList-dokumentaatio](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
 ## Harjoitustehtävät
-Lataa alaitustiedostot tästä reposta.
+Lataa aloitustiedostot tästä reposta.
 1. teht1.html
    * Dokumentti sisältää listan, jossa on etunimi, sukunimi, nikki ja osoite.
    * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
