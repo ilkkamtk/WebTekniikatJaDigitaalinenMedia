@@ -57,6 +57,7 @@ Suhteelliset taas seuraavia:
 | Yksikkö | Selitys   | 
 |:------ |:-------|
 | em    | suhteessa elementin fonttikokoon. Esim. 2em on kaksinkertainen |
+| rem    | suhteessa juurielementin fonttikokoon. |
 | ex     | verrattuna fontin korkeuteen. Harvoin käytetty  |
 | ch| suhteutettuna merkin "0" leveyteen|
 | rem  |  suhteellinen juurielementin (body) fonttikokoon  |
