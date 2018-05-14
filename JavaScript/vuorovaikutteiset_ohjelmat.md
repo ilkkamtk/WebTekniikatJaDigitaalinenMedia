@@ -412,7 +412,7 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 
 1. Kirjoita ohjelma, joka tulostaa näytölle tekstin 'Tämä on JavaScript-ohjelma!'
 
-2. Kirjoita ohjelma, joka kysyy nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi. Esimerkkejä:
+2. Kirjoita ohjelma, joka [kysyy](BOM.md#prompt-metodi) nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi. Esimerkkejä:
 
     - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin 'Terve, Viivi!'
     - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin 'Terve, Ahmed!'
