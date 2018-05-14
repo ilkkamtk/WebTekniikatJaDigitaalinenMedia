@@ -232,7 +232,7 @@ Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XM
      }
 </script>
 ```
-## Tehtävä
+## Harjoitustehtävä
 Tee sovellus, joka hakee käyttäjän syöttämän tv-sarjan tiedot ja näyttää ne web-sivulla. 
    * Käytettävä API: [TVMaze API](http://www.tvmaze.com/api#show-search)
    * Vaatimukset: 

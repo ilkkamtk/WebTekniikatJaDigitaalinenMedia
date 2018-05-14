@@ -87,8 +87,9 @@ nappi.addEventListener('click', A);
 ```
 ## Vakiotapahtuman keskeyttäminen
 Joillain elementeillä, kuten `<a>` tai `<form>` on vakiotapahtumia. Esim. `<a>` elementtiä klikkaamalla siirrytään `href`-attribuutilla määritettyyn osoitteeseen, tai `<form>`-elementti lähetettäessä avaa `action`-attribuutissa määritetyn osoitteen.
-Joissain tapauksissa nätä vakiotoiminnot halutaan keskeyttää. Nykyään aika usein halutaan hoitaa lomakkeen tietojen lähettäminen JavaScriptillä selaimen normaalitoiminnon sijasta. Eli ei haluta, että selain siirtyy `action`-attribuutissa määritettyyn osoitteeseen automaattisesti.
-Tällöin käytetään [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)-metodia:
+Joissain tapauksissa nätä vakiotoiminnot halutaan keskeyttää.
+
+Esimerkiksi HTML lomakkeet toimivat siten, että käyttäjä täyttää lomakkeen, jonka jälkeen hän painaa lähetysnappia. Tässä vaiheessa selain lähettää tiedot action-attribuutissa määritettyyn osoitteeseen (ts. lähettää HTTP-pyynnön) ja samalla avaa kyseisen osoitteen selainikkunassa (eli vastaanottaa HTTP-vastauksen). Nykyaikaisissa web-sovelluksissa tälläinen toiminta halutaan estää, eli ei haluta siirtyä aina uudelle sivulle lomaketta lähettäessä. Esimerkkinä vaikkapa viestien lähettäminen Facebookissa. Kun elementin vakiotapahtuma halutaan pysäyttää, käytetään [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)-metodia:
 ```html
 <form>
   <div>

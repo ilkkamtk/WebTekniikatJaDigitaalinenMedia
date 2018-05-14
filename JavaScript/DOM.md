@@ -127,7 +127,7 @@ document.scripts    // hakee kaikki script-elementit
            p.appendChild(i);                                       // lisätään kuva p-elementtiin
     
            div.appendChild(p);                                     // lisätään p-elementti HTML-dokumentista valittuun elementtiin
-                                                                   // tässä vaiheessa luoto HTML ilmestyy dokumenttin.
+                                                                   // tässä vaiheessa luotu HTML ilmestyy dokumenttin.
            </script>
         ```
 ### CSS:n käsittely
@@ -164,4 +164,45 @@ document.querySelector('#kappale').classList.toggle('sininen');
 ```
 [classList-dokumentaatio](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
-## Lomakkeen kanssa työskentely
+## Harjoitustehtävät
+Lataa alaitustiedostot tästä reposta.
+1. teht1.html
+   * Dokumentti sisältää listan, jossa on etunimi, sukunimi, nikki ja osoite.
+   * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
+   * Lisää JavaScriptillä listaan puhelinnumero
+   * Poista JavaScriptillä nikki
+1. teht2.html
+   * Dokumetissä on kuva 1, joka on piilotettu CSS:n avulla
+      * Tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
+   * Dokumentissä on kuva 2, joka on piilotettu CSS:n avulla
+      * Lisää teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
+      * Tee skripti, joka tuo kuvan näkyviin class attribuuttia muokkaamalla
+1. teht3.html
+   * teht3.js sisältää taulukon 'kuvat'
+   * tee for-silmukka, joka lisää innerHTML-ominaisuuden avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
+    ```html
+    <ul>
+      <li>
+       <img src="lisää_osoite_tänne">
+      </li>
+      <li>....
+    </ul>
+    
+    ```
+    * tee for-silmukan sisällä `<li>` ja `<img>` elementit jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään tulostat valmiin html-koodin innerHTML:n avulla  
+1. teht4.html
+   * myös teht4.js sisältää taulukon 'kuvat'
+   * tee for-silmukka, joka lisää DOM-metodien avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
+    ```html
+    <ul>
+      <li>
+       <img src="lisää_osoite_tänne">
+      </li>
+      <li>....
+    </ul>
+    
+    ```
+    * tee for-silmukan sisällä createElement-metodilla `<li>` ja `<img>` elementit jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään lisäät html elementit appendChild-metodin avulla
+ 1. tee tehtäviin 3 ja 4 CSS, joka poistaa listan edestä pallerot ([list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp)), ja joka tekee joka toisen `<li>` elementin taustan harmaaksi ([pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp))
+
+   
