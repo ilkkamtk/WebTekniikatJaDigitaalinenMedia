@@ -203,7 +203,7 @@ Ylläolevasta esimerkissä on kuvattu taulukko (hakasulkeet []), joka sisältä�
 
 
 ## [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XMLHTTPRequest-olioon verrattuna Fetch on tehokkaampi, joustavampi ja isommissa sovelluksissa yksinkertaisempi, koska sen kanssa ei jouduta niin sanottuun takaisinkutsuhelvettiin ja virheiden käsittely on helpompaa. Sama kuvanhaku esimerkki kuin aikaisemmin, nyt fetchillä toteutettuna:
+Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XMLHTTPRequest-olioon verrattuna Fetch on tehokkaampi, joustavampi ja isommissa sovelluksissa yksinkertaisempi, koska sen kanssa ei jouduta niin sanottuun takaisinkutsuhelvettiin ja virheiden käsittely on helpompaa. Sama kuvanhakuesimerkki kuin aikaisemmin, nyt fetchillä toteutettuna:
 ```html
 <figure>
     <img>
