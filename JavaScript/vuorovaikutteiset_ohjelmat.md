@@ -225,7 +225,7 @@ käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
 Sellaiset ohjelmat ovat harvinaisia. Yleensä halutaan, että käyttäjä voi antaa
 ohjelmalle syötteitä, jotka vaikuttavat ohjelman kulkuun.
 
-Syöte luetaan `prompt()`-funktiolla. Funktion argumenttina annetaan merkkijono, joka esitetään dialogi-ikkunassa käyttäjälle.
+Syöte luetaan [`prompt()`](BOM.md#prompt-metodi)-funktiolla. Funktion argumenttina annetaan merkkijono, joka esitetään dialogi-ikkunassa käyttäjälle.
 
 Seuraava lause kysyy käyttäjältä tämän nimen:
 

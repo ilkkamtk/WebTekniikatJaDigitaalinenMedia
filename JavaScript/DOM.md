@@ -204,5 +204,9 @@ Lataa alaitustiedostot tästä reposta.
     ```
     * tee for-silmukan sisällä createElement-metodilla `<li>` ja `<img>` elementit jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään lisäät html elementit appendChild-metodin avulla
  1. tee tehtäviin 3 ja 4 CSS, joka poistaa listan edestä pallerot ([list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp)), ja joka tekee joka toisen `<li>` elementin taustan harmaaksi ([pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp))
+ 1. teht5.html
+    * tee skripti, joka tulostaa kellonajan `<p id=kello>` elementin sisälle sekunnin välein
+        * kellon tulee olla 24h kello ja sen tulee näyttää tunnit, minuutit ja sekunnit
+        * Kellonaika saadaan [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp)-olion avulla 
 
    
