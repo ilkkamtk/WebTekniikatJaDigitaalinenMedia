@@ -172,7 +172,7 @@ Lataa aloitustiedostot tästä reposta.
    * Lisää JavaScriptillä listaan puhelinnumero
    * Poista JavaScriptillä nikki
 1. teht2.html
-   * Dokumetissä on kuva 1, joka on piilotettu CSS:n avulla
+   * Dokumentissä on kuva 1, joka on piilotettu CSS:n avulla
       * Tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
    * Dokumentissä on kuva 2, joka on piilotettu CSS:n avulla
       * Lisää teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
