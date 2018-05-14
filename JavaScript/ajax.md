@@ -1,4 +1,51 @@
 # AJAX - Asynchronous JavaScript and XML
+## Tyypillinen AJAX -sovellus
+Koska Ajax-sovellus muokkaa WWW-sivuja dynaamisesti ilman, että käyttäjän tarvitsee navigoida sivulta toiselle, web-sovelluksen toiminta voidaan saada muistuttamaan tavallisia työpöytäohjelmia, kuten esim. Google Docs. Myös Facebook on hyvä esimerkki AJAX-sovelluksesta.
+
+## XMLHttpRequest -olio
+XMLHttpRequest -olio hoitaa taustalla kommunikoinnin palvelimen kanssa. Sen avulla voidaan päivittää osia sivusta ilman, että sivu ladattaisiin kokonaan uudestaan.
+
+XHR-olion luominen:
+```javascript
+const xhr = new XMLHttpRequest();
+```
+Tärkeimmät metodit:
+```javascript
+open(metodi, osoite, async, user, pwd); // Määritetään yhteysasetukset
+                                        // metodi = GET, POST
+                                        // osoite = ladattavan datan osoite
+                                        // async = true (asynkroninen) / false (synkroninen) *valinnainen
+                                        // user = käyttäjänimi *valinnainen
+                                        // pwd = salasana *valinnainen
+                                                
+send(data);                             // Lähetetään pyyntö palvelimelle
+                                        // data = palvelimelle lähetettävä data, jos metodi on POST *valinnainen
+                                        // data lähetetään hakulausekkeena (query string)
+```
+
+Datan lähettäminen tehdään käyttämällä [hakulauseketta](https://en.wikipedia.org/wiki/Query_string) (query string). Kun Ajax-haku tehdään GET-metodilla, sen paikka on osoitteessa: `haeDataa.php?nimi=Seppo&ika=12`. POST-metodia käytettäessä, sen paikka on send-metodissa: `xhr.send('nimi=seppo&ika=12')`.
+
+Tärkeimmät ominaisuudet 
+```javascript
+onreadystatechange                      // määritetään funktio, jota kutsutaan kun readyState-ominaisuus vaihtuu
+
+readyState                              // sisältää XMLHttpRequestin tilatiedot
+                                        // 0: request not initialized 
+                                        // 1: server connection established
+                                        // 2: request received 
+                                        // 3: processing request
+                                        // 4: request finished and response is ready  (Tämä on ainoa, jota oikeasti käytetään)
+                                                
+responseText                            // palauttaa ladatun datan merkkijonona
+
+responseXML                             // palauttaa ladatun datan XML-oliona
+
+status                                  // palauttaa HTTP-tilakoodin. esim:
+                                        // 200: "OK"
+                                        // 403: "Forbidden"
+                                        // 404: "Not Found"
+```
+
 ### A = Asynkronisuus
 Koska JavaScriptin suoritusympäristö on yksisäikeinen, aikaa vieviä toimenpiteitä ei ole varaa jäädä odottamaan synkronisesti, eli siten, että ainut säie jää odottamaan kutsun suoritusta, jolloin ohjelma ei tee mitään muuta.
 Tämän takia JavaScriptissä monet asiat, kuten AJAX-kutsut ja tiedoston käsittely tehdään asynkronisesti eli vastaus annetaan funktion paluuarvon sijasta takaisinkutsufunktion parametrinä.
@@ -134,7 +181,7 @@ Ylläolevasta esimerkissä on kuvattu taulukko (hakasulkeet []), joka sisältä�
 
 <script>
     const xhr = new XMLHttpRequest();
-    xhr.open('get', 'kuvat.json', true);                // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (true)
+    xhr.open('get', 'kuvat.json', true);                        // Kerrotaan XMLHttpRequest-oliolle metodi ja osoite, johon pyyntö lähetetään sekä vaihdetaan toiminta synkroniseksi (true)
     xhr.onreadystatechange = naytaKuva;                         // Kuunnellaan muutoksia latauksen tilassa, ja aina kun muutoksia tapahtuu ajetaan naytaKuva-funktio
     xhr.send(null);                                             // Lähetetään pyyntö     
     
@@ -154,48 +201,34 @@ Ylläolevasta esimerkissä on kuvattu taulukko (hakasulkeet []), joka sisältä�
 </script>
 ```
 
-## Tyypillinen AJAX -sovellus
-Koska Ajax-sovellus muokkaa WWW-sivuja dynaamisesti ilman, että käyttäjän tarvitsee navigoida sivulta toiselle, web-sovelluksen toiminta voidaan saada muistuttamaan tavallisia työpöytäohjelmia, kuten esim. Google Docs. Myös Facebook on hyvä esimerkki AJAX-sovelluksesta.
 
-## XMLHttpRequest -olio
-XMLHttpRequest -olio hoitaa taustalla kommunikoinnin palvelimen kanssa. Sen avulla voidaan päivittää osia sivusta ilman, että sivu ladattaisiin kokonaan uudestaan.
+## [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XMLHTTPRequest-olioon verrattuna Fetch on tehokkaampi, joustavampi ja isommissa sovelluksissa yksinkertaisempi, koska sen kanssa ei jouduta niin sanottuun takaisinkutsuhelvettiin ja virheiden käsittely on helpompaa. Sama kuvanhaku esimerkki kuin aikaisemmin, nyt fetchillä toteutettuna:
+```html
+<figure>
+    <img>
+    <figcaption></figcaption>
+</figure>
 
-XHR-olion luominen:
-```javascript
-const xhr = new XMLHttpRequest();
+<script>
+    
+    fetch('kuvat.json')             // Käynnistetään haku. Vakiometodi on GET.
+    .then(function(vastaus){        // Sitten kun haku on valmis,
+      return vastaus.json();        // muutetaan ladattu tekstimuotoinen JSON JavaScript-olioksi 
+    }).then(function(json){         // Sitten otetaan ladattu data vastaan ja
+      naytaKuva(json);              // kutsutaan naytaKuva-funktiota ja lähetetään ladattu data siihen parametrinä.
+    }).catch(function(error){       // Jos tapahtuu virhe,
+      console.log(error);           // kirjoitetaan virhe konsoliin.
+    });                
+    
+    function naytaKuva(kuvat) {                    
+        const nimi = kuvat[1].nimi;     // 'Kuvat' taulukon toisen objektin 'nimi' ominaisuus
+        const kuvaus = kuvat[1].kuvaus; // 'Kuvat' taulukon toisen objektin 'kuvaus' ominaisuus
+        const osoite = kuvat[1].osoite; // 'Kuvat' taulukon toisen objektin 'osoite' ominaisuus
+        
+        document.querySelector('img').src = osoite;
+        document.querySelector('img').alt = nimi;
+        document.querySelector('figcaption').innerText = kuvaus;
+     }
+</script>
 ```
-Tärkeimmät metodit:
-```javascript
-open(metodi, osoite, async, user, pwd); // Määritetään yhteysasetukset
-                                        // metodi = GET, POST
-                                        // osoite = ladattavan datan osoite
-                                        // async = true (asynkroninen) / false (synkroninen) *valinnainen
-                                        // user = käyttäjänimi *valinnainen
-                                        // pwd = salasana *valinnainen
-                                                
-send(data);                             // Lähetetään pyyntö palvelimelle
-                                        // data = palvelimelle lähetettävä data, jos metodi on POST *valinnainen
-                                        // data tulee olla querystring-muodossa (https://en.wikipedia.org/wiki/Query_string)
-```
-Tärkeimmät ominaisuudet 
-```javascript
-onreadystatechange                      // määritetään funktio, jota kutsutaan kun readyState-ominaisuus vaihtuu
-
-readyState                              // sisältää XMLHttpRequestin tilatiedot
-                                        // 0: request not initialized 
-                                        // 1: server connection established
-                                        // 2: request received 
-                                        // 3: processing request
-                                        // 4: request finished and response is ready  (Tämä on ainoa, jota oikeasti käytetään)
-                                                
-responseText                            // palauttaa ladatun datan merkkijonona
-
-responseXML                             // palauttaa ladatun datan XML-oliona
-
-status                                  // palauttaa HTTP-tilakoodin. esim:
-                                        // 200: "OK"
-                                        // 403: "Forbidden"
-                                        // 404: "Not Found"
-```
-
-## Fetch API
