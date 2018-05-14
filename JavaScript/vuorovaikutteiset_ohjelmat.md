@@ -40,7 +40,7 @@ Hyvää huomenta kaikille.
 
 ### Ponnahtava varoitusikkuna
 
-Ponnahtava viesti-ikkuna tuotetaan `alert`-funktiolla:
+Ponnahtava viesti-ikkuna tuotetaan [`alert`](BOM.md#alert-metodi)-funktiolla:
 ```javascript
         alert('Hei tätäkin kautta!');
 ```
