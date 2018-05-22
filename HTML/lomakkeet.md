@@ -37,7 +37,7 @@ HTML-kieli antaa mahdollisuuden rakentaa erilaisia lomakkeita, mutta se ei tarjo
 Turvallisuus on lisäksi erittäin tärkeä osa lomakkeiden käsittelyä. Aina on varmistuttava siitä, että lomake välittää vain sellaista dataa, jota sen on tarkoituskin välittää, eli mitään ylimääräistä lomakkeesen ei pidä päästä syöttämään. Tällaista ylimääräistä ovat muun muassa seuraavat asiat:
 
    - html-tagit. Jos palautteessa ei tarvita html-koodia, sitä ei saa hyväksyä. Esimerkiksi `<script>`-tagi muodostuu helposti vaaralliseksi, koska tuo sallii Javascriptin ajamisen. Tätä kutsutaan nimellä Cross Site Scripting (XSS).
--     tietokantaliittymissä on estettävä kyselyihin yritettävät SQL-temput, joilla pyritään saamaan tietokannasta enemmän tietoa irti kuin olisi tarkoitus taikka yritetään tuhota taikka sotkea tietokannan tauluja. Tätä kutsutaan nimellä injektio (Injection).
+- tietokantaliittymissä on estettävä kyselyihin yritettävät SQL-temput, joilla pyritään saamaan tietokannasta enemmän tietoa irti kuin olisi tarkoitus taikka yritetään tuhota taikka sotkea tietokannan tauluja. Tätä kutsutaan nimellä injektio (Injection).
 
 Se, miten helppoa näiden torjunta on, riippuu paljolti käytetystä kielestä. Useat kielet sisältävät nykyisin omia turvallisuutta lisääviä ominaisuuksia. Itse ei tarvitse pyörää keksiä tässä tilanteessa uudestaan.
 
