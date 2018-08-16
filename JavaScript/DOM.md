@@ -64,11 +64,11 @@ document.scripts    // hakee kaikki script-elementit
 
 1. Valitse dokumentista elementti, jonka id on 'uutiset' ja tallenna elementtinode nimellä 'u'. Sen jälkeen valitse elementtinodesta 'u' kaikki p-elementit ja tallenna elementtilista nimellä 'p':
     ```javascript
-    const u = document.getElementById("uutiset");
-    const p = u.getElementsByTagName("p");
+    const u = document.getElementById('uutiset');
+    const p = u.getElementsByTagName('p');
     
     // sama voidaan kirjoittaa myös ilman välimuuttujaa
-    const p = document.getElementById("#uutiset").getElementsByTagName("p");
+    const p = document.getElementById('#uutiset').getElementsByTagName("p");
  
     // tai yhdellä komennolla
     const p = document.querySelectorAll('#uutiset p');
@@ -103,7 +103,7 @@ document.scripts    // hakee kaikki script-elementit
    <img id="logo" src="metropolia.png"  alt="Joku kuva">
    
    <script>
-   document.getElementById('logo').src = "laurea.png";                 // käytetään attribuutin nimeä ominaisuutena
+   document.getElementById('logo').src = 'laurea.png';                 // käytetään attribuutin nimeä ominaisuutena
    document.getElementById('logo').setAttribute('src', 'laurea.png');  // tai setAttribute()-metodia
    </script>
    ```
