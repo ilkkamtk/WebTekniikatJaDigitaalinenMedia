@@ -73,6 +73,19 @@ document.scripts    // hakee kaikki script-elementit
     // tai yhdellä komennolla
     const p = document.querySelectorAll('#uutiset p');
     ```
+1. Valitse listan `<ul>` toinen  nimike (item eli `<li>`):  
+     ```html
+        <ul>
+           <li>Eka nimike</li>
+           <li>Toka nimike</li>
+           <li>Kolmas nimike</li>
+       </ul>
+    ```
+    
+    ```javascript
+    const toka = document.getElementsByTagName('li')[1];  // getElementsByTagname palauttaa taulukon. Talukon järjestysnumerot alkavat nollasta, joten 1 tarkoittaa toista <li>-elementtiä.
+    ```
+
 1. Elementtilista kaikista "tiedote"-luokkaan kuuluvista p-elementeistä:   
     ```javascript
     const x = document.querySelectorAll('p.tiedote');
