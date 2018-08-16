@@ -39,7 +39,7 @@ solmu.getElementsByTagName("p")     // hakee solmu-nodesta kaikki p-elementit
 solmu.appendChild(lapsi)            // lisää solmu-nodeen lapsinoden
 solmu.removeChild(lapsi)            // poistaa solmu-nodesta lapsinoden
 ```
-Koska document-rajapinta perii [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)- ja [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-rajapinnat, itse asiassa tärkeimmät ominaisuudet tulevat niistä:
+Koska document-rajapinta perii [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)- ja [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-rajapinnat, itse asiassa tärkeimmät ominaisuudet tulevat niistä sekä [ParnetNode](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode)-rajapinnasta:
 ```javascript
 elem.innerHTML   // elem-noden sisältämä HTML-koodi
 elem.innerText   // elem-noden sisältämä teksti
@@ -47,6 +47,7 @@ elem.nodeName    // elem-noden elementtityyppi
 elem.nodeValue   // elem-noden arvo
 elem.parentNode  // elem-noden parentnode
 elem.childNodes  // elem-noden lapsinodet
+elem.children    // elem-noden lapsielementit
 elem.firstChild  // elem-noden ensimmäinen lapsinode 
 elem.lastChild   // elem-noden viimeinen lapsinode
 elem.attributes  // elem-noden attribuuttinodet
