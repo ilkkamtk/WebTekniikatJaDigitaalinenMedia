@@ -167,7 +167,7 @@ document.querySelector('#kappale').classList.toggle('sininen');
 ## Harjoitustehtävät
 Lataa aloitustiedostot tästä reposta.
 1. teht1.html
-   * Dokumentti sisältää taulukon, jossa on etunimi, sukunimi, nikki ja osoite.
+   * Dokumentti sisältää html-taulukon, jossa on etunimi, sukunimi, nikki ja osoite.
    * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
    * Lisää JavaScriptillä listaan puhelinnumero
    * Poista JavaScriptillä nikki
