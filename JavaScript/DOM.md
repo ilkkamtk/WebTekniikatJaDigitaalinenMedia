@@ -79,7 +79,7 @@ document.scripts    // hakee kaikki script-elementit
            <li>Eka nimike</li>
            <li>Toka nimike</li>
            <li>Kolmas nimike</li>
-       </ul>
+        </ul>
     ```
     
     ```javascript
