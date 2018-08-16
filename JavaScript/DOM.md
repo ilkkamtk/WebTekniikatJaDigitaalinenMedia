@@ -183,7 +183,9 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
    * Dokumentti sisältää html-taulukon, jossa on etunimi, sukunimi, nikki ja osoite.
    * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
    * Lisää JavaScriptillä listaan puhelinnumero
+     * Voit lisätä myös otsikon `<th>` -elementillä
    * Poista JavaScriptillä nikki
+     * Voit poistaa myös otsikon
 1. teht2.html
    * Dokumentissä on kuva 1, joka on piilotettu CSS:n avulla
       * Muokkaa teht2.js tiedostoa ja tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
