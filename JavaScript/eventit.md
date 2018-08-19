@@ -172,6 +172,7 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
 1. teht3.html
    * Tee laskin, jossa on yhteenlasku, vähennys, kerto- ja jakolasku.
    * teht3.html sisältää kaksi tekstikenttää, joihin syötetään numerot, jotka lasketaan yhteen, vähennetään, kerrotaan tai jaetaan, riippuen siitä mitä nappia käyttäjä painaa. Vastaus tulostetaan `<p id="vastaus">` elementin sisälle.
+   * Jotta luvuilla voidaan laskea, tekstikenttien arvot pitää muuttaa numeroiksi [parseFloat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) -funktiolla, koska tekstikenttien tyyppi on merkkijono. Tekstikenttien sisällön voi lukea `value` -attribuutilla (`element.value`).
    * Jos haluat haastetta, vaihda nappien tilalle alasvetovalikko, josta valitaan laskun tyyppi.
    * Vielä haasteellisemmasa versiossa tee vain yksi tekstikenttä, johon kirjoitat laskun. Tässä voit käyttää apuna esim [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ja [split -metodeja](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) sekä [switch -lausetta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 1. teht4.html
