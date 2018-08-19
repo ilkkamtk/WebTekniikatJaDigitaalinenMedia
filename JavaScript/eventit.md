@@ -170,6 +170,11 @@ Lataa aloitustiedostot tästä reposta.
 1. teht2.html
    * Dokumentti sisältää `<img>` ja `<p>` elementit. Tee CSS joka piilottaa `<p>` elementin ja skripti + CSS, joka näyttää `<p>` elementin, kun hiiri liikutetaan `<img>` elementin päälle (mouseenter) ja piilottaa `<p>` elementin, kun hiiri poistuu `<img>` elementin päältä (mouseleave).
 1. teht3.html
-    laskin, yhteenlasku, vähennys, kerto, jako
+   * Tee laskin, jossa on yhteenlasku, vähennys, kerto- ja jakolasku.
+   * teht3.html sisältää kaksi tekstikenttää, joihin syötetään numerot, jotka lasketaan yhteen, vähennetään, kerrotaan tai jaetaan, riippuen siitä mitä nappia käyttäjä painaa. Vastaus tulostetaan `<p id="vastaus">` elementin sisälle.
 1. teht4.html
-    innerHTML vs DOM-metodit
+   * teht4A.js ja teht4B.js sisältävät taulukon, jossa on kolmen kuvan tiedot; pieni kuvake ja iso kuva. innerHTML vs DOM-metodit
+   * Tulosta kuvakkeet teht4.html sivulle haluamallasi tavalla. Esim. lista tai taulukko
+   * teht4.html sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka.
+   * Tee em. toiminnot ensin teht4A.js -tiedostoon ja luo uudet elementit käyttäen innerHTML -ominaisuutta
+   * Tee sitten samat toiminnot, mutta tällä kertaa käytä DOM-metodeja uusien elementtien luomiseen (document.createElement jne.) 
