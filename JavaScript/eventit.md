@@ -174,7 +174,7 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
    * teht3.html sisältää kaksi tekstikenttää, joihin syötetään numerot, jotka lasketaan yhteen, vähennetään, kerrotaan tai jaetaan, riippuen siitä mitä nappia käyttäjä painaa. Vastaus tulostetaan `<p id="vastaus">` elementin sisälle.
 1. teht4.html
    * teht4A.js ja teht4B.js sisältävät taulukon, jossa on kolmen kuvan tiedot; pieni kuvake ja iso kuva. innerHTML vs DOM-metodit
-   * Tulosta kuvakkeet teht4.html sivulle haluamallasi tavalla. Esim. lista tai taulukko
-   * teht4.html sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka.
+   * Tulosta kuvakkeet teht4A.html ja teht4B.html sivuille haluamallasi tavalla. Esim. lista tai taulukko
+   * teht4A.html (ja B) sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka.
    * Tee em. toiminnot ensin teht4A.js -tiedostoon ja luo uudet elementit käyttäen innerHTML -ominaisuutta
-   * Tee sitten samat toiminnot, mutta tällä kertaa käytä DOM-metodeja uusien elementtien luomiseen (document.createElement jne.) 
+   * Tee sitten samat toiminnot teht4B.js -tiedostoon, mutta tällä kertaa käytä DOM-metodeja uusien elementtien luomiseen (document.createElement jne.) 
