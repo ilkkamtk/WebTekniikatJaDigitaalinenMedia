@@ -82,9 +82,11 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
 ## [navigator-rajapinta](https://developer.mozilla.org/en-US/docs/Web/API/navigator)
 `navigator`-rajapinnalla voi hakea tietoa selaimesta. Esim. [navigator.gelocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) palauttaa laitteen gps-koordinaatit:
 ```html
-<!-- haetaan käyttäjän paikkatiedot ja näytetään ne Google Mapsin avulla -->
-<iframe width="600" height="450" frameborder="0" style="border:0"></iframe>
+<!-- haetaan käyttäjän paikkatiedot ja näytetään ne OpenStreetMapin ja Leaflet.js:n avulla -->
+<div id="map" style="width: 100%; height: 400px;"></div>
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
 <script>
     // Asetukset paikkatiedon hakua varten (valinnainen)
     const options = {
@@ -103,11 +105,15 @@ history.go(-2); // siirry historiassa kaksi pykälää taaksepäin
       console.log(`Longitude: ${crd.longitude}`);
       console.log(`More or less ${crd.accuracy} meters.`);
       
-      // Haetaan Google Maps iframeen ja lisätään paikkatiedot hakuparametriin
-      // Huomaa, että Google Maps vaatii API-avaimen toimiakseen. 
-      // Sen saa Google-tunnuksilla (huom. Metropolian tunnus ei käy) esim. täältä: https://developers.google.com/maps/documentation/embed/
-      document.querySelector('iframe').src = 
-        `https://www.google.com/maps/embed/v1/view?key=API_AVAIN&center=${crd.latitude},${crd.longitude}`;
+      // Käytetään leaflet.js -kirjastoa näyttämään sijainti kartalla (https://leafletjs.com/)
+      const map = L.map('map').setView([crd.latitude, crd.longitude], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+  
+      L.marker([crd.latitude, crd.longitude]).addTo(map)
+      .bindPopup('Olen tässä.')
+      .openPopup();
     }
     
     // Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
