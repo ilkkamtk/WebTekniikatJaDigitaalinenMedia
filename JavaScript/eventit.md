@@ -165,17 +165,17 @@ form.onsubmit = function(evt) {
 ```
 ## Harjoitustehtävät
 Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtavat).
-1. teht1.html
+1. teht1.html (2p)
    * Dokumentti sisältää `<button>` elementin. Tee skripti, joka avaa ponnahdusikkunan, jossa lukee 'Nappia klikattu', kun `<button>` elementtiä klikataan
-1. teht2.html
+1. teht2.html (4p)
    * Dokumentti sisältää `<img>` ja `<p>` elementit. Tee CSS joka piilottaa `<p>` elementin ja skripti + CSS, joka näyttää `<p>` elementin, kun hiiri liikutetaan `<img>` elementin päälle (mouseenter) ja piilottaa `<p>` elementin, kun hiiri poistuu `<img>` elementin päältä (mouseleave).
-1. teht3.html
+1. teht3.html (4p)
    * Tee laskin, jossa on yhteenlasku, vähennys, kerto- ja jakolasku.
    * teht3.html sisältää kaksi tekstikenttää, joihin syötetään numerot, jotka lasketaan yhteen, vähennetään, kerrotaan tai jaetaan, riippuen siitä mitä nappia käyttäjä painaa. Vastaus tulostetaan `<p id="vastaus">` elementin sisälle.
    * Jotta luvuilla voidaan laskea, tekstikenttien arvot pitää muuttaa numeroiksi [parseFloat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) -funktiolla, koska tekstikenttien tyyppi on merkkijono. Tekstikenttien sisällön voi lukea `value` -attribuutilla (`element.value`).
-   * Jos haluat haastetta, vaihda nappien tilalle alasvetovalikko, josta valitaan laskun tyyppi.
-   * Vielä haasteellisemmasa versiossa tee vain yksi tekstikenttä, johon kirjoitat laskun. Tässä voit käyttää apuna esim [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ja [split -metodeja](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) sekä [switch -lausetta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
-1. teht4.html
+   * Jos haluat haastetta, vaihda nappien tilalle alasvetovalikko, josta valitaan laskun tyyppi. + 2p
+   * Tai vielä haasteellisemmasa versiossa tee vain yksi tekstikenttä, johon kirjoitat laskun. Tässä voit käyttää apuna esim [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ja [split -metodeja](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) sekä [switch -lausetta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) + 4p
+1. teht4.html (6p)
    * teht4A.js ja teht4B.js sisältävät taulukon, jossa on kolmen kuvan tiedot; pieni kuvake ja iso kuva. innerHTML vs DOM-metodit
    * Tulosta kuvakkeet teht4A.html ja teht4B.html sivuille haluamallasi tavalla. Esim. lista tai taulukko
    * teht4A.html (ja B) sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka.

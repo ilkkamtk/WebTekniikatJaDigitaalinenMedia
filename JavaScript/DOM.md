@@ -180,22 +180,22 @@ document.querySelector('#kappale').classList.toggle('sininen');
 
 ## Harjoitustehtävät
 Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtavat).
-1. teht1.html
+1. teht1.html (4p)
    * Dokumentti sisältää html-taulukon, jossa on etunimi, sukunimi, nikki ja osoite.
    * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
    * Lisää JavaScriptillä listaan puhelinnumero
      * Voit lisätä myös otsikon `<th>` -elementillä
    * Poista JavaScriptillä nikki
      * Voit poistaa myös otsikon
-1. teht2.html
+1. teht2.html (2p)
    * Dokumentissä on kuva 1, joka on piilotettu CSS:n avulla
       * Muokkaa teht2.js tiedostoa ja tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
    * Dokumentissä on kuva 2, joka on piilotettu CSS:n avulla
       * Lisää teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
       * Muokkaa teht2.js tiedostoa ja tee skripti, joka muokkaa `<img>` elementin class attribuuttia siten, että kuva tulee näkyviin
-1. teht3.html
+1. teht3.html (3p)
    * teht3.js sisältää taulukon 'kuvat'
-   * tee for-silmukka, joka lisää innerHTML-ominaisuuden avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
+   * Tee for-silmukka, joka lisää innerHTML-ominaisuuden avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
     ```html
     <ul>
       <li>
@@ -206,9 +206,9 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
     
     ```
     * tee for-silmukan sisällä `<li>` ja `<img>` elementit, jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään tulostat valmiin html-koodin innerHTML:n avulla  
-1. teht4.html
-   * myös teht4.js sisältää taulukon 'kuvat'
-   * tee for-silmukka, joka lisää DOM-metodien avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
+1. teht4.html (3p)
+   * Myös teht4.js sisältää taulukon 'kuvat'
+   * Tee for-silmukka, joka lisää DOM-metodien avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
     ```html
     <ul>
       <li>
@@ -218,11 +218,11 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
     </ul>
     
     ```
-    * tee for-silmukan sisällä createElement-metodilla `<li>` ja `<img>` elementit, jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään lisäät html elementit appendChild-metodin avulla
- 1. tee tehtäviin 3 ja 4 CSS, joka poistaa listan edestä pallerot ([list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp)), ja joka tekee joka toisen `<li>` elementin taustan harmaaksi ([pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp))
- 1. teht5.html
-    * tee skripti, joka tulostaa kellonajan `<p id=kello>` elementin sisälle sekunnin välein
-        * kellon tulee olla 24h kello ja sen tulee näyttää tunnit, minuutit ja sekunnit
+    * Tee for-silmukan sisällä createElement-metodilla `<li>` ja `<img>` elementit, jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään lisäät html elementit appendChild-metodin avulla
+ 1. tee tehtäviin 3 ja 4 CSS, joka poistaa listan edestä pallerot ([list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp)), ja joka tekee joka toisen `<li>` elementin taustan harmaaksi ([pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)) (2p)
+ 1. teht5.html (6p)
+    * Tee skripti, joka tulostaa kellonajan `<p id=kello>` elementin sisälle sekunnin välein
+        * Kellon tulee olla 24h kello ja sen tulee näyttää tunnit, minuutit ja sekunnit kussakin aina kaksi numeroa. Esim 09:34:03 tai 22:01:15.
         * Kellonaika saadaan [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp)-olion avulla ja päivitetään [setInterval](BOM.md#setInterval-metodi)-metodilla
 
    
