@@ -67,7 +67,7 @@ kuusi:
 ```javascript
         let tulos;
         do {
-            tulos = Math.ceil(Math.random()*6);
+            tulos = Math.floor(Math.random()*6)+1;
             console.log(tulos);
         } while (tulos<6);
 ```
