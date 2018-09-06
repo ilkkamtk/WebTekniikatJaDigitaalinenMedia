@@ -231,7 +231,7 @@ lottonumerotaulukon:
 
                 while (!ok) {
                     ok = true;
-                    r = Math.ceil(Math.random()*numerot);
+                    r = Math.flooar(Math.random()*numerot)+1;
                     for (var j = 0; j<i; j++) {
                         if (rivi[j] == r) {
                             ok = false;
