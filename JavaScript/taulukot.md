@@ -64,7 +64,7 @@ Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksess
         let heitot = [];
 
         for (i = 0; i<HEITOT; i++) {
-            tulos = Math.ceil(Math.random()*6);
+            tulos = Math.floor(Math.random()*6)+1;
             console.log('Heiton ' + (i+1) + ' tulos: ' + tulos);
             heitot[i] = tulos;
         }
@@ -116,7 +116,7 @@ Alla on arvonnan toteuttava ohjelmakoodi:
 
        for (i = 0; i<arvottavat; i++) {
            do {
-               r = Math.ceil(Math.random()*numerot);
+               r = Math.floor(Math.random()*numerot)+1;
            } while (kaytetty[r]);
            kaytetty[r] = true;
            console.log(r);
