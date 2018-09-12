@@ -164,7 +164,7 @@ form.onsubmit = function(evt) {
 </script>
 ```
 ## Harjoitustehtävät
-Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtavat).
+Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/event-tehtavat).
 1. teht1.html (2p)
    * Dokumentti sisältää `<button>` elementin. Tee skripti, joka avaa ponnahdusikkunan, jossa lukee 'Nappia klikattu', kun `<button>` elementtiä klikataan
 1. teht2.html (4p)
