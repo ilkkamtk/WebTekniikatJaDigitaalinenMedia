@@ -2,9 +2,9 @@
 
 Kuvat ovat keskeisiä elementtejä html-dokumenteissa. Kuvat liitetään `<img>`-tagilla html-sivuun, esimerkiksi
 
-`<img src="img/kuva.jpg" width="600" height="800">`
+`<img src="img/kuva.jpg" width="600" height="800" alt="Kuvausteksti">`
 
-Esimerkissä viitataan *img*-hakemistoon, jossa kuva sijaitsee. Kuvan leveys ja korkeus pikseleinä eivät ole välttämättömät ilmoittaa, mutta ne auttavat selainta renderöimään sivua. 
+Esimerkissä viitataan *img*-hakemistoon, jossa kuva sijaitsee. Kuvan leveys ja korkeus pikseleinä eivät ole välttämättömät ilmoittaa, mutta ne auttavat selainta renderöimään sivua. Alt-attribuutilla määritetään vaihtoehtoinen teksti, jos kuvaa ei jostain syystä voida näyttää. 
 
 ## Kuvan muokkaaminen webbisivulle sopivaksi
 
