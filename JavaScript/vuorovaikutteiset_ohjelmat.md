@@ -429,13 +429,14 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
     - Yksi leiviskä on 20 naulaa, yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
 
-    - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13,5 luotia:
+    - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13.5 luotia:
     
         ```
         Massa nykymittojen mukaan:
         29 kilogrammaa ja 545.95 grammaa. 
         ```
-
+    - apuja: [Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) ja [Number.prototype.toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+    
 7. Kirjoita ohjelma, joka kysyy käyttäjältä tilin saldon sekä vuotuisen korkoprosentin.
 Ohjelma ilmoittaa vuodessa kertyvän koron määrän sekä kasvaneen saldon, johon on lisätty vuosikorko.
 Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä.
