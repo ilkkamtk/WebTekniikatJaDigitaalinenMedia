@@ -44,7 +44,7 @@ suoritetaan valitsemassasi selaimessa. Tässä materiaalissa käytetään Chrome
 
     ![selainpalkki](img/selainpalkki.png)
 
-6. Kun Chrome-selain avautuu, paina F12-näppäintä, jolloin selaimessa aukeaa kehittäjäpaneeli. Kehittäjäpaneelissa
+6. Kun Chrome-selain avautuu, paina F12-näppäintä tai alt-ctrl-i tai alt-cmd-i, jolloin selaimessa aukeaa kehittäjäpaneeli. Kehittäjäpaneelissa
 näet ohjelman tuottamat konsolitulosteet (kuten tässä `Hei, maailma!`-tekstin) ja pääset tarkastelemaan ohjelman
 mahdollisesti tuottamia virheilmoituksia. Ks. kuva alla.
     ![konsolituloste](img/konsolituloste.png)
