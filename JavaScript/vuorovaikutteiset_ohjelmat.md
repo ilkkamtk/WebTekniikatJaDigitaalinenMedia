@@ -410,23 +410,23 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 
 ## Harjoitustehtävät
 
-1. Kirjoita ohjelma, joka tulostaa näytölle tekstin 'Tämä on JavaScript-ohjelma!'
+1. Kirjoita ohjelma, joka tulostaa näytölle tekstin 'Tämä on JavaScript-ohjelma!' (1p)
 
-2. Kirjoita ohjelma, joka [kysyy](BOM.md#prompt-metodi) nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi. Esimerkkejä:
+2. Kirjoita ohjelma, joka [kysyy](BOM.md#prompt-metodi) nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi (1p). Esimerkkejä:
 
     - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin 'Terve, Viivi!'
     - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin 'Terve, Ahmed!'
     
-3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
+3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan (2p).
 
     - Selvitä, miten saat käyttöösi piin tarkan likiarvon ja sen miten lasketaan potenssilasku. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
-4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta.
+4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta (2p).
     
-5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
+5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon (2p).
     - Ensimmäisellä yrityksellä summa ei todennäköisesti mene oikein. Voit muutta merkkijonon numeroksi esim. [unaarisella operaattorilla +](https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful#toc-unary-plus-)
 
-6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
+6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle (4p).
     - Yksi leiviskä on 20 naulaa, yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
 
     - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13.5 luotia:
@@ -439,14 +439,14 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
     
 7. Kirjoita ohjelma, joka kysyy käyttäjältä tilin saldon sekä vuotuisen korkoprosentin.
 Ohjelma ilmoittaa vuodessa kertyvän koron määrän sekä kasvaneen saldon, johon on lisätty vuosikorko.
-Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä.
+Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä (2p).
 
 8. Monopoli-pelissä pelaaja heittää kahta noppaa ja etenee silmälukujen summan verran.
-   Kirjoita ohjelma, joka arpoo kaksi nopan silmälukua. Ohjelma tulostaa viesti-ikkunassa arvotut silmäluvut sekä niiden alapuolella eri rivillä silmälukujen summan.
+   Kirjoita ohjelma, joka arpoo kaksi nopan silmälukua. Ohjelma tulostaa viesti-ikkunassa arvotut silmäluvut sekä niiden alapuolella eri rivillä silmälukujen summan (3p).
    
    - Käytä funktiota `Math.random()`.
    
-9. Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia:
+9. Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia (3p):
 
     1. Kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
     2. Nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6. 
