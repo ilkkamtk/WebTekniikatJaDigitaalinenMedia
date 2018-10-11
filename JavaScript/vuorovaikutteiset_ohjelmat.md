@@ -449,7 +449,7 @@ Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä (2p).
 9. Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia (3p):
 
     1. Kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
-    2. Nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6. 
+    2. Nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6.
 
 
 
