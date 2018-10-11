@@ -419,11 +419,12 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
     
 3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
 
-    - Selvitä, miten saat käyttöösi piin tarkan likiarvon. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+    - Selvitä, miten saat käyttöösi piin tarkan likiarvon ja sen miten lasketaan potenssilasku. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta.
     
 5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
+    - Ensimmäisellä yrityksellä summa ei todennäköisesti mene oikein. Voit muutta merkkijonon numeroksi esim. [unaarisella operaattorilla +](https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful#toc-unary-plus-)
 
 6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
     - Yksi leiviskä on 20 naulaa, yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
