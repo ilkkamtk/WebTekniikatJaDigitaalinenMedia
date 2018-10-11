@@ -64,7 +64,7 @@ Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappal
 </head>
 <body>
 <h1>Tervehditään</h1>
-    <script language="JavaScript">
+    <script>
         'use strict';
         var nimi = 'Aapo';
         document.write('<p>Hyvää huomenta, käyttäjä!</p>');
@@ -419,7 +419,7 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
     
 3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
 
-    - Selvitä, miten saat käyttöösi piin tarkan likiarvon. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+    - Selvitä, miten saat käyttöösi piin tarkan likiarvon. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta.
     
