@@ -219,7 +219,7 @@ Ilman `break`-lausetta suoritus jatkuisi välittömästi alapuolella olevan
 2. Harry Potter -nuortenkirjoissa lajitteluhattu määrää Tylypahkan noitien ja velhojen koulun uuden oppilaan johonkin neljästä tuvasta, jotka ovat Rohkelikko, Luihuinen, Puuskupuh ja Korpinkynsi.
 Kirjoita sähköinen lajitteluhattu, joka kysyy oppilaan nimen ja arpoo tälle tuvan. Jos käyttäjä syöttää nimeksi esim. Anna, ohjelma ilmoittaa esimerkiksi "Anna, olet Korpinkynsi."
 
-    - Tehtävässä on käytettävä monen vaihtoehdon valintarakennetta (if, else if, ..., else).
+    - Tehtävässä on käytettävä monen vaihtoehdon valintarakennetta (if, else if, ..., else tai switch).
 
 3. Kirjoita ohjelma, joka kysyy käyttäjän sukupuolen ja hemoglobiiniarvon (g/l). Ohjelma ilmoittaa, onko hemoglobiiniarvo alhainen, normaali vai korkea.
 
