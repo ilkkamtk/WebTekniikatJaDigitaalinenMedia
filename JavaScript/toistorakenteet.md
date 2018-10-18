@@ -182,9 +182,8 @@ Ohjelma tuottaa alla olevan tulosteen:
 7. Kirjoita ohjelma, joka arpoo bingolapun numerot ja tulostaa ne pienimmästä suurimpaan.
 Bingolapussa on 25 numeroa alla olevan säännön mukaisesti: (3p)
       
-    - ensimmäinen luku on jokin luvuista 1, 2, 3 ja 4.
-    - toinen luku on jokin luvuista 5, 6, 7 ja 8.
     - yleisesti n:s luku on jokin luvuista 4n-3, 4n-2, 4n-1 ja 4n. (kun n on välillä 1, 2, ..., 25)
+        - Kaavasta seuraa että ensimmäinen luku on jokin luvuista 1, 2, 3 ja 4 ja toinen luku on jokin luvuista 5, 6, 7 ja 8.
       
       
       
