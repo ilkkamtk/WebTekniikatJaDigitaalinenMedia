@@ -212,30 +212,30 @@ Ilman `break`-lausetta suoritus jatkuisi välittömästi alapuolella olevan
  
 ## Harjoitustehtävät
 
-1. Kirjoita ohjelma, joka kysyy kalastajalta kuhan pituuden senttimetreinä. Jos kuha on alamittainen, ohjelma käskee laskea kuhan takaisin järveen ilmoittaen samalla käyttäjälle, montako senttiä alimmasta sallitusta pyyntimitasta puuttuu.
+1. Kirjoita ohjelma, joka kysyy kalastajalta kuhan pituuden senttimetreinä. Jos kuha on alamittainen, ohjelma käskee laskea kuhan takaisin järveen ilmoittaen samalla käyttäjälle, montako senttiä alimmasta sallitusta pyyntimitasta puuttuu. (3p)
 
    -  Kuha on alamittainen, jos sen pituus on alle 37 cm.
 
 2. Harry Potter -nuortenkirjoissa lajitteluhattu määrää Tylypahkan noitien ja velhojen koulun uuden oppilaan johonkin neljästä tuvasta, jotka ovat Rohkelikko, Luihuinen, Puuskupuh ja Korpinkynsi.
-Kirjoita sähköinen lajitteluhattu, joka kysyy oppilaan nimen ja arpoo tälle tuvan. Jos käyttäjä syöttää nimeksi esim. Anna, ohjelma ilmoittaa esimerkiksi "Anna, olet Korpinkynsi."
+Kirjoita sähköinen lajitteluhattu, joka kysyy oppilaan nimen ja arpoo tälle tuvan. Jos käyttäjä syöttää nimeksi esim. Anna, ohjelma ilmoittaa esimerkiksi "Anna, olet Korpinkynsi." (3p)
 
     - Tehtävässä on käytettävä monen vaihtoehdon valintarakennetta (if, else if, ..., else tai switch).
 
-3. Kirjoita ohjelma, joka kysyy käyttäjän sukupuolen ja hemoglobiiniarvon (g/l). Ohjelma ilmoittaa, onko hemoglobiiniarvo alhainen, normaali vai korkea.
+3. Kirjoita ohjelma, joka kysyy käyttäjän sukupuolen ja hemoglobiiniarvon (g/l). Ohjelma ilmoittaa, onko hemoglobiiniarvo alhainen, normaali vai korkea. (3p)
 
     - Naisen normaali hemoglobiiniarvo on välillä 117-175 g/l.
     - Miehen normaali hemoglobiiniarvo on välillä 134-195 g/l.
 
-4. Kirjoita ohjelma, joka kysyy käyttäjältä lompakossa olevan rahamäärän ja bussilipun hinnan. Jos rahat riittävät bussilippuun, ohjelma vähentää lompakosta bussilipun hinnan ja toivottaa hyvää matkaa. Lopuksi (riittivätpä rahat tai ei) ohjelma ilmoittaa lompakkoon jäävän rahamäärän.
+4. Kirjoita ohjelma, joka kysyy käyttäjältä lompakossa olevan rahamäärän ja bussilipun hinnan. Jos rahat riittävät bussilippuun, ohjelma vähentää lompakosta bussilipun hinnan ja toivottaa hyvää matkaa. Lopuksi (riittivätpä rahat tai ei) ohjelma ilmoittaa lompakkoon jäävän rahamäärän. (3p)
 
     - Tallenna lompakossa olevaa rahamäärä omaan muuttujaansa. Muuttujan arvoa tulee vähentää silloin, jos bussilippu ostetaan. Muussa tapauksessa muuttujan arvoa ei saa muuttaa.
 
-5. Kirjoita ohjelma, joka tulostaa tekstin "Lasketaanko neliöjuuri?" varmistusikkunassa. Jos käyttäjä valitsee OK, ohjelma kysyy luvun ja laskee sekä tulostaa sen neliöjuuren. Jos käyttäjä valitsee Cancel, ohjelma tulostaa tekstin "Neliöjuurta ei lasketa."
+5. Kirjoita ohjelma, joka tulostaa tekstin "Lasketaanko neliöjuuri?" varmistusikkunassa. Jos käyttäjä valitsee OK, ohjelma kysyy luvun ja laskee sekä tulostaa sen neliöjuuren. Jos käyttäjä valitsee Cancel, ohjelma tulostaa tekstin "Neliöjuurta ei lasketa." (4p)
 
     - Varmistusikkuna saadaan näkyviin funktiolla window.confirm(). Funktio palauttaa totuusarvon true, jos käyttäjä valitsee OK. Jos käyttäjä valitsee Cancel, funktio palauttaa totuusarvon false.
    -  Neliöjuurta ei voi laskea negatiivisesta luvusta. Jos käyttäjän antama luku on negatiivinen, ohjelma tulostaa "Negatiivisen luvun neliöjuuri ei ole määritelty". 
     
-6. Kirjoita ohjelma, joka kysyy vuosiluvun ja ilmoittaa, onko annettu vuosi karkausvuosi.
+6. Kirjoita ohjelma, joka kysyy vuosiluvun ja ilmoittaa, onko annettu vuosi karkausvuosi. (4p)
 
     - Vuosi on karkausvuosi, jos se on jaollinen neljällä. Sadalla jaolliset vuodet ovat karkausvuosia vain jos ne ovat jaollisia myös neljälläsadalla.
     
