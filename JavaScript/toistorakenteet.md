@@ -155,6 +155,16 @@ Ohjelma tuottaa alla olevan tulosteen:
 2. Kirjoita ohjelma, joka kysyy käyttäjältä luvun ja tulostaa luvun neliöjuuren. Ohjelman on varauduttava siihen, että käyttäjä antaa negatiivisen luvun. Tällöin lukua pyydetään uudelleen niin kauan, kunnes saatu luku on ei-negatiivinen. (3p)
 
 3. Kirjoita ohjelma, joka kysyy käyttäjältä aloitus- ja lopetusvuoden. Ohjelma tulostaa kaikki karkausvuodet käyttäjän antamalta väliltä. Tulostus tehdään numeroimattomaan luetteloon osaksi web-sivun sisältöä. (3p)
+    - Esimerkkituloste:
+    ```html
+    <ul>
+       <li>1992</li>
+       <li>1996</li>
+       <li>2000</li>
+       <li>2004</li>
+       <li>2008</li>
+    </ul>
+    ```
 
 4. Kirjoita ohjelma, joka kysyy käyttäjältä arpakuutioiden lukumäärän. Ohjelma heittää kerran kaikkia arpakuutioita ja tulostaa silmälukujen summan. (3p)
 
