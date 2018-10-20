@@ -283,10 +283,10 @@ kiinteän kokoinen osa keskusmuistista saattaa loppua kesken.
 
 ## Nuolifunktiot
 
-Tämän sivun esimerkit on kirjoitettu JavaScript-kielen perinteisen `function`-lauseen avulla. EC6-kielimääritys tarjoaa
+Tämän sivun esimerkit on kirjoitettu JavaScript-kielen perinteisen `function`-lauseen avulla. ES6-kielimääritys tarjoaa
 vaihtoehtoisen, kompaktimman
 funktion kirjoitustavan. Tämän kirjoitustavan mukaisia funktioita kutsutaan nuolifunktioiksi eli lambda-funktioiksi.
-(Nuolifunktiot ratkaisevat myös eräitä aiemmassa EC5-kieliversiossa `this`-avainsanan
+(Nuolifunktiot ratkaisevat myös eräitä aiemmassa ES5-kieliversiossa `this`-avainsanan
 käsittelyyn liittyviä hankaluuksia, mutta niitä ei käsitellä tässä enempää.)
 
 Kirjoitetaan aiemmassa esimerkissä ollut neliösumman laskeva funktio tällä kertaa nuolifunktiona:
