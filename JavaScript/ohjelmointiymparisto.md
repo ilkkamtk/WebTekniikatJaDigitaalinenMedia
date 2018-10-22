@@ -27,7 +27,7 @@ Voit korvata sen haluamallasi ohjelmalla.
         <title>JavaScript-kokeilu</title>
     </head>
     <body>
-        <script language="JavaScript">
+        <script>
             'use strict';
             
             console.log('Hei, maailma!');
