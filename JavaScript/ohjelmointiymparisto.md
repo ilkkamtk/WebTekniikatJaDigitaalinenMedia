@@ -11,7 +11,7 @@ Pääset alkuun ohjelmien kirjoittamisessa seuraavan ohjeen avulla:
 1. Luo uusi projekti (File/New/Project). Voit valita projektin tyypiksi Empty project. Nimeä projekti haluamallasi tavalla.
 2. Varmista, että JavaScript versioksi on valittu EcmaScript 6
     1. Avaa File/Settings (win) tai WebStorm/Preferences (mac)
-    1. Valitse vasemmalta Languages & Frameworks/JavaScript ja valitse listasta ECMAScript 6 ja ruksaa 'Prefer strict mode'
+    1. Valitse vasemmalta Languages & Frameworks/JavaScript ja valitse listasta ECMAScript 6 ja ruksaa 'Prefer strict mode', jos se on vaihtoehtona.
     1. Valitse vasemmalta Editor/Code Style. CodeStyle-kolmiosta klikkaamalla aukeaaa lista kieliä. Valitse JavaScript
     1. Oikealla on linkki 'Set from'. Valitse 'Predefined style' ja sieltä 'Google JavaScript Style Guide'. Nyt voit muotoilla koodin automaattisesti näppäinyhdistelmällä _alt-ctrl-l_ tai _alt-cmd-l_ 
     1. Avaa File/Default settings ja tee kohdat i-iv uudestaan, jotta kaikissa uusissa projekteissa on samat asetukset.
