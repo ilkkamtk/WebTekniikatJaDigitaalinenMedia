@@ -35,7 +35,7 @@ suoritus hyppää ehdollisen ohjelmanosan yli.
 
 Valintalauseessa oleva ehdon ilmaisemiseksi tarvitaan yleensä vertailuoperaattoreita. JavaScript-kielessä on käytössä seuraavat vertailuoperattorit:
 
-- yhtä suuri kuin (`--`)
+- yhtä suuri kuin (`==`)
 - eri suuri kuin (`!=`)
 - suurempi kuin (`>`)
 - suurempi tai yhtä suuri kuin (`>=`)
