@@ -66,8 +66,8 @@ Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappal
 <h1>Tervehditään</h1>
     <script>
         'use strict';
-        var nimi = 'Aapo';
-        document.write('<p>Hyvää huomenta, käyttäjä!</p>');
+        const nimi = 'Aapo';
+        document.write('<p>Hyvää huomenta, ' + nimi + '!</p>');
     </script>
 </body>
 </html>
