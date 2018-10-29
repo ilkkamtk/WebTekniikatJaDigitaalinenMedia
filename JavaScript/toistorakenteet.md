@@ -24,7 +24,7 @@ tulostaa lopuksi, montako kruunaa ja klaavaa saatiin.
 ```javascript
         let kruunat = 0, klaavat = 0;
         while (kruunat + klaavat < 100) {
-            r = Math.random();
+            const r = Math.random();
             if (r>0.5)
                 kruunat++;
             else
