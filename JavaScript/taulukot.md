@@ -1,4 +1,4 @@
-# (Taulukot)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array]
+# [Taulukot](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 Taulukko on tietorakenne, joka koostuu joukosta alkioita.
 Taulukon käytön ansiosta ei tarvitse keksiä suurta joukkoa muuttujanimiä, vaan
 kaikkiin taulukossa olevia arvoja - eli taulukon alkioita - voidaan
