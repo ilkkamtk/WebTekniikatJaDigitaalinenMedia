@@ -110,7 +110,7 @@ Alla on arvonnan toteuttava ohjelmakoodi:
        numerot = prompt('Monestako numerosta valitaan? ');
        arvottavat = prompt('Montako numeroa arvotaan?');
 
-       const kaytetty = [];
+       kaytetty = [];
 
        for (i = 0; i<arvottavat; i++) {
            do {
