@@ -72,7 +72,7 @@ document.scripts    // hakee kaikki script-elementit
     const p = document.getElementById('#uutiset').getElementsByTagName("p");
  
     // tai yhdellä komennolla
-    const p = document.querySelector('#uutiset p');
+    const p = document.querySelectorAll('#uutiset p');
     ```
 1. Valitse listan `<ul>` toinen  nimike (item eli `<li>`):  
      ```html
