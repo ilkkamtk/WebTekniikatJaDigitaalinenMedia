@@ -154,7 +154,7 @@ Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
 Lopuksi ohjelma tulostaa osallistujien nimet web-sivulle numeroituun luetteloon samassa järjestyksessä kuin ne syötettiin. (3p)
 
 3. Kirjoita ohjelma, joka kysyy kuuden koiran nimet.
-Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon käänteisessä aakkosjärjestyksessä. (3p)
+Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon (`<ol>`) käänteisessä aakkosjärjestyksessä. (3p)
 
 4. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän antaa nollan. Tämän jälkeen annetut luvut tulostetaan suurimmasta pienimpään. (3p)
 
