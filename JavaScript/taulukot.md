@@ -110,8 +110,6 @@ Alla on arvonnan toteuttava ohjelmakoodi:
        numerot = prompt('Monestako numerosta valitaan? ');
        arvottavat = prompt('Montako numeroa arvotaan?');
 
-       kaytetty = [];
-
        for (i = 0; i<arvottavat; i++) {
            do {
                r = Math.floor(Math.random()*numerot)+1;
