@@ -157,8 +157,8 @@ document.querySelector('#kappale').style = "color: #eee; background-color: #222;
 </script>
 ```
 Class attribuutin muokkaaminen:
-```html
-<style>
+```css
+/* ulkoinen css-tiedosto */
 .punainen {
     color: #f00;
 }
@@ -166,8 +166,9 @@ Class attribuutin muokkaaminen:
 .sininen {
     color: #00f;
 }
-</style>
+```
 
+```html
 <p class="punainen" id="kappale">Jotain tekstiä</p>
 
 <script>
