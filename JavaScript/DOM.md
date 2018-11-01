@@ -192,7 +192,7 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtava
    * Dokumentissä on kuva 1, joka on piilotettu CSS:n avulla
       * Muokkaa teht2.js tiedostoa ja tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
    * Dokumentissä on kuva 2, joka on piilotettu CSS:n avulla
-      * Lisää teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
+      * Kirjoita käsin teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
       * Muokkaa teht2.js tiedostoa ja tee skripti, joka muokkaa `<img>` elementin class attribuuttia siten, että kuva tulee näkyviin
 1. teht3.html (3p)
    * teht3.js sisältää taulukon 'kuvat'
