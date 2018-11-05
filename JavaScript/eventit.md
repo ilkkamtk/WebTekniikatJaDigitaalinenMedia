@@ -176,8 +176,19 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/event-tehta
    * Jos haluat haastetta, vaihda nappien tilalle alasvetovalikko, josta valitaan laskun tyyppi. + 2p
    * Tai vielä haasteellisemmasa versiossa tee vain yksi tekstikenttä, johon kirjoitat laskun. Tässä voit käyttää apuna esim [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ja [split -metodeja](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) sekä [switch -lausetta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) + 4p
 1. teht4.html (6p)
-   * teht4A.js ja teht4B.js sisältävät taulukon, jossa on kolmen kuvan tiedot; pieni kuvake ja iso kuva. innerHTML vs DOM-metodit
+   * teht4A.js ja teht4B.js sisältävät taulukon, jossa on kolmen kuvan tiedot; pieni kuvake ja iso kuva.
    * Tulosta kuvakkeet teht4A.html ja teht4B.html sivuille haluamallasi tavalla. Esim. lista tai taulukko
-   * teht4A.html (ja B) sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka.
+   * teht4A.html (ja B) sisältää `<div>` elementin, jonka sisällä om `<img>` elementti. Tee JavaScriptillä toiminto, jossa kuvaketta klikkaamalla isompi kuva tulostetaan `<img>` elementin sisälle ja samalla `<div>` elementille vaihdetaan 'visible' CSS-luokka (ks. alla).
+   * Kun isoa kuva klikataan, se piilotetaan vaihtamalla `<div>` elementille 'hidden' luokka takaisin. 
    * Tee em. toiminnot ensin teht4A.js -tiedostoon ja luo uudet elementit käyttäen innerHTML -ominaisuutta
    * Tee sitten samat toiminnot teht4B.js -tiedostoon, mutta tällä kertaa käytä DOM-metodeja uusien elementtien luomiseen (document.createElement jne.) 
+   ```css
+   /* tee erillinen CSS-tiedosto */
+   .hidden {
+    display: none;
+   }
+   
+   .visible {
+    display: block;
+   }
+   ```
