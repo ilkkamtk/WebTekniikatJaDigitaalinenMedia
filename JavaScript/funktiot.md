@@ -343,7 +343,7 @@ Kirjoita myös pääohjelma. joka kysyy käyttäjältä kolme lukua, kutsuu kirj
    
    - Esimerkki: Kolmialkioisessa taulukossa on alkiot Viivi, Saara ja Yrjö-Pekka. Funktio palauttaa merkkijonon ViiviSaaraYrjö-Pekka.
 
-6. Kirjoita funktio `vastaluvuksi()`, joka saa parametrinaan lukuja sisältävän taulukon. Funktio muuttaa kaikki taulukon luvut vastaluvuiksi. Funktio ei palauta paluuarvoa. (3p)
+6. Kirjoita funktio `vastaluvuksi()`, joka saa parametrinaan lukuja sisältävän taulukon. Funktio muuttaa kaikki taulukon luvut vastaluvuiksi. Funktio ei palauta paluuarvoa (voit tulostaa luvut konsoliin). (3p)
 
 7. Kirjoita funktio `parilliset()`, joka saa parametrinaan lukuja sisältävän taulukon. Funktio palauttaa toisen (yleensä pienemmän) taulukon, johon on poimittu alkuperäisen taulukon parilliset luvut.  Funktio ei saa tehdä muutoksia alkuperäiseen taulukkoon. (3p)
 
