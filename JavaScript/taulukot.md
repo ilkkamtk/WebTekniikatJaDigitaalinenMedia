@@ -158,7 +158,7 @@ Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon (`<ul>`) käänteises
 
 4. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän antaa nollan. Tämän jälkeen annetut luvut tulostetaan suurimmasta pienimpään. (3p)
 
-5. Kirjoita ohjelma, joka kysyy käyttäjältä väliltä 1..1000 olevia lukuja, kunnes hän antaa uudelleen jonkin aiemmin antamansa luvun. Tuolloin ohjelma ilmoittaa, että luku on jo annettu ja lopettaa toimintansa. (3p)
+5. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän antaa uudelleen jonkin aiemmin antamansa luvun. Tuolloin ohjelma ilmoittaa, että luku on jo annettu ja lopettaa toimintansa. (3p)
 
 6. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes käyttäjä antaa nollan. Tämän jälkeen ohjelma tulostaa annettujen lukujen mediaanin. (3p)
    
