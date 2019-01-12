@@ -9,7 +9,7 @@ Tässä dokumentissa on sekä HTML- että CSS-osuuden harjoitukset. Tehtävät 1
     - kuvia
     - luetteloita
 
-    HTML-rakenteen ja seuraavassa tehtävässä tehtävän CSS:n voi tehdä valmiiksi, ennen kuin raportti ja lyhennelmä on valmis. Voit käyttää väliaikaisena tekstinä vaikkapa lorem ipsumia (esim: https://www.lipsum.com/feed/html). Kun raportti ja sen lyhennelmä on valmis, lorem ipsumin tilalle vaihdetaan lopullinen teksti. (5 p.)
+    HTML-rakenteen ja seuraavassa tehtävässä tehtävän CSS:n voi tehdä valmiiksi, ennen kuin raportti ja lyhennelmä ovat valmiita. Voit käyttää väliaikaisena tekstinä vaikkapa lorem ipsumia (esim: https://www.lipsum.com/feed/html). Kun raportti ja sen lyhennelmä ovat valmiit, lorem ipsumin tilalle vaihdetaan lopullinen teksti. (5 p.)
 
 1. Toteuta sivustolle CSS-tiedosto, jolla luot yhteäisen ulkoasun sivustolle. CSS:n tulee toteuttaa ainakin seuraavat ominaisuudet:
 
