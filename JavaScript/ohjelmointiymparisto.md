@@ -14,7 +14,7 @@ Pääset alkuun ohjelmien kirjoittamisessa seuraavan ohjeen avulla:
     1. Valitse vasemmalta Languages & Frameworks/JavaScript ja valitse listasta ECMAScript 6 ja ruksaa 'Prefer strict mode', jos se on vaihtoehtona.
     1. Valitse vasemmalta Editor/Code Style. CodeStyle-kolmiosta klikkaamalla aukeaaa lista kieliä. Valitse JavaScript
     1. Oikealla on linkki 'Set from'. Valitse 'Predefined style' ja sieltä 'Google JavaScript Style Guide'. Nyt voit muotoilla koodin automaattisesti näppäinyhdistelmällä _alt-ctrl-l_ tai _alt-cmd-l_ 
-    1. Avaa File/Default settings ja tee kohdat i-iv uudestaan, jotta kaikissa uusissa projekteissa on samat asetukset.
+    1. Avaa File/Settings for new projects ja tee kohdat i-iv uudestaan, jotta kaikissa uusissa projekteissa on samat asetukset.
 2. Lisää projektiin HTML-tiedosto, jolla on haluamasi nimi, vaikkapa `esimerkki.html`.
 3. Aseta tiedoston sisällöksi alla oleva ohjelmakoodi. Varsinainen JavaScript-koodi koostuu tässä yhdestä `console.log()`-lauseesta, joka tulostaa `Hei, maailma!`-tekstin.
 Voit korvata sen haluamallasi ohjelmalla.
