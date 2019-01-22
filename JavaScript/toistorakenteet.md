@@ -81,8 +81,7 @@ ohjelmoidaan osaksi for-lausetta.
 
 Seuraava esimerkki tulostaa luvut yhdestä kymmeneen:
 ```javascript
-        let i;
-        for (i = 1; i<=10 ; i++) {
+        for (let i = 1; i<=10 ; i++) {
             console.log(i);
         }
 ```
@@ -103,9 +102,9 @@ Esimerkiksi seuraava ohjelma kysyy käyttäjältä luvun ja tulostaa
 kaikki parilliset kokonaisluvut nollasta alkaen käyttäjän antamaan lukuun
 asti:
 ```javascript
-        let luku, i;
+        let luku;
         luku = prompt('Anna yläraja parillisille luvuille.');
-        for (i = 0; i<=luku ; i+=2) {
+        for (let i = 0; i<=luku ; i+=2) {
             console.log(i);
         }
 ```
@@ -117,9 +116,9 @@ viiteen kertotaulu on ensimmäisen tulon tekijän saatava vuoron perään kaikki
 Tämänkaltainen ongelma voidaan ratkaista kahden sisäkkäisen toistorakenteen avulla:
 
 ```javascript
-        let i, j, tulo;
-        for (i = 1; i<=5; i++) {
-            for (j = 1; j<=5; j++) {
+        let tulo;
+        for (let i = 1; i<=5; i++) {
+            for (let j = 1; j<=5; j++) {
                 tulo = i*j;
                 console.log(i + ' kertaa ' + j + ' on ' + tulo + ".");
             }
