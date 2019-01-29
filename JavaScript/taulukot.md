@@ -60,16 +60,16 @@ Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksess
 
 ```javascript
         const HEITOT = 5;
-        let i, tulos;
+        let tulos;
         let heitot = [];
 
-        for (i = 0; i<HEITOT; i++) {
+        for (let i = 0; i<HEITOT; i++) {
             tulos = Math.floor(Math.random()*6)+1;
             console.log('Heiton ' + (i+1) + ' tulos: ' + tulos);
             heitot[i] = tulos;
         }
         console.log('Takaperin:')
-        for (i = HEITOT-1; i>=0; i--) {
+        for (let i = HEITOT-1; i>=0; i--) {
             console.log('Heiton ' + (i+1) + ' tulos: ' + heitot[i]);
         }
 ```
@@ -105,12 +105,12 @@ Alla on arvonnan toteuttava ohjelmakoodi:
 ```javascript
        let kaytetty = [];
        let numerot, arvottavat;
-       let i, r;
+       let r;
 
        numerot = prompt('Monestako numerosta valitaan? ');
        arvottavat = prompt('Montako numeroa arvotaan?');
 
-       for (i = 0; i<arvottavat; i++) {
+       for (let i = 0; i<arvottavat; i++) {
            do {
                r = Math.floor(Math.random()*numerot)+1;
            } while (kaytetty[r]);
