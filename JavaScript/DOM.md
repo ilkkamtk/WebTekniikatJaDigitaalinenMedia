@@ -69,7 +69,7 @@ document.scripts    // hakee kaikki script-elementit
     const p = u.getElementsByTagName('p');
     
     // sama voidaan kirjoittaa myös ilman välimuuttujaa
-    const p = document.getElementById('#uutiset').getElementsByTagName("p");
+    const p = document.getElementById('uutiset').getElementsByTagName("p");
  
     // tai yhdellä komennolla
     const p = document.querySelectorAll('#uutiset p');
