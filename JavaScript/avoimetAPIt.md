@@ -40,3 +40,4 @@ Rajapinnan dokumentaatiosta selviää mitä metodia ja mitä parametrejä ja HTT
 #### Tehtävä: asenna Postman ja testaa [OpenChargeMap](https://openchargemap.org/site/develop#api)-rajapintaa
 
 #### [Esimerkkisovellus, jossa käytetään OpenChargeMap:ia](https://github.com/ilkkamtk/sahkoauto)
+  - [Valmis sovellus](https://users.metropolia.fi/~ilkkamtk/sahkoauto/)
