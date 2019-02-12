@@ -68,7 +68,7 @@ Tämän takia JavaScriptissä monet asiat, kuten AJAX-kutsut ja tiedoston käsit
     console.log('skripti päättyy');
 </script>
 ``` 
-##### Tehtävä: Kokeile yllä olevaa skriptiä. Aseta osoitteeksi [raw-linkistä löytyvä osoite](img/dataUrlExample.txt)
+##### Tehtävä: Kokeile yllä olevaa skriptiä. Aseta osoitteeksi https://raw.githubusercontent.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/master/JavaScript/img/dataUrlExample.txt
 Koodin pitäisi kirjoittaa konsoliin:
 ```text
 skripti alkaa
@@ -97,7 +97,7 @@ skripti päättyy
     console.log('skripti päättyy');
 </script>
 ```
-##### Tehtävä: Kokeile yllä olevaa skriptiä. Aseta taas osoitteeksi [raw-linkistä löytyvä osoite](img/dataUrlExample.txt)
+##### Tehtävä: Kokeile yllä olevaa skriptiä. Aseta taas osoitteeksi https://raw.githubusercontent.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/master/JavaScript/img/dataUrlExample.txt
 Koodin pitäisi kirjoittaa konsoliin:
 ```text
 skripti alkaa
