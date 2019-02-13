@@ -189,7 +189,24 @@ Muuttujan tyyppi voidaan testata `typeOf`-operaatiolla:
  
 ### Tyypin muuttaminen
 
-Numeerinen muuttuja voidaan muuttaa merkkijonoksi        
+Numeerinen muuttuja voidaan muuttaa merkkijonoksi `toString`-metodilla:
+```javascript
+        let ika = 23;
+        let ikaStr = ika.toString();
+```
+Toiseen suuntaan muunnos voidaan tehdä parseInt- tai parseFloat-metodilla:
+```javascript
+        let ikaStr = '23';
+        let rahaStr= '15.48';
+        
+        let ika = parseInt(ikaStr);
+        let raha = parseFloat(rahaStr);
+```
+Muunnos voidaan tehdä myös unaarisella `+`-operaatiolla:
+```javascript
+        let raha = +rahaStr;
+```
+
         
         
 ### Merkkijonojen yhdistäminen
