@@ -115,14 +115,10 @@ XML on merkintäkieli, kuten HTML. Se on tarkoitettu datan tallennukseen ja siir
 <?xml version="1.0" encoding="UTF-8"?>
 <kuvat>
     <kuva>
-      <nimi>Nukkuva kissa</nimi>
-      <kuvaus>Tässä kuvassa kissa nukkuu.</kuvaus>
-      <osoite>http://placekitten.com/321/241</osoite>
+      <nimi>Nukkuva kissa</nimi><kuvaus>Tässä kuvassa kissa nukkuu.</kuvaus><osoite>http://placekitten.com/321/241</osoite>
     </kuva>
     <kuva>
-      <nimi>Makaava kissa</nimi>
-      <kuvaus>Tässä kuvassa kissa makaa.</kuvaus>
-      <osoite>http://placekitten.com/421/251</osoite>
+      <nimi>Makaava kissa</nimi><kuvaus>Tässä kuvassa kissa makaa.</kuvaus><osoite>http://placekitten.com/421/251</osoite>
     </kuva>
 </kuvat>
 ```
