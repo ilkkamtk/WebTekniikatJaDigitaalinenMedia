@@ -243,3 +243,4 @@ Tee sovellus, joka hakee käyttäjän syöttämän tv-sarjan tiedot ja näyttä�
    * Hakua varten tarvitsee hakea 'hakuteksti'-kentän arvo (value), joka sitten lähetetään fetch:in avulla APIin.
    * Haun tuloksessa on todennäköisesti useampi TV-sarja, joten tee for-silmukka, jonka sisällä tulostat tietojen näyttämiseen tarvittavan HTML:n
    * Joidenkin sarjojen tiedoista voi puuttua esim. kuva. Tällöin kyseisen kentän arvo on _null_. Tämä aiheuttaa virheilmoituksen ja skriptin suoritus keskeytyy. Kokeile tehdä skriptistä sellainen, että se sietää em. virheitä. Voit esim. if-lauseella tarkastaa onko jonkin muuttujan arvo null, tai voit kokeilla [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+      * Tätä voit kokeilla esim. hakusanalla 'dome'. Se palauttaa APIsta 9 tv-sarjaa, mutta yhdestä niistä puuttuu kuva.
