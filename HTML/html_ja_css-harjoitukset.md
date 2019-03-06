@@ -1,6 +1,6 @@
 # HTML- sekkä CSS-harjoituksia
 
-Tässä dokumentissa on sekä HTML- että CSS-osuuden harjoitukset. Tehtävät 1 ja 2 voi luonnollisesti toteuttaa yhdessäkin.
+Tässä dokumentissa on sekä HTML- että CSS-osuuden harjoitukset. Tehtävät 1 ja 2 voi luonnollisesti toteuttaa samaan kansioon.
 
 1. Viestinnän harjoituksena teette ryhmänä alaantutustumisraportin. Tee yksilötehtävänä HTML-sivusto perustuen tutkielmaan. Tiivistä teksti n. yhteen kolmasosaan alkuperäisestä ja jaa se muutamaan osaan, jotka jokainen menee omalle HTML-sivulleen. Sivustolla tulee sisällön lisäksi olla mukana ainakin seuraavia ominaisuuksia:
 
