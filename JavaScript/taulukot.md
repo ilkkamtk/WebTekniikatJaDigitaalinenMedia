@@ -144,6 +144,12 @@ Näitä metodeja ovat esimerkiksi:
 Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi.
 Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
 
+Huomaa, että edellä mainittu `sort()`-metodi lajittelee taulukon aakkosjärjestykseen eikä numeeriseen järjestykseen. Tällöin esimerkiksi arvot 100, 23 ja 15 lajiteltaisiin aakkosjärjestykseen 100, 15, 23, mikä ei yleensä ole ohjelmoijan haluama järjestys. Tämän voi korjata kirjoittamalla halutun lajittelufunktion `sort()`-metodikutsun yhteydessä. Esimerkiksi taulukko `luvut` lajiteltaisiin numeeriseen järjestykseen seuraavasti:
+```
+luvut.sort((a,b) => a-b);
+```
+Edellä käytettiin ns. nuolifunktionotaatiota lajittelufunktion kirjoittamiseen; nuolifunktioihin palataan myöhemmin.
+
 ## Harjoitustehtävät
 
 1. Kirjoita ohjelma, joka kysyy käyttäjältä viisi lukua ja tulostaa ne vastakkaisessa järjestyksessä kuin ne syötettiin. (2p)
