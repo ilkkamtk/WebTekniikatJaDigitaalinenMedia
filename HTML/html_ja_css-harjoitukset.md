@@ -1,20 +1,22 @@
-# HTML- sekkä CSS-harjoituksia
+# HTML- ja CSS-harjoituksia
 
 Tässä dokumentissa on sekä HTML- että CSS-osuuden harjoitukset. Tehtävät 1 ja 2 voi luonnollisesti toteuttaa samaan kansioon.
 
-1. Viestinnän harjoituksena teette ryhmänä alaantutustumisraportin. Tee yksilötehtävänä HTML-sivusto perustuen tutkielmaan. Tiivistä teksti n. yhteen kolmasosaan alkuperäisestä ja jaa se muutamaan osaan, jotka jokainen menee omalle HTML-sivulleen. Sivustolla tulee sisällön lisäksi olla mukana ainakin seuraavia ominaisuuksia:
+1. Tee yksilötehtävänä HTML-sivusto, joka käsittelea tämän opintojakson digitaalisen median osion viikkotehtävien mukaisia aiheita (kuva ja kuvaformaatit, kamerat ja kuvaaminen, video, ääni). Sisältö jaetaan vastaaviin osiin omille HTML-sivuilleen. Sivujen sisällön tarkempi määrittely tehdään digitaalisen median opettajan johdolla. 
+
+Sivustolla tulee sisällön lisäksi olla mukana ainakin seuraavia ominaisuuksia:
 
     - eri tasoisia otsikoita
     - linkkejä alasivuille sekä ulkoisille sivuille
     - kuvia
     - luetteloita
 
-    HTML-rakenteen ja seuraavassa tehtävässä tehtävän CSS:n voi tehdä valmiiksi, ennen kuin raportti ja lyhennelmä ovat valmiita. Voit käyttää väliaikaisena tekstinä vaikkapa lorem ipsumia (esim: https://www.lipsum.com/feed/html). Kun raportti ja sen lyhennelmä ovat valmiit, lorem ipsumin tilalle vaihdetaan lopullinen teksti. (5 p.)
+Sivuston HTML-rakenne ja seuraavan tehtävän CSS tehdään ja palautetaan ennen kuin kaikki digitaalisen median sisällöt ovat valmiita. Voit käyttää puuttuvien osien väliaikaisena tekstinä vaikkapa lorem ipsumia (esim: https://www.lipsum.com/feed/html). Sitä mukaa kun  digitaalisen median sisällöt valmistuvat, lorem ipsumin tilalle vaihdetaan lopullinen teksti. (5 p.)
 
 1. Toteuta sivustolle CSS-tiedosto, jolla luot yhteäisen ulkoasun sivustolle. CSS:n tulee toteuttaa ainakin seuraavat ominaisuudet:
 
     - taustaväri taikka taustakuva. Jos käytetään taustakuvaa, se tulee olla venytetty koko selainikkunan kokoiseksi
-    - fontti tekstissä ja otsikoissa tulee olla jokin muu kuin oletusfontti. Tarvittaessa värin voi vaihtaa.
+    - fontti tekstissä ja otsikoissa tulee olla jokin muu kuin oletusfontti. Myös värin voi vaihtaa.
     - otsikoiden tulee olla kehystettyjä sekä keskitettyjä
     - valikko tulee toteuttaa siten, että se toteutetaan listana ja on sivun ylälaidassa keskitettynä vaakatasossa.
     - sivuston tulee olla responsiivinen
