@@ -140,6 +140,7 @@ Näitä metodeja ovat esimerkiksi:
 - `shift()`	poistaa ja palauttaa taulukon 1. alkion
 - `pop()`	poistaa ja palauttaa taulukon viimeisen 	alkion
 - `push(alkioluettelo)`	lisää taulukon loppuun luetellut, pilkuilla 	erotellut alkiot
+- `includes(arvo)`      tarkastaa sisältääkö taulukko annetun arvon
 
 Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi.
 Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
