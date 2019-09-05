@@ -179,9 +179,9 @@ Ohjelma tuottaa alla olevan tulosteen:
    - Ratkaise ongelma simuloimalla: Laita ohjelma heittelemään annettua määrää noppia toistorakenteessa (esim. 10000 kertaa) ja laske, kuinka suuri osuus toistoista tuotti käyttäjää kiinnostavan silmälukujen summan.
    
 7. Kirjoita ohjelma, joka arpoo bingolapun numerot ja tulostaa ne pienimmästä suurimpaan.
-Bingolapussa on 25 numeroa alla olevan säännön mukaisesti: (3p)
+Bingolapussa on 25 ruutua, joihin numerot arvotaan alla olevan säännön mukaisesti: (3p)
       
-    - yleisesti n:s luku on jokin luvuista 4n-3, 4n-2, 4n-1 ja 4n. (kun n on välillä 1, 2, ..., 25)
+    - yleisesti n:s luku on jokin luvuista 4n-3, 4n-2, 4n-1 ja 4n. (kun n on välillä 1, 2, ..., 25, eli n on ruudun järjestysnumero)
         - Kaavasta seuraa että ensimmäinen luku on jokin luvuista 1, 2, 3 ja 4 ja toinen luku on jokin luvuista 5, 6, 7 ja 8.
       
       
