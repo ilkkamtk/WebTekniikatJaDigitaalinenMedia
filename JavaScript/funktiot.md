@@ -81,7 +81,7 @@ kopioidaan funktion määrityksessä olevien parametrimuuttujien arvoiksi.
 
 Kirjoitetaan funktion määrityksen alapuolelle funktion kutsu:
 ```javascript
-        tervehdi(4, 'Moikka!');
+        tervehdi('Moikka!', 4);
 ```
 Ohjelma tuottaa seuraavan tulosteen:
 ```
