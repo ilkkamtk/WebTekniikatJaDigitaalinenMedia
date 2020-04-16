@@ -210,7 +210,7 @@ Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XM
     
     fetch('kuvat.json')             // Käynnistetään haku. Vakiometodi on GET.
     .then(function(vastaus){        // Sitten kun haku on valmis,
-      return vastaus.json();        // muutetaan ladattu tekstimuotoinen JSON JavaScript-olioksi 
+      return vastaus.json();        // muutetaan ladattu tekstimuotoinen JSON JavaScript-olioksi/taulukoksi
     }).then(function(json){         // Sitten otetaan ladattu data vastaan ja
       naytaKuva(json);              // kutsutaan naytaKuva-funktiota ja lähetetään ladattu data siihen parametrinä.
     }).catch(function(error){       // Jos tapahtuu virhe,
@@ -228,6 +228,33 @@ Fetch on uudempi lupauksiin (promise) perustuva tapa tehdä Ajax-sovelluksia. XM
      }
 </script>
 ```
+JavaScriptin ES8-versiossa esiteltiin [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntaksi, jonka avulla Promisen käyttöä ja varsinkin virheenhallintaa yksinkertaistettiin. Async/await syntaksin avulla funktioita, jotka palauttavat Promisen, käsitellään lähes samoin, kuin mitä tahansa muutakin funktiota. Erona on se, että funktio, joka palauttaa Promisen, pitää kirjoittaa toisen, asynkronisen (async) funktion sisälle. Lisäksi kutsun eteen kirjoitetaan await. Tässä yllä oleva esimerkki käyttäen async/await syntaksia.
+```html
+<figure>
+    <img>
+    <figcaption></figcaption>
+</figure>
+
+<script>   
+    async function naytaKuvat() {  
+        try{
+           const vastaus = await fetch('kuvat.json');              // Käynnistetään haku.
+           if (!vastaus.ok) throw new Error('jokin meni pieleen'); // Jos tapahtuu virhe, heitetään ilmoitus
+           const kuvat = await vastaus.json();                     // muutetaan ladattu tekstimuotoinen JSON JavaScript-olioksi/taulukoksi
+           const nimi = kuvat[1].nimi;     // 'Kuvat' taulukon toisen objektin 'nimi' ominaisuus
+           const kuvaus = kuvat[1].kuvaus; // 'Kuvat' taulukon toisen objektin 'kuvaus' ominaisuus
+           const osoite = kuvat[1].osoite; // 'Kuvat' taulukon toisen objektin 'osoite' ominaisuus
+           
+           document.querySelector('img').src = osoite;
+           document.querySelector('img').alt = nimi;
+           document.querySelector('figcaption').innerText = kuvaus;
+        } catch (error) {                                          // Otetaan heitetty virheilmoitus kiinni
+          console.log(error)
+        }                  
+     }
+</script>
+```
+
 ## Harjoitustehtävä
 Tee sovellus, joka hakee käyttäjän syöttämän tv-sarjan tiedot ja näyttää ne web-sivulla. 
    * Käytettävä API: [TVMaze API](http://www.tvmaze.com/api#show-search)
