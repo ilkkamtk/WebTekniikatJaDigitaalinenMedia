@@ -252,6 +252,8 @@ JavaScriptin ES8-versiossa esiteltiin [async/await](https://developer.mozilla.or
           console.log(error)
         }                  
      }
+   
+   naytaKuvat();
 </script>
 ```
 
