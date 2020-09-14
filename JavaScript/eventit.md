@@ -26,7 +26,7 @@ function popup(evt){
 nappi.addEventListener('click', popup);
 </script>
 ``` 
-Huomaa että addEventListenerissä popup-funktiosta puutuvat sulkeet Tämä siksi, että popup-funktiota käytetään tapahtumankäsittelijänä 
+Huomaa että addEventListenerissä popup-funktiosta puuttuvat sulkeet Tämä siksi, että popup-funktiota käytetään tapahtumankäsittelijänä 
 eikä sitä kutsuta välittömästi, vaan vasta sitten, kun 'click' tapahtuu. Jos siinä oisi sulkeet, funktio käynnistettäisiin välittömästi.
 
 Tapahtumankäsittelijää kutsutaan myös takaisinkutsufunktioksi (callback).
