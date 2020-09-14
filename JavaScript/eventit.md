@@ -8,7 +8,7 @@ Esimerkiksi, jos käyttäjä napsauttaa painiketta, siihen voidaan vastata näyt
 <script>
 const nappi = document.querySelector('button');
 nappi.addEventListener('click', function(evt){
-  alert('Elementtiä' + evt.target + 'klikattiin');
+  alert('Elementtiä' + evt.curentTarget + 'klikattiin');
 });
 </script>
 ``` 
