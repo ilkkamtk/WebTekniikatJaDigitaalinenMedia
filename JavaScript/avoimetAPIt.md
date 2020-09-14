@@ -12,7 +12,7 @@ jonka avulla voidaan vain lukea tietoa (esim. [OpenWeatherMap](https://openweath
 
 Avoimia rajapintoja on tarjolla runsaasti ja suurin osa niistä on nykyään hyvin dokumentoituja. Monet rajapinnoista vaativat jonkinlaisen rekisteröitymisen ennen kuin niitä voidaan käyttää. Lisäksi ne ovat testattavissa ennen käyttöönottoa.
 
-Testaamista varten erittäin kätevä apuväline on [Postman](https://www.getpostman.com/). Sen avulla internetissä olevia rajapintoja voidaan testata kirjoittamatta riviäkään koodia.
+Testaamista varten erittäin kätevä apuväline on [Postman](https://www.postman.com/downloads/). Sen avulla internetissä olevia rajapintoja voidaan testata kirjoittamatta riviäkään koodia.
 
 ## HTTP-protokolla
 Suurin osa avoimista rajapinnoista on toteutettu HTTP-protokollaan perustuvalla REST-arkkitehtuurimallilla, jonka takia niistä käytetään usein termiä RESTful web palvelut (web service).
