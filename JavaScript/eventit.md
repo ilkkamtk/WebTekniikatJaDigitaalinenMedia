@@ -8,7 +8,7 @@ Esimerkiksi, jos käyttäjä napsauttaa painiketta, siihen voidaan vastata näyt
 <script>
 const nappi = document.querySelector('button');
 nappi.addEventListener('click', function(evt){
-  alert('Elementtiä' + evt.curentTarget + 'klikattiin');
+  alert('Elementtiä' + evt.currentTarget + 'klikattiin');
 });
 </script>
 ``` 
@@ -20,7 +20,7 @@ Toinen parametri voi olla myös viittaus funktioon:
 const nappi = document.querySelector('button');
 
 function popup(evt){
-  alert('Elementtiä' + evt.target + 'klikattiin');
+  alert('Elementtiä' + evt.currentTarget + 'klikattiin');
 }
 
 nappi.addEventListener('click', popup);
@@ -31,7 +31,7 @@ eikä sitä kutsuta välittömästi, vaan vasta sitten, kun 'click' tapahtuu. Jo
 
 Tapahtumankäsittelijää kutsutaan myös takaisinkutsufunktioksi (callback).
 
-Tapahtumankäsittelijä ottaa vastaan [tapahtuma-olion](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt), joka sisältää tietoa tapahtumasta, kuten tapahtuman tyypin ja sen kohteen. Esim `evt.target` palauttaa sen elementin, joka on tapahtuman kohde.
+Tapahtumankäsittelijä ottaa vastaan [tapahtuma-olion](https://developer.mozilla.org/en-US/docs/Web/API/Event) (evt), joka sisältää tietoa tapahtumasta, kuten tapahtuman tyypin ja sen kohteen. Esim `evt.currentTarget` palauttaa sen elementin, joka on tapahtuman kohde.
 Yllä olevassa esimerkkikoodissä tämä kohde on `<button>`-elementti; 
 
 ### [Lista tapahtumista](https://developer.mozilla.org/en-US/docs/Web/Events) 
@@ -45,7 +45,7 @@ Inline syntaksi, jossa tapahtumankäsittelijä määritetään HTML-koodissa. T�
 <button onclick="popup()">Klikkaa mua</button>
 <script>
 function popup(evt){
-  alert('Elementtiä' + evt.target + 'klikattiin');
+  alert('Elementtiä' + evt.currentTarget + 'klikattiin');
 }
 </script> 
 ```
@@ -58,7 +58,7 @@ function popup(evt){
 const nappi = document.querySelector('button');
 
 function popup(evt){
-  alert('Elementtiä' + evt.target + 'klikattiin');
+  alert('Elementtiä' + evt.currentTarget + 'klikattiin');
 }
 
 nappi.onclick = popup;
@@ -125,7 +125,7 @@ form.onsubmit = function(evt) {
 ```
 
 ## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-JavaScriptin uudemmissa versioissa tapahtumien sijasta käytetään yhä useammin lupauksia (promise). Lupaus on olio, joka 'lupaa' palauttaa arvon.
+JavaScriptin uudemmissa versioissa callback funktioiden sijasta käytetään yhä useammin lupauksia (promise). Lupaus on olio, joka 'lupaa' palauttaa arvon.
 Lupauksen etuja ovat mm. yksinkertaisempi syntaksi ja virheenkäsittelyn helpottaminen. Esim. lomakkeen lähettäminen fetch-metodilla:
 ```html
 <form>
