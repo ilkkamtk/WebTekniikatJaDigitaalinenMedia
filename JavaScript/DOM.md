@@ -23,7 +23,7 @@ Yllä olevassa esimerkissä valittu p-elementti tallennetaan elementtioliona (ta
 ## Parent/child
 ![DOM](https://www.w3schools.com/js/pic_htmltree.gif) 
 
-Koska DOM kuvaa dokumentin puumaisena rakenteena, käytetään sen yhteydessä termejä vanhempi (tai äiti/isä), lapsi, ja sisar. Englanniksi parent, child ja sibling. Esim. ylläolevassa kuvassa h1-elementti on body-elementin lapsi ja a-elementin sisar. Vastaavasti body-elementti on sekä h1- ja a-elementtien vanhempi.
+Koska DOM kuvaa dokumentin puumaisena rakenteena, käytetään sen yhteydessä termejä vanhempi (tai äiti/isä), lapsi, ja sisarus. Englanniksi parent, child ja sibling. Esim. ylläolevassa kuvassa h1-elementti on body-elementin lapsi ja a-elementin sisarus. Vastaavasti body-elementti on sekä h1- ja a-elementtien vanhempi.
 
 ## [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)-rajapinta
 `document`-rajapinta edustaa web-sivua, sen sisällä ovat kaikki muut dokumentin objektit. Kun haluat valita dokumentista minkä tahansa HTML-elementin, sinun tulee aloittaa document-rajapinnasta. Esim. `document.getElementByID('logo')`
@@ -39,7 +39,7 @@ solmu.getElementsByTagName("p")     // hakee solmu-nodesta kaikki p-elementit
 solmu.appendChild(lapsi)            // lisää solmu-nodeen lapsinoden
 solmu.removeChild(lapsi)            // poistaa solmu-nodesta lapsinoden
 ```
-Koska document-rajapinta perii [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)- ja [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-rajapinnat, itse asiassa tärkeimmät ominaisuudet tulevat niistä sekä [ParnetNode](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode)-rajapinnasta:
+Koska document-rajapinta perii [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)- ja [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)-rajapinnat, itse asiassa tärkeimmät ominaisuudet tulevat niistä sekä [ParentNode](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode)-rajapinnasta:
 ```javascript
 elem.innerHTML   // elem-noden sisältämä HTML-koodi
 elem.innerText   // elem-noden sisältämä teksti
@@ -71,7 +71,7 @@ document.scripts    // hakee kaikki script-elementit
     // sama voidaan kirjoittaa myös ilman välimuuttujaa
     const p = document.getElementById('uutiset').getElementsByTagName("p");
  
-    // tai yhdellä komennolla
+    // tai yhdellä komennolla käyttäen CSS-valitsinta
     const p = document.querySelectorAll('#uutiset p');
     ```
 1. Valitse listan `<ul>` toinen  nimike (item eli `<li>`):  
@@ -84,7 +84,14 @@ document.scripts    // hakee kaikki script-elementit
     ```
     
     ```javascript
-    const toka = document.getElementsByTagName('li')[1];  // getElementsByTagname palauttaa taulukon. Talukon järjestysnumerot alkavat nollasta, joten 1 tarkoittaa toista <li>-elementtiä.
+    const toka = document.getElementsByTagName('li')[1];  // getElementsByTagname palauttaa taulukon. Taulukon järjestysnumerot alkavat nollasta, joten 1 tarkoittaa toista <li>-elementtiä.
+    const toka = document.querySelectorAll('li')[1];      // Sama querySelectorAll-metodilla
+    
+    // Käydään läpi kaikki <li>-elementit forEach-metodin avulla (lihavoidaan teksti)
+    const bullets = document.querySelectorAll('ul li');
+            bullets.forEach(bullet => {
+              bullet.innerHTML = `<b>${bullet.innerHTML}</b>`;
+            })
     ```
 
 1. Elementtilista kaikista "tiedote"-luokkaan kuuluvista p-elementeistä:   
@@ -172,58 +179,53 @@ Class attribuutin muokkaaminen:
 <p class="punainen" id="kappale">Jotain tekstiä</p>
 
 <script>
+// Vaihdetaan siniseksi
 document.querySelector('#kappale').setAttribute('class', 'sininen');
-// tai
+// poistetaan sininen
 document.querySelector('#kappale').classList.toggle('sininen');
+// Korvataan sininen punaisella
+document.querySelector('#kappale').classList.replace('sininen', 'punainen');
 </script>
 ```
-[classList-dokumentaatio](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+Lisää metodeja class-attribuuttien käsittelyyn, katso [classList-dokumentaatio](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
 
-## Harjoitustehtävät
-Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/DOM-tehtavat).
-1. teht1.html (4p)
-   * Dokumentti sisältää html-taulukon, jossa on etunimi, sukunimi, nikki ja osoite.
-   * Muokkaa teht1.js tiedostoa ja tee skripti joka korvaa listassa olevat tiedot omillasi.
-   * Lisää JavaScriptillä listaan puhelinnumero
-     * Voit lisätä myös otsikon `<th>` -elementillä
-   * Poista JavaScriptillä nikki
-     * Voit poistaa myös otsikon
-1. teht2.html (2p)
-   * Dokumentissä on kuva 1, joka on piilotettu CSS:n avulla
-      * Muokkaa teht2.js tiedostoa ja tee skripti, joka tuo kuvan näkyviin style attribuuttia muokkaamalla
-   * Dokumentissä on kuva 2, joka on piilotettu CSS:n avulla
-      * Kirjoita käsin teht2.css tiedostoon luokka, joka tuo kuvan näkyviin
-      * Muokkaa teht2.js tiedostoa ja tee skripti, joka muokkaa `<img>` elementin class attribuuttia siten, että kuva tulee näkyviin
-1. teht3.html (3p)
-   * teht3.js sisältää taulukon 'kuvat'
-   * Tee for-silmukka, joka lisää innerHTML-ominaisuuden avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
-    ```html
-    <ul>
-      <li>
-       <img src="lisää_osoite_tänne">
-      </li>
-      <li>....
-    </ul>
-    
-    ```
-    * tee for-silmukan sisällä `<li>` ja `<img>` elementit, jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään tulostat valmiin html-koodin innerHTML:n avulla  
-1. teht4.html (3p)
-   * Myös teht4.js sisältää taulukon 'kuvat'
-   * Tee for-silmukka, joka lisää DOM-metodien avulla listaan taulukossa olevat kuvat. Valmis HTML näyttää tältä: 
-    ```html
-    <ul>
-      <li>
-       <img src="lisää_osoite_tänne">
-      </li>
-      <li>....
-    </ul>
-    
-    ```
-    * Tee for-silmukan sisällä createElement-metodilla `<li>` ja `<img>` elementit, jonka jälkeen valitse dokumentistä `<ul>` elementti ja sen sisään lisäät html elementit appendChild-metodin avulla
- 1. tee tehtäviin 3 ja 4 CSS-tiedosto, joka poistaa listan edestä pallerot ([list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.asp)), ja joka tekee joka toisen `<li>` elementin taustan harmaaksi ([pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)) (2p)
- 1. teht5.html (6p)
-    * Tee skripti, joka tulostaa kellonajan `<p id=kello>` elementin sisälle sekunnin välein
-        * Kellon tulee olla 24h kello ja sen tulee näyttää tunnit, minuutit ja sekunnit kussakin aina kaksi numeroa. Esim 09:34:03 tai 22:01:15.
-        * Kellonaika saadaan [Date](https://www.w3schools.com/jsref/jsref_obj_date.asp)-olion avulla ja päivitetään [setInterval](BOM.md#setInterval-metodi)-metodilla
 
+# DOM-tehtävät
+
+### Tehtävä A
+Lataa [tämä zip](misc/DOM-tiedostot.zip) omalle koneellesi ja pura se hakemistoon, jossa
+muidenkin tuntien tehtävät ovat.
    
+### Tehtävä B, [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp) (2p.)
+1. Avaa tiedostot task-b.html ja js/main-b.js
+1. Lisää JavaScriptillä HTML-sivun `<main>`-elementtiin toinen `<article>`-elementti muokkaamalla tiedostoa js/main-b.js:
+   * Uusi `<article>`-elementti sisältää samat elementit kuin valmiina oleva `<article>`-elementti. Tee uudet elementit HTML merkkijonona (älä käytä valmiina olevan elementin `innerHTML`-ominaisuutta).
+   * Valitse `<main>`-elementti käyttäen [DOM-metodeja](https://www.w3schools.com/js/js_htmldom_elements.asp)
+   * Käytä [innerHTML](https://www.w3schools.com/js/js_htmldom_html.asp) -ominaisuutta lisätessäsi `<article>`-elementin `<main>`-elementtiin.
+   * Huomaa, että sinun on käytettävä `+=`-operaattoria lisäyksessä
+   * Jos haluat sisällyttää HTML:än useamman rivin pituisen merkkijonon, käytä `+`-operaattoria tai tee [template string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+   
+### Tehtävä C, [JavaScript HTML DOM Elements](https://www.w3schools.com/js/js_htmldom_nodes.asp) (4p.)
+1. Avaa tiedostot task-c.html ja js/main-c.js
+1. Lisää JavaScrptillä uusi `<article>`-elementti `<main>`-elementtiin:
+   * Uusi `<article>`-elementti sisältää samat elementit kuin valmiina oleva `<article>`-elementti. Tee nämä käyttäen DOM-metodia ja luotujen elementtien ominaisuuksia.
+   * Valitse `<main>`-elementti käyttäen [DOM-metodeja](https://www.w3schools.com/js/js_htmldom_elements.asp)
+   * Käytä DOM-metodeja lisätessäsi `<article>`-elementin `<main>`-elementtiin
+   * Tekstinoden tekemisessä voit kokeilla eri vaihtoehtoja (`createTextNode`-metodi tai elementtiolion `innerHTML`-ominaisuudet).
+
+### Tehtävä D, HTML sisällön lisääminen taulukosta [iteroimalla](https://www.w3schools.com/js/js_loop_for.asp) (5p.)
+1. Avaa tiedostot task-d.html ja js/main-d.js
+1. Lisää `<article>`-elementejä `<main>`-elementtiin iteroimalla picArray (käyttäen toistorakennetta tiedostossa main-d.js).
+   * Uusien `<article>`-elementtien tulee sisältää samat elementit kuin valmiina oleva `<article>`-elementti
+   * Valitse `<main>`-elementti DOM-metodeja käyttäen
+   * Käytä DOM-metodeja tai `innerHTML`-ominaisuutta lisätäksesi `<article>`-elementit `<main>`-elementtiin.
+      * Lisää otsikko `<h2>`-elementtiin ja `<img>`-elementin alt-attribuuttiin
+      * Lisää seloste `<caption>`-elementtiin
+      * Lisää tiedostopolku `<img>`-elementin src-attribuuttiin
+      * Lisää kuvaus `<p>`-elementtiin
+      
+### Tehtävä E, HTML sisällön lisääminen taulukosta [iteroimalla](https://www.w3schools.com/js/js_loop_for.asp) (5p.)
+1. Avaa tiedostot task-e.html ja js/main-e.js
+1. Lisää `<article>`-elementejä `<main>`-elementtiin iteroimalla picArray (käyttäen toistorakennetta tiedostossa main-e.js).
+   * Käytä tällä kertaa DOM-metodeja lisätäksesi `<article>`-elementit `<main>`-elementtiin.
+   * Lopputulos pitäisi selaimessa näyttää samalta, kuin tehtävä D.
