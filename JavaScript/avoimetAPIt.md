@@ -42,3 +42,6 @@ Rajapinnan dokumentaatiosta selviää mitä metodia ja mitä parametrejä ja HTT
 ### Esimerkkisovellus, jossa käytetään OpenChargeMap:ia
   - [Lähdekoodi](https://github.com/ilkkamtk/sahkoauto)
   - [Linkki toimivaan sovellukseen](https://users.metropolia.fi/~ilkkamtk/sahkoauto/)
+
+### Lisää esimerkkejä esim. projektia varten
+  - [Linkki](api-esimerkit/README.md)
