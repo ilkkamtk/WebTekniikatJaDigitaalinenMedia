@@ -7,3 +7,6 @@
 1. [geoJSON](https://leafletjs.com/examples/geojson/)
    - [HTML](esim2.html)
    - [JavaScript](js/esim2.js)
+1. geoJSON toinen esimerkki
+   - [HTML](esim3.html)
+   - [JavaScript](js/esim3.js)
