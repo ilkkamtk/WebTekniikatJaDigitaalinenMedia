@@ -199,6 +199,7 @@ muidenkin tuntien tehtävät ovat.
 ### Tehtävä B, [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp) (2p.)
 1. Avaa tiedostot task-b.html ja js/main-b.js
 1. Lisää JavaScriptillä HTML-sivun `<main>`-elementtiin toinen `<article>`-elementti muokkaamalla tiedostoa js/main-b.js:
+   * Katso [Esimerkkejä](https://github.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/blob/master/JavaScript/DOM.md#esimerkkej%C3%A4) kohta 6i
    * Uusi `<article>`-elementti sisältää samat elementit kuin valmiina oleva `<article>`-elementti. Tee uudet elementit HTML merkkijonona (älä käytä valmiina olevan elementin `innerHTML`-ominaisuutta).
    * Valitse `<main>`-elementti käyttäen [DOM-metodeja](https://www.w3schools.com/js/js_htmldom_elements.asp)
    * Käytä [innerHTML](https://www.w3schools.com/js/js_htmldom_html.asp) -ominaisuutta lisätessäsi `<article>`-elementin `<main>`-elementtiin.
@@ -208,6 +209,7 @@ muidenkin tuntien tehtävät ovat.
 ### Tehtävä C, [JavaScript HTML DOM Elements](https://www.w3schools.com/js/js_htmldom_nodes.asp) (4p.)
 1. Avaa tiedostot task-c.html ja js/main-c.js
 1. Lisää JavaScrptillä uusi `<article>`-elementti `<main>`-elementtiin:
+   * Katso [Esimerkkejä](https://github.com/ilkkamtk/WebTekniikatJaDigitaalinenMedia/blob/master/JavaScript/DOM.md#esimerkkej%C3%A4) kohta 6ii
    * Uusi `<article>`-elementti sisältää samat elementit kuin valmiina oleva `<article>`-elementti. Tee nämä käyttäen DOM-metodia ja luotujen elementtien ominaisuuksia.
    * Valitse `<main>`-elementti käyttäen [DOM-metodeja](https://www.w3schools.com/js/js_htmldom_elements.asp)
    * Käytä DOM-metodeja lisätessäsi `<article>`-elementin `<main>`-elementtiin
@@ -216,7 +218,7 @@ muidenkin tuntien tehtävät ovat.
 ### Tehtävä D, HTML sisällön lisääminen taulukosta [iteroimalla](https://www.w3schools.com/js/js_loop_for.asp) (5p.)
 1. Avaa tiedostot task-d.html ja js/main-d.js
 1. Lisää `<article>`-elementejä `<main>`-elementtiin iteroimalla picArray (käyttäen toistorakennetta tiedostossa main-d.js).
-   * Uusien `<article>`-elementtien tulee sisältää samat elementit kuin valmiina oleva `<article>`-elementti
+   * Uusien `<article>`-elementtien tulee sisältää samat elementit kuin tehtävissä B ja C
    * Valitse `<main>`-elementti DOM-metodeja käyttäen
    * Käytä DOM-metodeja tai `innerHTML`-ominaisuutta lisätäksesi `<article>`-elementit `<main>`-elementtiin.
       * Lisää otsikko `<h2>`-elementtiin ja `<img>`-elementin alt-attribuuttiin
