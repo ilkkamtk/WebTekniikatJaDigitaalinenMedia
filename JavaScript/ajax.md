@@ -263,7 +263,7 @@ Tee sovellus, joka hakee käyttäjän syöttämän tv-sarjan tiedot ja näyttä�
    * Vaatimukset: 
       * Vaihe 1: Tulostetaan haun tulos konsoliin (3p)
       * Vaihe 2: Tulostetaan web-sivulle haun tuloksesta yhden sarjan tiedot (4p)
-         * vaadittavat tiedot: Nimi, linkki kotisivulle, medium-kuva sekä yhteenveto (summary)
+         * vaadittavat tiedot: Nimi, linkki kotisivulle (officialSite), medium-kuva sekä yhteenveto (summary)
       * Vaihe 3: Tulostetaan web-sivulle haun tuloksesta kaikkien sarjojen samat tiedot kuin edellä (7p)
          * lisäksi tulostetaan genret, joihin sarja kuuluu
       * Vaihe 4: Tyylikäs ulkoasu CSS:llä ja validi HTML (6p)
