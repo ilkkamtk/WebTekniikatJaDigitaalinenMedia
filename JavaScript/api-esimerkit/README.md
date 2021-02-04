@@ -10,3 +10,6 @@
 1. geoJSON toinen esimerkki
    - [HTML](esim3.html)
    - [JavaScript](js/esim3.js)
+1. Yksinkertainen reittiopas
+   - [HTML](esim4.html)
+   - [JavaScript](js/esim4.js)
