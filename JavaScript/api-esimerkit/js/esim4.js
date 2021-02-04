@@ -1,4 +1,9 @@
 'use strict';
+// lähteet:
+// https://digitransit.fi/en/developers/apis/1-routing-api/itinerary-planning/
+// reittipisteet ovat Google polyline encoded formaatissa, joten Leafletiin pitää lisätä niille tuki:
+// https://github.com/jieter/Leaflet.encoded
+
 
 // näytetään kartta
 const map = L.map('map').setView([60.1785553, 24.8786212], 13);
@@ -9,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const apiOsoite = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 const proxy = 'https://cors-anywhere.herokuapp.com/';
 
-// haetaan pysakit koordiaattien avulla
+// haetaan reitti lähtöpisteen ja kohteen avulla
 function haeReitti(lahto, kohde) {
     // GraphQL haku
     const haku = `{
@@ -67,7 +72,7 @@ function haeReitti(lahto, kohde) {
                     break;
             }
             const reitti = (googleKoodattuReitti[i].legGeometry.points);
-            const pisteObjektit = L.Polyline.fromEncoded(reitti).getLatLngs();
+            const pisteObjektit = L.Polyline.fromEncoded(reitti).getLatLngs(); // fromEncoded: muutetaan Googlekoodaus Leafletin Polylineksi
             L.polyline(pisteObjektit).setStyle({
                 color
             }).addTo(map);
@@ -78,10 +83,5 @@ function haeReitti(lahto, kohde) {
     });
 }
 
-// käynnistetään pysäkkien haku halutuista koordinaateista 500 metrin säteellä
+// käynnistetään reitin haku lähtöpisteestä kohteeseen
 haeReitti({latitude: 60.24, longitude: 24.74}, {latitude: 60.16, longitude: 24.92})
-
-// tämä funktio ajetaan jokaiselle featurelle
-function onEachFeature(sijainti, taso) {
-    console.log(taso);
-}
