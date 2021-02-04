@@ -26,7 +26,7 @@ then(function(vastaus) {
 }).
 then(function(sijainnit) {
   L.geoJSON(sijainnit, {  // sijainnit on geoJSON featureita joten ne voi suoraan syöttää karttaan
-    onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 20
+    onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 34
   }).addTo(map);
 });
 

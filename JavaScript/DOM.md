@@ -220,7 +220,7 @@ muidenkin tuntien tehtävät ovat.
 1. Lisää `<article>`-elementejä `<main>`-elementtiin iteroimalla picArray (käyttäen toistorakennetta tiedostossa main-d.js).
    * Uusien `<article>`-elementtien tulee sisältää samat elementit kuin tehtävissä B ja C
    * Valitse `<main>`-elementti DOM-metodeja käyttäen
-   * Käytä DOM-metodeja tai `innerHTML`-ominaisuutta lisätäksesi `<article>`-elementit `<main>`-elementtiin.
+   * Käytä `innerHTML`-ominaisuutta lisätäksesi `<article>`-elementit `<main>`-elementtiin.
       * Lisää otsikko `<h2>`-elementtiin ja `<img>`-elementin alt-attribuuttiin
       * Lisää seloste `<caption>`-elementtiin
       * Lisää tiedostopolku `<img>`-elementin src-attribuuttiin
