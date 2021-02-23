@@ -18,7 +18,7 @@ function haeParkkipaikka(sivu) {
       then(function(tulos) {
         const parkkikset = tulos.features;
         L.geoJSON(parkkikset, {  // parkkikset on geoJSON featureita joten ne voi suoraan syöttää karttaan
-          onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 31
+          onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 35
         }).addTo(map);
         sivu++; // kasvatetaan sivun arvoa, jotta saadaan haettua seuraava sivu
         console.log('haettiin sivu', sivu);
