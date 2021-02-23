@@ -6,30 +6,34 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // haetaan helsingin parkkipaikat
-// parkkipaikkoja on monta sivua, joten homma täytyy hoitaa synkronisesti
-// (nykyaikaisempi tapa olisi toki käyttää fetchiä Promise.all funktion kanssa.
-let sivu = 1; // aloitetaan sivusta 1
-for (; ;) { // ikuinen for luuppi
-  const xhr = new XMLHttpRequest();
-  xhr.open('get',
-      'https://pubapi.parkkiopas.fi/public/v1/parking_area/?page=' + sivu,
-      false);
-  xhr.send(null);
-  if (xhr.status === 200) { // jos haku onnistuu...
-    const tulos = JSON.parse(xhr.responseText);
-    console.log(tulos);
-    const parkkikset = tulos.features;
-    L.geoJSON(parkkikset, {  // parkkikset on geoJSON featureita joten ne voi suoraan syöttää karttaan
-      onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 31
-    }).addTo(map);
-    sivu++;
-  } else {
-    break;  // hos haku ei onnistu lopetetaan for
-  }
+function haeParkkipaikka(sivu) {
+  fetch('https://pubapi.parkkiopas.fi/public/v1/parking_area/?page=' + sivu).
+      then(function(vastaus) {
+        if (vastaus.ok) {  // jos vastaus on OK, eli ollaan saatu vastaus,
+          return vastaus.json(); // mennään seuraavaan then-funktioon
+        } else {
+          throw new Error('parkkikset haettu'); // jos vastaus ei ole OK, heitetään errori ja koodi siirtyy catch osaan.
+        }
+      }).
+      then(function(tulos) {
+        const parkkikset = tulos.features;
+        L.geoJSON(parkkikset, {  // parkkikset on geoJSON featureita joten ne voi suoraan syöttää karttaan
+          onEachFeature: onEachFeature, // jos halutaan että parkkipaikkaa klikkaamalla tapahtuu jotain... ks. rivi 31
+        }).addTo(map);
+        sivu++; // kasvatetaan sivun arvoa, jotta saadaan haettua seuraava sivu
+        console.log('haettiin sivu', sivu);
+        haeParkkipaikka(sivu); // haetaan seuraava sivu kutsumalla funktiota itseään (rekursio)
+      }).
+      catch(function(error) {
+        console.log(error.message);
+      });
 }
+
+// käynnistetään parkkipaikkojen haku sivulta 1
+haeParkkipaikka(1);
 
 // tämä funktio ajetaan jokaiselle featurelle
 function onEachFeature(feature, layer) {
   console.log(feature);
-  layer.bindPopup('<h1>Mua klikattiin</h1>');
+  layer.bindPopup(`<h1>Mua klikattiin</h1><p>${feature.properties.capacity_estimate}</p>`);
 }
