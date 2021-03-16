@@ -1,8 +1,7 @@
 Ohjelmointiosuuden arvostelu
 
 Yksilö:
-Tuntitehtävät 40%
-Viikkokokeet 20%
+Tuntitehtävät 60%
 
 Ryhmä:
 Projekti 40%
