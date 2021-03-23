@@ -235,7 +235,7 @@ ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
         console.log(kaikki);
 ```       
 
-###Olioliteraalit
+### Olioliteraalit
 
 Olioliteraali määrittää joukon avain-arvopareina esitettäviä ominaisuuksia, joita voidaan käsitellä
 yhden muuttujan avulla.
