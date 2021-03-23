@@ -235,6 +235,56 @@ ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
         console.log(kaikki);
 ```       
 
+###Olioliteraalit
+
+Olioliteraali määrittää joukon avain-arvopareina esitettäviä ominaisuuksia, joita voidaan käsitellä
+yhden muuttujan avulla.
+
+Esimerkiksi opiskelijalla on etunimi, sukunimi ja opintopistemäärä. Voimme luoda tällaisen
+opiskelijan olioliteraalin avulla seuraavasti:
+
+```javascript
+let op1 = {
+      etunimi: 'Viivi',
+      sukunimi: 'Virta',
+      opintopisteet :80
+    };
+```
+    
+Ominaisuuksiin voidaan viitata vaihtoehtoisilla notaatioilla.
+Esimerkiksi opiskelijan etunimi saadaan ilmauksella `op1.etunimi` tai `op1["etunimi"]`.
+Seuraavassa käytetään ensin mainittua tapaa:
+
+```javascript
+console.log("Opiskelijan " + op1.etunimi +" tutkinnosta puuttuu " +
+        (240-op1.opintopisteet) + " opintopistettä.");
+```
+
+Ominaisuuden avain voi olla myös tallennettuna muuttujaan. Seuraava koodi tulostaa opiskelijan sukunimen:
+```javascript
+let valittuOminaisuus = "sukunimi";
+console.log(op1[valittuOminaisuus]);
+``` 
+Olioliteraalin määrittely voi sisältää myös funktioita. Alla oleva esimerkki luo olion, jonka
+ jäljellä oleva tutkintoon vaadittava opintopistemäärä
+lasketaan funktion avulla. Lopuksi kyseinen opintopistemäärä tulostetaan.
+
+```javascript
+let op2 = {
+      etunimi: 'Ahmed',
+      sukunimi: 'Hussein',
+      opintopisteet :175,
+      jäljellä: function() {return 240-this.opintopisteet}
+    }
+
+    console.log("Opiskelijalta " + op2.etunimi + " puuttuu " + op2.jäljellä() + " op.");
+```
+
+Funktioita käsitellään yksityiskohtaisesti myöhemmin.
+
+Edellä olioliteraaleja käytettiin tietorakenteena, jossa yhden muuttujanimen "taakse" voidaan tallentaa useita toisiinsa liittyviä arvoja.
+Vaikka oliopiirteitä ei tässä käsitelläkään, JavaScript on täysiverinen olio-ohjelmointikieli, jossa voidaan määrittää luokkia konstruktoreineen ja metodeineen. Olioita voidaan luoda `new`-lauseella, ja luokkia voidaan EC6-kieliversiosta alkaen määrittää toisten luokkien aliluokiksi hieman samaan tapaan kuin Java-ohjelmointikielessä.
+
 ## Syötteen luku
 Aiemmissa esimerkeissä ohjelmien tuottamat tulosteet olivat aina samanlaisia, eikä
 käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
