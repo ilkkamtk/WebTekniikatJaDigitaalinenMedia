@@ -89,7 +89,7 @@ document.scripts    // hakee kaikki script-elementit
     
     // Käydään läpi kaikki <li>-elementit forEach-metodin avulla (lihavoidaan teksti)
     const bullets = document.querySelectorAll('ul li');
-            bullets.forEach(bullet => {
+            bullets.forEach(function (bullet) {
               bullet.innerHTML = `<b>${bullet.innerHTML}</b>`;
             })
     ```
