@@ -38,6 +38,7 @@ Yleisimmin käytetyt metodit ovat:
 Rajapinnan dokumentaatiosta selviää mitä metodia ja mitä parametrejä ja HTTP-otsakkeita (header) tulee käyttää eri tilanteissa.
 
 #### Tehtävä: asenna Postman ja testaa [OpenChargeMap](https://openchargemap.org/site/develop#api)-rajapintaa
+- API Key: af18334a-87ce-4c57-b805-97ff3685c22d
 
 ### Esimerkkisovellus, jossa käytetään OpenChargeMap:ia
   - [Lähdekoodi](https://github.com/ilkkamtk/sahkoauto)
