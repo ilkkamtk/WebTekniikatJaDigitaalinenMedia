@@ -157,7 +157,7 @@ Edellä käytettiin ns. nuolifunktionotaatiota lajittelufunktion kirjoittamiseen
      - Tehtävä on ratkaistava taulukkomuuttujan avulla.
 
 2. Kirjoita ohjelma, joka kysyy käyttäjältä osallistujien määrän. Tämän jälkeen ohjelma kysyy kaikkien osallistujen nimet.
-Lopuksi ohjelma tulostaa osallistujien nimet web-sivulle numeroituun luetteloon samassa järjestyksessä kuin ne syötettiin. (3p)
+Lopuksi ohjelma tulostaa osallistujien nimet web-sivulle numeroituun luetteloon (<ol>) samassa järjestyksessä kuin ne syötettiin. (3p)
 
 3. Kirjoita ohjelma, joka kysyy kuuden koiran nimet.
 Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon (`<ul>`) käänteisessä aakkosjärjestyksessä. (3p)
