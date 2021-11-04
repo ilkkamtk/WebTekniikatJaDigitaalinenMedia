@@ -60,11 +60,10 @@ Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksess
 
 ```javascript
         const HEITOT = 5;
-        let tulos;
-        let heitot = [];
+        const heitot = [];
 
         for (let i = 0; i<HEITOT; i++) {
-            tulos = Math.floor(Math.random()*6)+1;
+            const tulos = Math.floor(Math.random()*6)+1;
             console.log('Heiton ' + (i+1) + ' tulos: ' + tulos);
             heitot[i] = tulos;
         }
