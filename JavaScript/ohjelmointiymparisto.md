@@ -4,7 +4,7 @@ Tervetuloa opiskelemaan ohjelmointia JavaScript-kielellä!
 
 JavaScript on selaimessa ajattava ohjelmointikieli, jolla voidaan tuottaa dynaamista, ohjelmallisesti luotua sisältöä web-sivuille.
 
-Työkaluna käytetään WebStorm-kehitintä. Voit hankkia opiskelijalisenssin sivulla https://www.jetbrains.com/student/ ja sen jälkeen ladata [tuotteen](https://www.jetbrains.com/webstorm/).
+Työkaluna käytetään WebStorm-kehitintä. Voit hankkia opiskelijalisenssin sivulla https://www.jetbrains.com/student/ ja sen jälkeen ladata [tuotteen](https://www.jetbrains.com/webstorm/) (tai [Toolboxin](https://www.jetbrains.com/toolbox-app/).)
 
 Pääset alkuun ohjelmien kirjoittamisessa seuraavan ohjeen avulla:
 
