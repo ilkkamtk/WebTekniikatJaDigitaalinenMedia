@@ -53,7 +53,9 @@ Tästä eteenpäin esimerkeissä käytetään konsolitulostusvaihtoehtoa eli `co
 ### Tulostus osaksi verkkosivua
 
 JavaScript-ohjelma voi tulostaa  HTML-sisältöä verkkosivun osaksi `document.write`-metodin avulla.
-Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappale-elementin (`p`) sisällön ohjelmallisesti:
+Esimerkiksi allaoleva HTML-sivu sisältää JavaScript-osan, joka tulostaa kappale-elementin (`p`) sisällön ohjelmallisesti.
+
+JavaScript-koodi kannattaa kirjoittaa omaan tiedostoonsa ja linkittää HTML-koodiin <script>-tägin src-attribuuttia käyttäen alla oleva esimerkin mukaisesti:
 
 ```html
 <!DOCTYPE html>
@@ -64,13 +66,18 @@ Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappal
 </head>
 <body>
 <h1>Tervehditään</h1>
-    <script>
-        'use strict';
-        const nimi = 'Aapo';
-        document.write('<p>Hyvää huomenta, ' + nimi + '!</p>');
-    </script>
+    <script src="js/tervehdi.js"></script>
 </body>
 </html>
+```
+
+tervehdi.js (sijaittava HTML tiedoston sisältävän hakemiston alihakemistossa nimeltä js)
+
+```javascript
+'use strict';
+
+ const nimi = 'Aapo';
+ document.write('<p>Hyvää huomenta, ' + nimi + '!</p>');
 ```
 
 Avattava verkkosivu näyttää selaimessa tältä:
